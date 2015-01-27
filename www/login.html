@@ -1,0 +1,64 @@
+ <!DOCTYPE html>
+ <html ng-app='angularRoutingApp'>
+ <head>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Buffet Express - Un sano y delicioso click</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body ng-controller='loginController'>
+    <div class="container">
+        <!-- Menu -->
+        <div class="menusup">            
+            <div class="title">Buffet Express</div>
+        </div>
+        <!-- Fin menu --> 
+              <!-- Menu lateral -->
+        <div class="latermenu">
+            <div class="tr">
+                <div class="td">
+                    <a ng-href="login.html"><img src="images/mi_cuenta.png" alt="..." title="..." /></a>
+                </div>
+            </div>
+        </div>
+        <!-- fin menu lateral -->          
+        <div ng-view ng-mouseover="hiddeMenu()"></div>     
+    </div>    
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="http://buffetexpress.co/REST/resources/js/functions2.js"></script>
+    <script src="http://buffetexpress.co/REST/resources/js/md5.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script type="text/javascript" src="phonegap.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+
+    <script type="text/javascript">
+       $(function(){
+        $(".container").css({"height":$(document).height()});
+        $(".container").css("padding-top","10px");
+        $(".latermenu").css("padding-top","30px");          
+        $(".verlatermenu").click(function(event){
+            event.preventDefault();
+            var position = $(".latermenu").position();
+            if(position.left==0){
+                $(".latermenu").animate({"left":-412},200);
+            }else{
+                $(".latermenu").animate({"left":0},400);           
+            }
+            $(".container").animate({
+               scrollTop:0
+           },"slow"); 
+        });
+        $(".sesion").click(function(){
+            alert(2);
+            $(".latermenu").animate({"left":-412},200);
+        });        
+    });
+    function hiddeMenu(){
+        $(".latermenu").animate({"left":-412},200);
+    }       
+   </script>
+</body>
+</html>

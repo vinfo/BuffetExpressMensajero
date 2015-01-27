@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html manifest="cache.manifest" ng-app="angularRoutingApp">
+<head>
+  <meta charset="utf-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BuffetExpress - Domiciliario</title>
+  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600|Oxygen:700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/libs.min.css">
+<link rel="stylesheet" href="css/app.css">  
+</head>
+<body ng-controller='mainController'>
+    <div class="container">
+        <!-- Menu -->
+        <div class="menusup">
+            <button class="verlatermenu ico-menu" id="ico_menu"><span></span></button>
+            <div class="title">Working Express</div>
+        </div>
+        <!-- Fin menu -->
+      
+        <!-- Menu lateral -->
+        <div class="latermenu">
+            <div class="tr">
+                <div class="td">
+                    <a ng-href="{{mi_cuenta}}"><img src="images/mi_cuenta.png" alt="..." title="..." /></a>
+                </div>
+            </div>
+        </div>
+        <!-- fin menu lateral -->
+        <!-- Aquí inyectamos las vistas -->
+        <a name="top" id="top"></a>        
+        <div ng-view ng-mouseover="hiddeMenu()"></div>       
+
+        <!-- Menu pie -->
+        <div class="menupie">
+            <ul>
+                <li class="active"><a href="internal.html#/ordenes"><img src="images/ordenes.png" alt="..." title="..." /></a></li>
+                <li><a href="internal.html#/ruta"><img src="images/ver ruta.png" alt="..." title="..." /></a></li>
+                <li><a href="internal.html#/detalle"><img src="images/detalle.png" alt="..." title="..." /></a></li>
+                <li><a href="internal.html#/notificar"><img src="images/notificar.png" alt="..." title="..." /></a></li>
+            </ul>
+        </div>
+        <!-- fin Menu pie --> 
+    </div>
+    <input id="page" name="page" type="hidden" value="{{page}}" />
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry&sensor=false"></script>
+    <script type='text/javascript' src='js/maplace-0.1.3.js'></script>
+    <script src="http://buffetexpress.co/REST/resources/js/functions2.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script src="js/angular-sanitize.min.js"></script>
+
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="phonegap.js"></script>
+    <script type="text/javascript" src="js/device.js"></script>
+    <script type="text/javascript" src="js/internal.js"></script>
+</body>
+</html>
