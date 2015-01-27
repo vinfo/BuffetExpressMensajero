@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.vinfo.buffetexpress" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Buffet Express</name>
+    <name>Working Express</name>
     <description>
-        Buffet Express - Un sano y delicioso click
+        Working Express - Aplicativo Domiciliarios
     </description>
     <author email="victor.valencia@gmail.com" href="http://vinfoweb.com">
         Codigodinamico Team
