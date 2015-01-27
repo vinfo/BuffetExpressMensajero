@@ -4,46 +4,6 @@
 		"selected_items":
 		[
 			[
-				"parse",
-				"parseInt"
-			],
-			[
-				"r",
-				"routes"
-			],
-			[
-				"mar",
-				"margin-bottom"
-			],
-			[
-				"bor",
-				"border-bottom"
-			],
-			[
-				"clas",
-				"class"
-			],
-			[
-				"pa",
-				"padding-left"
-			],
-			[
-				"ro",
-				"routes"
-			],
-			[
-				"di",
-				"display"
-			],
-			[
-				"opt",
-				"option	Tag"
-			],
-			[
-				"al",
-				"alt	Attr"
-			],
-			[
 				"co",
 				"coord"
 			],
@@ -108,6 +68,10 @@
 				"stringify"
 			],
 			[
+				"pa",
+				"padding-left"
+			],
+			[
 				"pos",
 				"position"
 			],
@@ -156,12 +120,20 @@
 				"table"
 			],
 			[
+				"di",
+				"dimension"
+			],
+			[
 				"ge",
 				"getFullLastId"
 			],
 			[
 				"fec",
 				"felicitaciones"
+			],
+			[
+				"al",
+				"alert"
 			],
 			[
 				"get",
@@ -337,59 +309,31 @@
 	},
 	"expanded_folders":
 	[
-		"/D/Movilidad/BuffetExpressMensajero",
-		"/D/Movilidad/BuffetExpressMensajero/www"
+		"/D/Movilidad/BuffetExpressMensajero"
 	],
 	"file_history":
 	[
-		"/D/Movilidad/BuffetExpressMensajero/www/config.xml",
-		"/D/Movilidad/BuffetExpressMensajero/www/internal.html",
-		"/D/Movilidad/BuffetExpressMensajero/www/login.html",
-		"/D/Movilidad/BuffetExpressMensajero/www/index.html",
-		"/D/Movilidad/BuffetExpressMensajero/www/js/main.js",
-		"/D/Movilidad/BuffetExpressMensajero/www/js/maplace-0.1.3.js",
-		"/D/Movilidad/BuffetExpressMensajero/www/templates/ruta.html",
-		"/D/Movilidad/BuffetExpressMensajero/www/templates/detalles.html",
-		"/D/Movilidad/BuffetExpressMensajero/www/rutas.html",
-		"/D/Movilidad/BuffetExpressMensajero/www/js/index.js",
-		"/C/Users/odc/Desktop/test/walk-rt2.js",
-		"/D/Movilidad/BuffetExpressPhoneGap/www/test.html",
-		"/D/Movilidad/BuffetExpressMensajero/www/cache.manifest",
-		"/D/Movilidad/BuffetExpressMensajero/www/templates/clave.html",
-		"/D/Movilidad/BuffetExpressMensajero/www/offline.html",
-		"/D/Movilidad/BuffetExpressMensajero/www/js/login.js",
-		"/D/Movilidad/BuffetExpressMensajero/www/templates/notificaciones.html",
-		"/D/Movilidad/BuffetExpressMensajero/www/css/style.css",
-		"/D/wamp/www/Premisas/modules/js/productos_entradas.js",
-		"/D/Movilidad/BuffetExpressMensajero/www/js/device.js",
-		"/D/Movilidad/BuffetExpressMensajero/www/js/jquery-1.11.1.min.js",
-		"/D/Movilidad/BuffetExpressMensajero/www/js/jquery-ui.js",
-		"/D/Movilidad/BuffetExpressPhoneGap/www/js/login.js",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/js/main.js",
-		"/D/Movilidad/BuffetExpressMensajero/www/templates/ordenes.html",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/js/index.js",
-		"/D/Movilidad/BuffetExpressPhoneGap/www/templates/pago.html",
-		"/D/Movilidad/BuffetExpressPhoneGap/www/templates/contactenos.html",
+		"/D/Movilidad/BuffetExpressPhoneGap/index.js",
+		"/D/Movilidad/BuffetExpressPhoneGap/www/config.xml",
+		"/C/Mi Informacion/Programacion/PHP/Plantillas WEB/Administrativas/DulceAdmin/HTML/login.html",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/templates/felicitaciones.html",
-		"/D/Movilidad/BuffetExpressMensajero/icon.png",
-		"/D/Movilidad/BuffetExpressMensajero/index.js",
-		"/D/Movilidad/BuffetExpressPhoneGap/www/internal.html",
-		"/D/Movilidad/BuffetExpressMensajero/www/js/internal.js",
-		"/D/Movilidad/BuffetExpressMensajero/www/templates/pago.html",
-		"/D/Movilidad/BuffetExpressMensajero/www/templates/slider.html",
-		"/D/Movilidad/BuffetExpressMensajero/www/templates/compras.html",
-		"/D/Movilidad/BuffetExpressMensajero/www/test.html",
-		"/D/Movilidad/BuffetExpressMensajero/.gitattributes",
+		"/D/Movilidad/BuffetExpressPhoneGap/www/templates/clave.html",
+		"/D/Movilidad/BuffetExpressPhoneGap/www/templates/categoria.html",
+		"/D/Movilidad/BuffetExpressPhoneGap/www/templates/nosotros.html",
+		"/D/Movilidad/BuffetExpressPhoneGap/www/js/login.js",
+		"/D/Movilidad/BuffetExpressPhoneGap/www/templates/menu.html",
+		"/D/Movilidad/BuffetExpressPhoneGap/www/css/style.css",
 		"/D/wamp/www/agendar/application/helpers/index.html",
 		"/D/wamp/www/Premisas/js/tools.js",
 		"/D/wamp/www/familymarketing/js/tools.js",
-		"/D/Movilidad/BuffetExpressPhoneGap/www/templates/menu.html",
+		"/D/Movilidad/BuffetExpressPhoneGap/www/test.html",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/test",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/templates/compras.html",
 		"/D/wamp/www/redes_prueba/modules/js/productos.js",
-		"/D/Movilidad/BuffetExpressPhoneGap/www/css/style.css",
-		"/D/Movilidad/BuffetExpressPhoneGap/www/templates/categoria.html",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/login.html",
+		"/D/Movilidad/BuffetExpressPhoneGap/www/internal.html",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/templates/guia.html",
 		"/D/wamp/www/buffetexpress/docs/Humberto/buffet/css/style.css",
 		"/D/wamp/www/buffetexpress/docs/Humberto/buffet/secu_presentacion.html",
@@ -401,8 +345,7 @@
 		"/D/Movilidad/BuffetExpressPhoneGap/www/mapa.html",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/js/jquery-1.11.1.min.js",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/js/device.js",
-		"/D/Movilidad/BuffetExpressPhoneGap/www/config.xml",
-		"/D/Movilidad/BuffetExpressPhoneGap/www/templates/nosotros.html",
+		"/D/Movilidad/BuffetExpressPhoneGap/www/templates/pago.html",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/js/internal.js",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/templates/mapa.html",
 		"/C/Users/odc/Downloads/Rashim.RND.GoogleMap/Rashim.RND.GoogleMap/directives.js",
@@ -435,7 +378,6 @@
 		"/C/Mi Informacion/Programacion/Angular/angular-google-maps-master/example/assets/scripts/controllers/issue-432-markers-fit-clustering.js",
 		"/C/Mi Informacion/Programacion/Angular/angular-google-maps-master/example/assets/templates/issue-755-ng-router.html",
 		"/D/Movilidad/BackupsBuffet/directives.js",
-		"/D/Movilidad/BuffetExpressPhoneGap/index.js",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/spec/helper.js",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/spec/index.js",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/js/angular-google-maps_dev_mapped.js",
@@ -454,6 +396,7 @@
 		"/C/Users/odc/AppData/Local/Temp/Rar$EXa0.752/www/templates/mapa.html",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/angular-google-maps_dev_mapped.js",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/dragzoom.js",
+		"/D/Movilidad/BuffetExpressPhoneGap/www/templates/contactenos.html",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/templates/cuenta.html",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/templates/mi_cuenta.html",
 		"/D/wamp/www/buffetexpress/codeigniter/resources/js/functions.js",
@@ -469,11 +412,39 @@
 		"/C/Users/odc/AppData/Local/Temp/Rar$EXa0.715/BuffetExpressPhoneGap/www/templates/mapa.html",
 		"/C/Users/odc/AppData/Local/Temp/Rar$EXa0.072/www/templates/mapa.html",
 		"/C/Users/odc/AppData/Local/Temp/Rar$EXa0.932/www/templates/mapa.html",
-		"/C/Users/odc/AppData/Local/Temp/Rar$DIa0.007/index.js"
+		"/C/Users/odc/AppData/Local/Temp/Rar$DIa0.007/index.js",
+		"/D/Movilidad/BuffetExpressPhoneGap/www/js/angular-google-maps.min.js",
+		"/D/Movilidad/BuffetExpressPhoneGap/www/js/getDishDay",
+		"/C/Users/odc/Desktop/CIA.html",
+		"/D/Movilidad/BuffetExpressPhoneGap/www/templates/terminos.html",
+		"/D/Movilidad/BuffetExpressPhoneGap/plugins/nl.x-services.plugins.socialsharing/src/ios/SocialSharing.m",
+		"/C/Mi Informacion/Programacion/PHP/Plantillas WEB/Administrativas/DulceAdmin/HTML/generic_icons.html",
+		"/D/wamp/www/familymarketing/eventos/eventos.js",
+		"/D/Movilidad/BuffetExpressPhoneGap/www/cache.manifest",
+		"/D/Movilidad/BuffetExpressPhoneGap/plugins/nl.x-services.plugins.socialsharing/src/android/nl/xservices/plugins/SocialSharing.java",
+		"/D/Movilidad/BuffetExpressPhoneGap/README.md",
+		"/C/Users/odc/AppData/Local/Temp/Rar$DIa0.916/style.css",
+		"/D/wamp/www/buffetexpress/docs/Humberto/buffet/pagos.html",
+		"/D/Movilidad/login.html",
+		"/D/Movilidad/index.js",
+		"/D/wamp/www/familymarketing/modules/js/registrados.js",
+		"/D/wamp/www/familymarketing/modules/js/aproductos.js",
+		"/C/Users/odc/Downloads/jquery.formatCurrency-1.4.0/demo/index.html",
+		"/D/wamp/www/buffetexpress/docs/Humberto/buffet/pantalla6.html",
+		"/D/Movilidad/BuffetExpressPhoneGap/www/js/angular.min.js",
+		"/D/wamp/www/familymarketing/js/jquery.currency.js",
+		"/D/wamp/www/familymarketing/modules/js/compras.js",
+		"/D/Movilidad/BuffetExpressPhoneGap/www/css/index.css",
+		"/D/Movilidad/BuffetExpressPhoneGap/www/owl-carousel/owl.carousel.js",
+		"/C/Users/odc/Downloads/jquery.formatCurrency-1.4.0/demo/format_as_you_type.html",
+		"/D/wamp/www/familymarketing/js/jquery.maskMoney.js",
+		"/D/wamp/www/familymarketing/plugins/PHPMailer/examples/index.html",
+		"/D/wamp/www/buffetexpress/docs/Humberto/buffet/pantalla8.html",
+		"/D/wamp/www/buffetexpress/docs/Humberto/buffet/perfil.html"
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 23.0
 	},
 	"find_in_files":
 	{
@@ -490,63 +461,31 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"dist_time",
-			"distance",
-			"afterRoute",
-			"compute_distance",
-			"distance",
-			"compute_distance",
-			"Maplace.prototype.",
-			"distance",
-			"li.carrito a img",
-			"alert",
-			"waypoint",
-			"waypts",
-			"start",
-			"end",
-			"logo.png",
-			"calcRoute",
-			"#directions_panel",
-			"DirectionsRenderer",
+			"pagoController",
 			"coordinates",
-			"agregar_item",
-			"directionsService",
-			".facturavir .contf .tr",
-			".setMap(",
-			"localData",
-			"valor_domicilio",
-			"valor_recomendado",
-			"getZone",
-			"zona",
-			"localData",
-			"cuenta",
-			"for(",
+			"pagoController",
+			"position",
+			"pagoController",
+			"SendPay",
 			"alert",
-			"alert(",
-			".rechazado",
-			"ajaxrest",
-			"setBackground",
-			"closeSession",
-			"closeSession()",
-			"vrdirc",
-			".rechazado",
-			".facturavir .vrdirc .btns",
-			".rechazado",
-			".facturavir",
-			".facturavir .vrdirc input, select",
-			".felicitation .checkbox input",
-			".menupie ul li:nth-child(2) a img",
-			".felicitation .checkbox input",
-			"mi_cuenta",
-			"ajaxrest.login",
-			"/login",
-			"mapaController",
-			"mapa",
-			"mapaController",
-			".facturavir .contf .tr",
-			"function compressArray",
-			".facturavir .vrdirc",
-			".facturavir .contf .tr .td:nth-child(1)",
+			"fcode",
+			"setDish",
+			"getItemsxDish(",
+			"SendPay",
+			"71",
+			"setDish",
+			"dishes",
+			"setDish",
+			"getItemsxDish(",
+			"71",
+			"getItemsxDish",
+			"getItem",
+			"getItemsxDish",
+			"orderxitems",
+			"72",
+			"comprasController",
+			"ajaxrest.login(",
+			".menuplatolist .col-md-12 .btnts img",
 			"pagoController",
 			"comprasController",
 			"class=\"icodeli\">",
@@ -617,7 +556,39 @@
 			"ajaxrest",
 			"pagoController",
 			"tipo_pago",
-			"orderxitems"
+			"orderxitems",
+			"ajaxrest",
+			"pagoController",
+			"closeSession",
+			"direccion",
+			"numero",
+			"nosotros",
+			"nosotrosController",
+			"ajaxrest",
+			"etDishes",
+			"$ajaxrest",
+			"sliderController",
+			"pagoController",
+			"ng-bind-html",
+			"ngSanitize",
+			"sliderController",
+			"ico-menu",
+			"ico_menu",
+			"activity",
+			"ico_menu",
+			"verlatermenu",
+			"ico_menu",
+			"flecha_atras",
+			"pagoController",
+			"comprasController",
+			"recomendadoController",
+			".icodeta img",
+			"icodeta",
+			".vermapa label.title",
+			"getZone",
+			".vermapa label.title",
+			".menusup .title",
+			".vermapa label.title"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -625,8 +596,6 @@
 		"regex": false,
 		"replace_history":
 		[
-			"logo_domiciliarios.png",
-			"rutaController",
 			"",
 			"http://webmarket.com.co/buffet/images/",
 			"http://webmarket.com.co/buffet/images/images/",
@@ -717,10 +686,10 @@
 	{
 		"height": 100.0
 	},
-	"project": "buffetexpress.sublime-project",
+	"project": "BuffetExpressMensajero.sublime-project",
 	"replace":
 	{
-		"height": 62.0
+		"height": 42.0
 	},
 	"save_all_on_build": true,
 	"select_file":
