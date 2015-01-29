@@ -22,12 +22,12 @@
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="7" />
     <preference name="android-installLocation" value="auto" />
-    <preference name="SplashScreen" value="splash" />
-    <preference name="SplashScreenDelay" value="2000" />
+<!--     <preference name="SplashScreen" value="splash" />
+    <preference name="SplashScreenDelay" value="2000" /> -->
 
-     <feature name="SplashScreen">
+<!--      <feature name="SplashScreen">
         <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
-    </feature>
+    </feature> -->
     
 <!--    <feature name="Toast">
       <param name="android-package" value="nl.xservices.plugins.Toast" />
@@ -54,11 +54,11 @@
   
   <icon src="icon.png" gap:platform="android" gap:density="ldpi"/>
 
-  <gap:splash src="res/screen/android/screen-ldpi-portrait.png" gap:platform="android" gap:qualifier="ldpi" />
+<!--   <gap:splash src="res/screen/android/screen-ldpi-portrait.png" gap:platform="android" gap:qualifier="ldpi" />
   <gap:splash src="res/screen/android/screen-mdpi-portrait.png" gap:platform="android" gap:qualifier="mdpi" />
   <gap:splash src="res/screen/android/screen-hdpi-portrait.png" gap:platform="android" gap:qualifier="hdpi" />
   <gap:splash src="res/screen/android/screen-xhdpi-portrait.png" gap:platform="android" gap:qualifier="xhdpi" />
-  <gap:splash src="res/screen/android/screen-xxhdpi-portrait.png" gap:platform="android" gap:qualifier="xxhdpi" />
+  <gap:splash src="res/screen/android/screen-xxhdpi-portrait.png" gap:platform="android" gap:qualifier="xxhdpi" /> -->
 
   <access origin="*" />
 </widget>
