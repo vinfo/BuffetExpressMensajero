@@ -323,10 +323,13 @@
 	],
 	"file_history":
 	[
+		"/D/Movilidad/BuffetExpressMensajero/www/index.html",
+		"/D/Movilidad/BuffetExpressPhoneGap/www/index.html",
+		"/D/Movilidad/BuffetExpressMensajero/www/config.xml",
+		"/D/Movilidad/BuffetExpressMensajero/www/login.html",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/test.html",
 		"/D/Movilidad/BuffetExpressMensajero/www/js/index.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/js/device.js",
-		"/D/Movilidad/BuffetExpressMensajero/www/index.html",
 		"/D/Movilidad/BuffetExpressMensajero/www/css/style.css",
 		"/D/Movilidad/BuffetExpressMensajero/www/js/maplace-0.1.3.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/js/main.js",
@@ -347,7 +350,6 @@
 		"/D/Movilidad/BuffetExpressPhoneGap/www/templates/mapa.html",
 		"/D/Movilidad/BuffetExpressMensajero/www/js/login.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/templates/login.html",
-		"/D/Movilidad/BuffetExpressMensajero/www/config.xml",
 		"/D/Movilidad/BuffetExpressMensajero/icon.png",
 		"/D/Movilidad/BuffetExpressMensajero/index.js",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/js/index.js",
@@ -375,7 +377,6 @@
 		"/D/Movilidad/BuffetExpressPhoneGap/www/templates/slider.html",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/templates/recomendado.html",
 		"/D/wamp/www/buffetexpress/docs/Humberto/buffet/presentacion.html",
-		"/D/Movilidad/BuffetExpressPhoneGap/www/index.html",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/mapa.html",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/js/jquery-1.11.1.min.js",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/js/device.js",
@@ -449,8 +450,7 @@
 		"/D/Movilidad/BuffetExpressPhoneGap/www/js/angular-google-maps.min.js",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/js/getDishDay",
 		"/C/Users/odc/Desktop/CIA.html",
-		"/D/Movilidad/BuffetExpressPhoneGap/www/templates/terminos.html",
-		"/D/Movilidad/BuffetExpressPhoneGap/plugins/nl.x-services.plugins.socialsharing/src/ios/SocialSharing.m"
+		"/D/Movilidad/BuffetExpressPhoneGap/www/templates/terminos.html"
 	],
 	"find":
 	{
