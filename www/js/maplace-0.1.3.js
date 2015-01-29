@@ -12,10 +12,16 @@
     * @version  0.1.32
     */
 
+    var GoogleMap=false;
 
     var html_dropdown,
         html_ullist,
         Maplace;
+
+        var cuenta= JSON.parse(localStorage.cuenta);
+        var title= cuenta.names;
+        var position= JSON.parse(localStorage.position);               
+        var MyPosition = new google.maps.LatLng(position.lat, position.lng);        
 
 
     //dropdown menu type
@@ -283,7 +289,17 @@
                         height: '100%'
                     }).appendTo(this.map_div);
 
-                    this.oMap = new google.maps.Map(this.canvas_map.get(0), this.o.map_options);
+                    this.oMap = new google.maps.Map(this.canvas_map.get(0), this.o.map_options);                    
+
+                    this.createMarker(MyPosition,title);
+                    this.createKML(localStorage.getItem("domain")+'resources/kmls/zona_total.kml');
+                    this.createKML(localStorage.getItem("domain")+'resources/kmls/'+localData['code']+'.kml');
+
+                    var homeControlDiv = document.createElement('div');
+                    var homeControl = new this.HomeControl(homeControlDiv, this.oMap);
+                    homeControlDiv.index = 9999999;
+                    this.oMap.controls[google.maps.ControlPosition.TOP_RIGHT].push(homeControlDiv);
+                    GoogleMap= this.oMap;                          
 
                 } catch (err) {
                     this.debug('create_objMap::' + this.map_div.selector, err.toString());
@@ -326,6 +342,53 @@
                     break;
             }
         };
+
+        //Establecer marker domiciliario
+        Maplace.prototype.createMarker = function (MyPosition,title) {
+           var marker = new google.maps.Marker({
+                map: this.oMap,
+                position: MyPosition,
+                title: title,
+                icon: 'images/puntero_dom.png'
+            }); 
+        };
+
+        //Establecer Kmls
+        Maplace.prototype.createKML = function (src) {
+            var kmlLayer = new google.maps.KmlLayer(src, {
+                suppressInfoWindows: true,
+                preserveViewport: false,
+                map: this.oMap
+            });   
+        };
+
+        //Ubicar mi posición
+        Maplace.prototype.HomeControl = function (controlDiv, map) {
+            controlDiv.style.padding = '5px';
+            controlDiv.style.paddingRight = '0';
+
+            var controlUI = document.createElement('div');
+            controlUI.style.backgroundColor = 'white';
+            controlUI.style.borderStyle = 'solid';
+            controlUI.style.borderWidth = '1px';
+            controlUI.style.padding = '1px';
+            controlUI.style.cursor = 'pointer';
+            controlUI.style.textAlign = 'center';
+            controlUI.title = 'Click para ir a Mí Ubicación';
+            controlDiv.appendChild(controlUI);
+
+            var controlText = document.createElement('div');
+            controlText.style.fontFamily = 'Arial,sans-serif';
+            controlText.style.fontSize = '12px';
+            controlText.style.paddingLeft = '4px';
+            controlText.style.paddingRight = '4px';
+            controlText.innerHTML = '<b>Mí Ubicación</b>';
+            controlUI.appendChild(controlText);
+
+            google.maps.event.addDomListener(controlUI, 'click', function() {
+                map.setCenter(MyPosition)
+            });   
+        };                         
 
         //create the main object point
         Maplace.prototype.create_objPoint = function (index) {
@@ -665,7 +728,8 @@
                     origin,
                     destination,
                     waypoints = [],
-                    dist_time = [];
+                    dist_time = [],
+                    cont=0;
 
                 //create the waypoints and location marker
                 for (a = 0; a < this.ln; a++) {
@@ -688,6 +752,7 @@
                         });
                     }					
                     this.create.marker.call(this, a, point);
+                    cont++;
                 }
 
                 this.o.directions_options.origin = origin;
@@ -699,7 +764,7 @@
                     ? this.directionsDisplay.setOptions({ draggable: this.o.draggable })
                     : this.directionsDisplay = new google.maps.DirectionsRenderer({ draggable: this.o.draggable});
 
-                this.directionsDisplay.setMap(this.oMap);
+                this.directionsDisplay.setMap(this.oMap);               
 
                 //show the directions panel
                 if (this.o.directions_panel) {
@@ -717,7 +782,7 @@
                 this.directionsService.route(this.o.directions_options, function (result, status) {
                     //directions found
                     if (status === google.maps.DirectionsStatus.OK) {
-                        dist_time = self.calc_dist_time(result);         
+                        dist_time = self.calc_dist_time(result);                               
 						localStorage.setItem("routes",JSON.stringify(result));
                         self.directionsDisplay.setDirections(result);
                     }
@@ -1032,6 +1097,17 @@
             return this;
         };
 
+        //Reload map
+        Maplace.prototype.ResizeMap = function () {
+            var height= $(".container").height() - $("#menupie").height();
+            google.maps.event.trigger(GoogleMap, 'resize', function () {
+                $("#gmap-route").css("height", height+"px");                             
+            });
+            GoogleMap.setZoom(13);
+            GoogleMap.setCenter(MyPosition);
+            $(".wrap_controls").css({"background":"none","max-height":"30px"});
+        };        
+
         //check if already initialized with a Load()
         Maplace.prototype.Loaded = function () {
             return this.loaded;
@@ -1090,7 +1166,7 @@
                 });
 
                 //adapt the div size on resize
-                google.maps.event.addListener(this.oMap, 'resize', function () {
+                google.maps.event.addListener(this.oMap, 'resize', function () {                 
                     self.canvas_map.css({
                         width: self.map_div.width(),
                         height: self.map_div.height()

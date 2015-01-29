@@ -61,7 +61,11 @@ if (window.jQuery) {
 function hiddeMenu(){
     $(".latermenu").animate({"left":-412},200);
 }
-
+function show(div){
+    $(".panels").hide();
+    $("."+div).fadeIn();
+    new Maplace().ResizeMap();     
+}
 function addShop(action){
     var num=$(".numero").html();
     if(action=="mas"){

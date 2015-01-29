@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"p",
+				"push"
+			],
+			[
+				"Lo",
+				"LocsD"
+			],
+			[
+				"ba",
+				"backgroundColor"
+			],
+			[
+				"n",
+				"transparent"
+			],
+			[
+				"ma",
+				"margin-bottom"
+			],
+			[
+				"pa",
+				"paddingRight"
+			],
+			[
 				"co",
 				"coord"
 			],
@@ -22,10 +46,6 @@
 			[
 				"v",
 				"val"
-			],
-			[
-				"p",
-				"position"
 			],
 			[
 				"a",
@@ -68,20 +88,12 @@
 				"stringify"
 			],
 			[
-				"pa",
-				"padding-left"
-			],
-			[
 				"pos",
 				"position"
 			],
 			[
 				"max",
 				"max-width"
-			],
-			[
-				"ba",
-				"background-color"
 			],
 			[
 				"nam",
@@ -94,10 +106,6 @@
 			[
 				"na",
 				"Narray"
-			],
-			[
-				"ma",
-				"margin"
 			],
 			[
 				"cu",
@@ -309,11 +317,36 @@
 	},
 	"expanded_folders":
 	[
-		"/D/Movilidad/BuffetExpressMensajero"
+		"/D/Movilidad/BuffetExpressMensajero",
+		"/D/Movilidad/BuffetExpressMensajero/www"
 	],
 	"file_history":
 	[
+		"/D/Movilidad/BuffetExpressMensajero/www/css/style.css",
+		"/D/Movilidad/BuffetExpressMensajero/www/js/maplace-0.1.3.js",
+		"/D/Movilidad/BuffetExpressMensajero/www/js/main.js",
+		"/D/Movilidad/BuffetExpressMensajero/www/js/internal.js",
+		"/D/Movilidad/BuffetExpressMensajero/www/templates/ordenes.html",
+		"/D/Movilidad/BuffetExpressMensajero/www/internal.html",
+		"/D/Movilidad/BuffetExpressMensajero/www/templates/notificaciones.html",
+		"/D/Movilidad/BuffetExpressPhoneGap/www/internal.html",
+		"/D/Movilidad/BuffetExpressMensajero/www/css/app.css",
+		"/D/Movilidad/BuffetExpressMensajero/www/templates/detalles.html",
+		"/D/Movilidad/BuffetExpressMensajero/www/templates/ruta.html",
+		"/C/Users/odc/Desktop/test/AngularDirections/walk-rt2.js",
+		"/D/Movilidad/BuffetExpressMensajero/www/js/Detalles.js",
+		"/D/Movilidad/BuffetExpressMensajero/www/js/Ruta.js",
+		"/D/Movilidad/BuffetExpressMensajero/www/js/ruta.js",
+		"/D/Movilidad/BuffetExpressMensajero/www/js/ordenes.js",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/js/main.js",
+		"/D/Movilidad/BuffetExpressPhoneGap/www/templates/mapa.html",
+		"/D/Movilidad/BuffetExpressMensajero/www/js/index.js",
+		"/D/Movilidad/BuffetExpressMensajero/www/js/login.js",
+		"/D/Movilidad/BuffetExpressMensajero/www/templates/login.html",
+		"/D/Movilidad/BuffetExpressMensajero/www/index.html",
+		"/D/Movilidad/BuffetExpressMensajero/www/config.xml",
+		"/D/Movilidad/BuffetExpressMensajero/icon.png",
+		"/D/Movilidad/BuffetExpressMensajero/index.js",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/js/index.js",
 		"/D/Movilidad/BuffetExpressPhoneGap/index.js",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/config.xml",
@@ -333,7 +366,6 @@
 		"/D/Movilidad/BuffetExpressPhoneGap/www/templates/compras.html",
 		"/D/wamp/www/redes_prueba/modules/js/productos.js",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/login.html",
-		"/D/Movilidad/BuffetExpressPhoneGap/www/internal.html",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/templates/guia.html",
 		"/D/wamp/www/buffetexpress/docs/Humberto/buffet/css/style.css",
 		"/D/wamp/www/buffetexpress/docs/Humberto/buffet/secu_presentacion.html",
@@ -347,7 +379,6 @@
 		"/D/Movilidad/BuffetExpressPhoneGap/www/js/device.js",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/templates/pago.html",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/js/internal.js",
-		"/D/Movilidad/BuffetExpressPhoneGap/www/templates/mapa.html",
 		"/C/Users/odc/Downloads/Rashim.RND.GoogleMap/Rashim.RND.GoogleMap/directives.js",
 		"/C/Users/odc/Downloads/Rashim.RND.GoogleMap/Rashim.RND.GoogleMap/app.js",
 		"/C/Users/odc/Downloads/Rashim.RND.GoogleMap/Rashim.RND.GoogleMap/Mapa.html",
@@ -418,33 +449,11 @@
 		"/C/Users/odc/Desktop/CIA.html",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/templates/terminos.html",
 		"/D/Movilidad/BuffetExpressPhoneGap/plugins/nl.x-services.plugins.socialsharing/src/ios/SocialSharing.m",
-		"/C/Mi Informacion/Programacion/PHP/Plantillas WEB/Administrativas/DulceAdmin/HTML/generic_icons.html",
-		"/D/wamp/www/familymarketing/eventos/eventos.js",
-		"/D/Movilidad/BuffetExpressPhoneGap/www/cache.manifest",
-		"/D/Movilidad/BuffetExpressPhoneGap/plugins/nl.x-services.plugins.socialsharing/src/android/nl/xservices/plugins/SocialSharing.java",
-		"/D/Movilidad/BuffetExpressPhoneGap/README.md",
-		"/C/Users/odc/AppData/Local/Temp/Rar$DIa0.916/style.css",
-		"/D/wamp/www/buffetexpress/docs/Humberto/buffet/pagos.html",
-		"/D/Movilidad/login.html",
-		"/D/Movilidad/index.js",
-		"/D/wamp/www/familymarketing/modules/js/registrados.js",
-		"/D/wamp/www/familymarketing/modules/js/aproductos.js",
-		"/C/Users/odc/Downloads/jquery.formatCurrency-1.4.0/demo/index.html",
-		"/D/wamp/www/buffetexpress/docs/Humberto/buffet/pantalla6.html",
-		"/D/Movilidad/BuffetExpressPhoneGap/www/js/angular.min.js",
-		"/D/wamp/www/familymarketing/js/jquery.currency.js",
-		"/D/wamp/www/familymarketing/modules/js/compras.js",
-		"/D/Movilidad/BuffetExpressPhoneGap/www/css/index.css",
-		"/D/Movilidad/BuffetExpressPhoneGap/www/owl-carousel/owl.carousel.js",
-		"/C/Users/odc/Downloads/jquery.formatCurrency-1.4.0/demo/format_as_you_type.html",
-		"/D/wamp/www/familymarketing/js/jquery.maskMoney.js",
-		"/D/wamp/www/familymarketing/plugins/PHPMailer/examples/index.html",
-		"/D/wamp/www/buffetexpress/docs/Humberto/buffet/pantalla8.html",
-		"/D/wamp/www/buffetexpress/docs/Humberto/buffet/perfil.html"
+		"/C/Mi Informacion/Programacion/PHP/Plantillas WEB/Administrativas/DulceAdmin/HTML/generic_icons.html"
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -458,9 +467,81 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
+			"routes",
+			"'resize'",
+			"routes",
+			"224",
+			"'resize'",
+			"zoom",
+			"localData",
+			"calcRoute",
+			"ordenesController",
+			"rutaController",
+			".facturavir .vrdirc",
+			"wrap_controls",
+			"'resize'",
+			"homeControlDiv",
+			"0 2px 4px rgba(0, 0, 0, 0.4)",
+			"box-shadow",
+			"wrap_controls",
+			"box-shadow",
+			"wrap_controls",
+			"contr",
+			"'resize'",
+			"this.o.div",
+			"gmap",
+			".gmap",
+			"container",
+			"'resize'",
+			"canvas_map",
+			"map_div",
+			"gmap-route",
+			"GoogleMap",
+			"google.maps",
+			".setCenter",
+			"Load",
+			"setCenter",
+			"setMap",
+			"marker.setMap",
+			"ViewOnMap",
+			"AddLocation",
+			"RemoveLocations",
+			"Loaded",
+			"Load",
+			"ordenesController",
+			"addListener",
+			"maps.Map",
+			"	\n0,2 km\n	4.	Continúa por Carrera 70.	\n0,6 km\n	5.	Gira a la derecha hacia Calle 42	\n0,3 km\n	6.	Toma la 2.ª a la derecha hacia Carrera 72	\n82 m\n	7.	Toma la 1.ª a la derecha hacia Calle 43\nEl destino está a la izquierda.\n	\n70 m\n	Calle 43 # 71-2 a 71-100, Medellín, Antioquia, Colombia\n1,3 km - aproximadamente 6 min\n	1.	Dirígete hacia el este en Calle 43 hacia Carrera 71	\n49 m\n	2.	Toma la 1.ª a la derecha hacia Carrera 71	\n79 m\n	3.	Toma la 1.ª a la derecha hacia Calle 42	\n0,7 km\n	4.	Gira a la izquierda hacia Carrera 78	\n60 m\n	5.	Gira a la derecha hacia Calle 41	\n91 m\n	6.	Continúa por Carrera 79.	\n0,1 km\n	7.	Gira ligeramente a la derecha hacia Calle 38B	\n0,1 km\n	8.	Gira a la izquierda hacia Carrera 80\nEl destino está a la derecha.\n	\n35 m\n	Carrera 80 # 38A-2 a 38A-100, Medellín, Antioquia, Colombia\n3,4 km - aproximadamente 9 min\n	1.	Dirígete hacia el norte en Carrera 80 hacia Calle 38B	\n0,1 km\n	2.	Gira a la izquierda hacia Transversal 39	\n40 m\n	3.	Gira ligeramente a la derecha hacia Carrera 80A	\n0,2 km\n	4.	Gira a la izquierda hacia Calle 42	\n0,2 km\n	5.	Gira a la derecha hacia Carrera 81	\n0,3 km\n	6.	Continúa por Carrera 80.	\n0,2 km\n	7.	Continúa por Carrera 80.	\n0,3 km\n	8.	Continúa por @K80.	\n0,2 km\n	9.	Continúa por Carrera 80.	\n0,8 km\n	10.	En la rotonda, toma la segunda salida y continúa por Carrera 80	\n0,4 km\n	11.	Gira a la derecha hacia Calle 53	\n0,3 km\n	12.	Gira a la izquierda hacia Carrera 77D	\n0,2 km\n	13.	Gira a la derecha hacia Calle 54\nEl destino está a la izquierda.\n	\n31 m\n	Calle 54 # 77C-1 a 77C-99, Medellín, Antioquia, Colombia\n3,2 km - aproximadamente 11 min\n	1.	Dirígete hacia el noroeste en Calle 54 hacia Carrera 77D	\n31 m\n	2.	Toma la 1.ª a la derecha hacia Carrera 77D	\n0,1 km\n	3.	Gira a la derecha hacia Calle 55	\n1,1 km\n	4.	Gira a la derecha hacia Carrera 70	\n0,8 km\naproximadamente",
+			"Ruta",
+			"Maplace",
+			"Ordenes",
+			"Maplace",
+			"rutaController",
+			"waypoi",
+			"response",
+			"directions_panel",
+			"areaBasedGoogleMap",
+			"route.legs",
+			".adp table",
+			".adp, .adp table",
+			"detallesController",
+			"createKML",
+			"MyPosition",
+			"HomeControl",
+			"createKML",
+			"localData",
+			"createMarker",
+			"createKML",
+			"add_markers_to_objMap",
+			"marker",
+			"create_objMap",
+			"activateCurrent",
+			"new google.maps.Map",
+			"initialize",
+			"logo_pno",
 			"pagoController",
 			"coordinates",
 			"pagoController",
@@ -516,86 +597,17 @@
 			"getPos",
 			"pos:",
 			"localStorage.setItem(\"pos\"",
-			"cerr_vpla.png",
-			"Fecha y hora: 12/30/2014 11:11:50 AM\nError: atributo duplicado\nArchivo de origen: file:///D:/Movilidad/BuffetExpressPhoneGap/www/templates/slider.html\nLínea: 13, columna: 47\nCódigo fuente:\nng-click=\"close('costoad')",
-			"Fecha y hora: 12/30/2014 11:11:50 AM\nError: atributo duplicado\nArchivo de origen: file:///D:/Movilidad/BuffetExpressPhoneGap/www/templates/slider.html\nLínea: 13, columna: 47\nCódigo fuente:\n ng-click=\"close('costoad')\">",
-			".carne",
-			".carousel-control",
-			"carousel-inner",
-			"images/",
-			"createKML",
-			"kml",
-			".presen",
-			".felicitation .form-group .btn",
-			".presen",
-			"id=\"tipo",
-			"felicitacionesController",
-			"checkbox.png",
-			".kml",
-			"processOrder",
-			"ajax",
-			"createKML",
-			"marker",
-			"createKML",
-			"getPosition",
-			"createKML",
-			".kml",
-			".buffet .owl-wrapper img",
-			".costoad",
-			"recomendadoController",
-			"arrow_l.png",
-			"images",
-			"arrow_l.png",
-			"guiaController",
-			"ng-bind-html",
-			"nosotrosController",
-			"ng-bind-html",
-			"guiaController",
-			".presen #present .item > h4",
-			"goTo",
-			"ajaxrest",
-			"pagoController",
-			"tipo_pago",
-			"orderxitems",
-			"ajaxrest",
-			"pagoController",
-			"closeSession",
-			"direccion",
-			"numero",
-			"nosotros",
-			"nosotrosController",
-			"ajaxrest",
-			"etDishes",
-			"$ajaxrest",
-			"sliderController",
-			"pagoController",
-			"ng-bind-html",
-			"ngSanitize",
-			"sliderController",
-			"ico-menu",
-			"ico_menu",
-			"activity",
-			"ico_menu",
-			"verlatermenu",
-			"ico_menu",
-			"flecha_atras",
-			"pagoController",
-			"comprasController",
-			"recomendadoController",
-			".icodeta img",
-			"icodeta",
-			".vermapa label.title",
-			"getZone",
-			".vermapa label.title",
-			".menusup .title",
-			".vermapa label.title"
+			"cerr_vpla.png"
 		],
-		"highlight": false,
+		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
 		[
+			"Detalles",
+			"Ruta",
+			"Ordenes",
 			"",
 			"http://webmarket.com.co/buffet/images/",
 			"http://webmarket.com.co/buffet/images/images/",
@@ -689,7 +701,7 @@
 	"project": "BuffetExpressMensajero.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 62.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -724,7 +736,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 243.0,
+	"side_bar_width": 222.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

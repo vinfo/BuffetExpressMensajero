@@ -31,7 +31,7 @@ angularRoutingApp.config(function($routeProvider) {
 
 angularRoutingApp.controller('loginController', function($scope, $location,$routeParams) {	
 	if(localStorage.dimension<380){
-		$scope.logo="images/logo_pno.png";
+		$scope.logo="images/logo_domiciliarios_pno.png";
 	}else{
 		$scope.logo="images/logo_domiciliarios.png";
 	}
@@ -51,7 +51,7 @@ angularRoutingApp.controller('loginController', function($scope, $location,$rout
 
 angularRoutingApp.controller('cuentaController', function($scope) {
 	if(localStorage.dimension<380){
-		$scope.logo="images/logo_pno.png";
+		$scope.logo="images/logo_domiciliarios_pno.png";
 	}else{
 		$scope.logo="images/logo_domiciliarios.png";
 	}	
