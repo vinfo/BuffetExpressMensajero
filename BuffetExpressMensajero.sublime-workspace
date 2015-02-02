@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"di",
+				"display"
+			],
+			[
+				"str",
+				"stringify"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
 				"p",
 				"push"
 			],
@@ -126,10 +138,6 @@
 			[
 				"t",
 				"table"
-			],
-			[
-				"di",
-				"dimension"
 			],
 			[
 				"ge",
@@ -267,12 +275,36 @@
 		"selected_items":
 		[
 			[
-				"Snippet: ",
-				"Snippet: getAllVars"
-			],
-			[
 				"inst",
 				"Package Control: Install Package"
+			],
+			[
+				"bs3",
+				"Snippet: bs3-carousel"
+			],
+			[
+				"bs3-h",
+				"Snippet: bs3-html5-template"
+			],
+			[
+				"htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: getAllVars"
 			],
 			[
 				"i",
@@ -285,10 +317,6 @@
 			[
 				"Snippet: re",
 				"Snippet: readFolders"
-			],
-			[
-				"ins",
-				"Package Control: Install Package"
 			],
 			[
 				"pack",
@@ -318,26 +346,44 @@
 	"expanded_folders":
 	[
 		"/D/Movilidad/BuffetExpressMensajero",
-		"/D/Movilidad/BuffetExpressMensajero/www",
-		"/D/Movilidad/BuffetExpressMensajero/www/js"
+		"/D/Movilidad/BuffetExpressMensajero/www"
 	],
 	"file_history":
 	[
+		"/D/Movilidad/BuffetExpressMensajero/www/js/internal.js",
+		"/D/Movilidad/BuffetExpressMensajero/www/js/maplace-0.1.3.js",
+		"/D/Movilidad/BuffetExpressMensajero/www/js/index.js",
+		"/D/Movilidad/BuffetExpressPhoneGap/www/js/main.js",
+		"/D/Movilidad/BuffetExpressMensajero/www/js/main.js",
+		"/D/Movilidad/BuffetExpressMensajero/www/templates/ordenes.html",
+		"/D/Movilidad/BuffetExpressMensajero/www/css/style.css",
+		"/D/Movilidad/BuffetExpressMensajero/www/js/angular.min.js",
+		"/C/Users/odc/Desktop/test/Rutas.html",
+		"/D/Movilidad/BuffetExpressMensajero/www/templates/notificaciones.html",
+		"/D/Movilidad/BuffetExpressMensajero/www/internal.html",
+		"/D/Movilidad/BuffetExpressPhoneGap/www/internal.html",
+		"/C/Users/odc/Desktop/test/Worker.html",
+		"/C/Users/odc/Desktop/test/HelloWebWorkers_EN.js",
+		"/D/Movilidad/BuffetExpressMensajero/www/js/worker_orders.js",
+		"/C/Users/odc/Downloads/jquery-hive-master/jquery-hive-master/test/jquery.hive.html",
+		"/C/Users/odc/Downloads/jquery-hive-master/jquery-hive-master/jquery.hive.js",
+		"/D/wamp/www/jquery-hive-master/jquery.hive.js",
+		"/D/wamp/www/jquery-hive-master/demo/hive.demo.js",
+		"/D/wamp/www/jquery-hive-master/demo/hive.worker.js",
+		"/D/wamp/www/jquery-hive-master/jquery.hive.pollen.js",
+		"/C/Users/odc/Downloads/simple-web-worker-gh-pages/worker.js",
+		"/C/Users/odc/Downloads/simple-web-worker-gh-pages/main.js",
+		"/C/Users/odc/Downloads/simple-web-worker-gh-pages/simple-web-worker-gh-pages/demo_workers.js",
+		"/C/Users/odc/Downloads/simple-web-worker-gh-pages/simple-web-worker-gh-pages/index.html",
+		"/C/Users/odc/Downloads/simple-web-worker-gh-pages/simple-web-worker-gh-pages/main.js",
+		"/C/Users/odc/Downloads/simple-web-worker-gh-pages/simple-web-worker-gh-pages/worker.js",
+		"/D/Movilidad/BuffetExpressPhoneGap/www/config.xml",
+		"/D/Movilidad/BuffetExpressMensajero/www/config.xml",
 		"/D/Movilidad/BuffetExpressMensajero/www/index.html",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/index.html",
-		"/D/Movilidad/BuffetExpressMensajero/www/config.xml",
 		"/D/Movilidad/BuffetExpressMensajero/www/login.html",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/test.html",
-		"/D/Movilidad/BuffetExpressMensajero/www/js/index.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/js/device.js",
-		"/D/Movilidad/BuffetExpressMensajero/www/css/style.css",
-		"/D/Movilidad/BuffetExpressMensajero/www/js/maplace-0.1.3.js",
-		"/D/Movilidad/BuffetExpressMensajero/www/js/main.js",
-		"/D/Movilidad/BuffetExpressMensajero/www/js/internal.js",
-		"/D/Movilidad/BuffetExpressMensajero/www/templates/ordenes.html",
-		"/D/Movilidad/BuffetExpressMensajero/www/internal.html",
-		"/D/Movilidad/BuffetExpressMensajero/www/templates/notificaciones.html",
-		"/D/Movilidad/BuffetExpressPhoneGap/www/internal.html",
 		"/D/Movilidad/BuffetExpressMensajero/www/css/app.css",
 		"/D/Movilidad/BuffetExpressMensajero/www/templates/detalles.html",
 		"/D/Movilidad/BuffetExpressMensajero/www/templates/ruta.html",
@@ -346,7 +392,6 @@
 		"/D/Movilidad/BuffetExpressMensajero/www/js/Ruta.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/js/ruta.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/js/ordenes.js",
-		"/D/Movilidad/BuffetExpressPhoneGap/www/js/main.js",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/templates/mapa.html",
 		"/D/Movilidad/BuffetExpressMensajero/www/js/login.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/templates/login.html",
@@ -354,7 +399,6 @@
 		"/D/Movilidad/BuffetExpressMensajero/index.js",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/js/index.js",
 		"/D/Movilidad/BuffetExpressPhoneGap/index.js",
-		"/D/Movilidad/BuffetExpressPhoneGap/www/config.xml",
 		"/C/Mi Informacion/Programacion/PHP/Plantillas WEB/Administrativas/DulceAdmin/HTML/login.html",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/templates/felicitaciones.html",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/templates/clave.html",
@@ -433,24 +477,7 @@
 		"/D/Movilidad/BuffetExpressPhoneGap/www/templates/contactenos.html",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/templates/cuenta.html",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/templates/mi_cuenta.html",
-		"/D/wamp/www/buffetexpress/codeigniter/resources/js/functions.js",
-		"/D/wamp/www/Premisas/modules/js/orden_compra.js",
-		"/C/Users/odc/Downloads/angular-google-maps-master/angular-google-maps-master/example/assets/stylesheets/example.css",
-		"/C/Users/odc/Downloads/angular-google-maps-master/angular-google-maps-master/website_libs/dev_deps.js",
-		"/C/Users/odc/Downloads/angular-google-maps-master/angular-google-maps-master/example/issue-755-ng-router.html",
-		"/C/Users/odc/Downloads/angular-google-maps-master/angular-google-maps-master/example/example.html",
-		"/C/Users/odc/Downloads/angular-google-maps-master/angular-google-maps-master/example/geojson.html",
-		"/D/Movilidad/BuffetExpressPhoneGap/www/js/lodash.min.js",
-		"/C/Users/odc/Downloads/angular-google-maps-master/angular-google-maps-master/example/two-maps.html",
-		"/D/Movilidad/mapa.html",
-		"/C/Users/odc/AppData/Local/Temp/Rar$EXa0.715/BuffetExpressPhoneGap/www/templates/mapa.html",
-		"/C/Users/odc/AppData/Local/Temp/Rar$EXa0.072/www/templates/mapa.html",
-		"/C/Users/odc/AppData/Local/Temp/Rar$EXa0.932/www/templates/mapa.html",
-		"/C/Users/odc/AppData/Local/Temp/Rar$DIa0.007/index.js",
-		"/D/Movilidad/BuffetExpressPhoneGap/www/js/angular-google-maps.min.js",
-		"/D/Movilidad/BuffetExpressPhoneGap/www/js/getDishDay",
-		"/C/Users/odc/Desktop/CIA.html",
-		"/D/Movilidad/BuffetExpressPhoneGap/www/templates/terminos.html"
+		"/D/wamp/www/buffetexpress/codeigniter/resources/js/functions.js"
 	],
 	"find":
 	{
@@ -471,6 +498,49 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"CenterMap",
+			"MyPosition",
+			"getSummary(",
+			"valor_buffet",
+			"setItem(\"time",
+			"\"time\"",
+			"Hola",
+			".adp-summary",
+			"afterRoute",
+			"setPanel",
+			"directions_panel",
+			"summary",
+			"final_orders",
+			"adp-summary",
+			"angular.min.js.map",
+			"Orden #",
+			"final_orders",
+			"ID#",
+			"adp-summary",
+			"function show(",
+			"show(",
+			"adp-summary",
+			".adp-summary",
+			"No ex",
+			"final_orders",
+			"canvas_map",
+			"alert(\"show\"",
+			"\"show\"",
+			"show",
+			"ResizeMap",
+			"setZoom",
+			"setCenter",
+			"create",
+			"directions",
+			"ResizeMap",
+			"setCenter",
+			"Orden #",
+			"Orden",
+			"Orden #",
+			"Orden # ",
+			"notificaciones",
+			"travelMode",
+			"directions_options",
 			"getDeviceProperty",
 			"routes",
 			"'resize'",
@@ -555,50 +625,7 @@
 			"setDish",
 			"getItemsxDish(",
 			"SendPay",
-			"71",
-			"setDish",
-			"dishes",
-			"setDish",
-			"getItemsxDish(",
-			"71",
-			"getItemsxDish",
-			"getItem",
-			"getItemsxDish",
-			"orderxitems",
-			"72",
-			"comprasController",
-			"ajaxrest.login(",
-			".menuplatolist .col-md-12 .btnts img",
-			"pagoController",
-			"comprasController",
-			"class=\"icodeli\">",
-			" btns",
-			"comprasController",
-			"images/masmenu.png",
-			"guiaController",
-			"dishes",
-			"ng-repeat",
-			"guiaController",
-			".felicitation .form-group .btn",
-			".presen .n_close",
-			"#present .owl-pagination .owl-page",
-			"alert(",
-			"sort",
-			"setImage",
-			"$scope.menu",
-			"menu",
-			".carousel-indicators li",
-			"#present .owl-wrapper-outer .item img",
-			".item img",
-			"#present .owl-wrapper-outer .item img",
-			".felicitation .form-group .btn",
-			"#present",
-			"#present .owl-wrapper-outer",
-			"getPos",
-			"setDish",
-			"getPos",
-			"pos:",
-			"localStorage.setItem(\"pos\""
+			"71"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -646,7 +673,7 @@
 		"show_context": true,
 		"use_buffer2": true,
 		"whole_word": false,
-		"wrap": true
+		"wrap": false
 	},
 	"groups":
 	[

@@ -35,69 +35,11 @@
 		}										
 	});		
 
-	angularRoutingApp.controller('ordenesController', function($scope,$location){
+	angularRoutingApp.controller('ordenesController', function($scope,$location){		
 		$(".links").attr("href","");
-		var LocsD = [],route=[],orders="",clas="",cont=0;
-
-		var coordinates= localData['coordinates'].split(',');
-		LocsD.push({
-			lat: coordinates[0], 
-			lon: coordinates[1],
-			title: 'Punto Inicial',
-			html: '<h3>Cocina Laureles</h3>',
-			icon: 'images/puntero_cocina.png',
-			visible: true
-		});
-		var data= ajaxrest.getOrders();
-
-		if(data.length>0){			
-			for(var j=0;j<data.length;j++){
-				cont+=1;
-				var coord= data[j].coordinates.split(',');
-				var ord=data[j].id_r;
-				var dir="";
-				if(data[j].address!=null && data[j].address!="")dir+=data[j].address+'. ';
-				if(data[j].type!=null && data[j].type!="")dir+=data[j].type+'. ';
-				if(data[j].num!=null && data[j].num!="")dir+=data[j].num+'. ';								
-				if(data[j].reference!=null && data[j].reference!="")dir+=data[j].reference+'. ';
-				LocsD.push({
-					lat: coord[0],
-					lon: coord[1],
-					title: 'Orden #'+cont,
-					html: '<h3>Orden # %index - ID# '+ord+' </h3>'+data[j].name+' '+data[j].lastname+'<br/>'+dir,
-					stopover: true,
-					visible: true,
-					icon: 'images/rastreo_'+cont+'.png'
-				});	
-			}
-		}else{
-			orders+='<div class="norecords">No existen ordenes asignadas para entregar!</div>';
-			localStorage.removeItem("routes");
-		}	
-		LocsD.push({
-			lat: coordinates[0], 
-			lon: coordinates[1],
-			title: 'Punto Final'
-		});
-
-		new Maplace({
-			locations: LocsD,
-			map_div: '#gmap-route',
-			generate_controls: true,
-			show_markers: false,
-			type: 'directions',
-			draggable: false,
-			directions_panel: '#route',
-			afterRoute: function(dist_time) {
-				/*$('#kms').text((dist_time[0]/1000));*/
-				$('#min').text(Math.round((dist_time[1]/60)));
-			}
-		}).Load();
-					
-		
-
-
-		$("#contenedor").html(orders);								
+		getOrdens();
+		setInterval(function(){ getOrdens(); }, 30000);
+		$(".pedidotar").css({"bottom":$(".menupie").height()+"px"});										
 	});	
 
 	angularRoutingApp.controller('mi_cuentaController', function($scope) {

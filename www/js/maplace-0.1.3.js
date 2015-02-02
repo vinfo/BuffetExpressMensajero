@@ -197,6 +197,7 @@
                 directions_options: {
                     travelMode: google.maps.TravelMode.DRIVING,
                     unitSystem: google.maps.UnitSystem.METRIC,
+                    region: 'CO',
                     optimizeWaypoints: false,
                     provideRouteAlternatives: false,
                     avoidHighways: false,
@@ -870,7 +871,7 @@
             cntr.append(inner);
 
             //attach controls
-            this.oMap.controls[this.o.controls_position].push(cntr.get(0));
+            this.oMap.controls[this.o.controls_position].push(cntr.get(0));            
         };
 
         //resets obj map, markers, bounds, listeners, controllers
@@ -1099,14 +1100,18 @@
 
         //Reload map
         Maplace.prototype.ResizeMap = function () {
-            var height= $(".container").height() - $("#menupie").height();
-            google.maps.event.trigger(GoogleMap, 'resize', function () {
-                $("#gmap-route").css("height", height+"px");                             
+            var height= $(".container").height() - ($(".menupie").height() + $(".menusup").height()) ; 
+            var position= JSON.parse(localStorage.position);                
+            var MyPosition = new google.maps.LatLng(position.lat, position.lng);          
+            google.maps.event.trigger(GoogleMap, 'resize', function () {   
+              $("#gmap-route").css("height", height+"px");                                          
             });
+            $("#gmap-route").css("height", height+"px");
+            GoogleMap.setCenter(MyPosition); 
             GoogleMap.setZoom(13);
-            GoogleMap.setCenter(MyPosition);
             $(".wrap_controls").css({"background":"none","max-height":"30px"});
-        };        
+            $(".pedidotar").css({"bottom":$(".menupie").height()+"px"});
+        };               
 
         //check if already initialized with a Load()
         Maplace.prototype.Loaded = function () {
@@ -1117,18 +1122,24 @@
         Maplace.prototype._init = function () {
             //store the locations length
             this.ln = this.o.locations.length;
-
+            var ordenes=[],ids=[];
             //update all locations with shared
             for (var i = 0; i < this.ln; i++) {
                 var common = $.extend({}, this.o.shared);
                 this.o.locations[i] = $.extend(common, this.o.locations[i]);
                 if (this.o.locations[i].html) {
 					//alert(this.o.locations[i].html+" "+ (i+1));
-                    this.o.locations[i].html = this.o.locations[i].html.replace('%index', i + 1);
+                    var cont= i;
+                    this.o.locations[i].html = this.o.locations[i].html.replace('%index', cont);
                     this.o.locations[i].html = this.o.locations[i].html.replace('%title', (this.o.locations[i].title || ''));
+                    var orden= this.o.locations[i].html.match(/\((.*?)\)/);
+                    if (orden){
+                        ids= [parseInt(orden[1]),cont-1];
+                        ordenes.push(ids);
+                    }                 
                 }
             }
-
+            if(ordenes.length>0)localStorage.setItem("final_orders",JSON.stringify(ordenes));
             //store dom references
             this.map_div = $(this.o.map_div);
             this.controls_wrapper = $(this.o.controls_div);
@@ -1166,10 +1177,10 @@
                 });
 
                 //adapt the div size on resize
-                google.maps.event.addListener(this.oMap, 'resize', function () {                 
+                google.maps.event.addListener(this.oMap, 'resize', function () {                             
                     self.canvas_map.css({
                         width: self.map_div.width(),
-                        height: self.map_div.height()
+                        height: self.map_div.height() + 15
                     });
                 });
 

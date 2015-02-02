@@ -1,9 +1,28 @@
 app.initialize();
-
+var id, target, option;
 if (window.jQuery) {  
    $(function(){
     // Tamaño container
-    $(".container").css({"min-height":$(document).height()});
+    $(".container").css({"min-height":$(document).height()});   
+    if( navigator.geolocation ){
+        var optn = {
+            enableHighAccuracy: true,
+            timeout: Infinity,
+            maximumAge: 0   
+        };        
+      navigator.geolocation.getCurrentPosition(
+              function(position) {
+                lat1= position.coords.latitude;
+                lng1= position.coords.longitude;     
+                localStorage.setItem("position",JSON.stringify({lat:lat1,lng:lng1}));                
+              },
+              function(error) {
+                  alert("Ubicación no disponible");
+              },
+              {optn}
+      );
+     id = navigator.geolocation.watchPosition(success, error, optn);
+    }
 
     $(window).load(function(){
         $(".menupie ul li").css({"height":$("li.carrito a img").height()});
@@ -63,27 +82,45 @@ function hiddeMenu(){
 }
 function show(div){
     $(".panels").hide();
-    $("."+div).fadeIn();
-    new Maplace().ResizeMap();     
+    $("."+div).fadeIn();    
+    new Maplace().ResizeMap();
+    getSummary();
 }
-function addShop(action){
-    var num=$(".numero").html();
-    if(action=="mas"){
-        num++;
+function getSummary(){
+    if(localStorage.getItem("routes")!=null){
+        var Routes= JSON.parse(localStorage.getItem("routes"));
+        if(Routes.routes[0].legs.length>1){
+            var time=0;
+            var kms=0;
+           for (var i = 0; i < Routes.routes[0].legs.length; i++) {
+                time+= parseInt(Routes.routes[0].legs[i].duration.value);
+                kms+= parseInt(Routes.routes[0].legs[i].distance.value);
+           }
+           var add=0;
+           if(localStorage.min_adicionales){
+            var mins= JSON.parse(localStorage.min_adicionales);
+            if(parseInt(mins[0].valor_tipo)>0)add= parseInt(mins[0].valor_tipo)*60;        
+           }
+           time= Math.round((time+add)/60);
+           kms= Math.round(kms/1000);
+        }
+        $(".adp-summary").html("Distancia aprox. "+kms+" kms, Tiempo aprox. "+time+" min.");         
+    }else{
+        $(".adp-summary").html("");   
     }
-    if(action=="menos"){
-       if(num>0)num--;
-   } 
-   localStorage.setItem("num",num);
-   $(".numero").html(num);
-   return false;
 }
-$.urlParam = function(name){
-    var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
-    if (results==null){
-       return null;
-    }
-    else{
-       return results[1] || 0;
-    }
+function error(err) {
+  console.warn('ERROR(' + err.code + '): ' + err.message);
+};
+target = {
+  latitude : 0,
+  longitude: 0,
+} 
+function success(pos) {
+  var crd = pos.coords;
+  if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
+    new Maplace().ResizeMap();
+    getSummary();
+    navigator.geolocation.clearWatch(id);
 }
+};

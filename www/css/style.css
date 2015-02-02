@@ -10,10 +10,13 @@ a img
 .panels{
 	display: none;
 }
+.notificaciones{
+	margin-top: 45px;
+}
 .adp-summary{
     height: 20px;
     position: absolute;
-    text-align: left;
+    text-align: right;
     top: 50px;
     width: 100%;
 }
@@ -43,6 +46,14 @@ a img
 	margin: 0px;
 	overflow: auto;
 	min-width: 317px;
+}
+.norecords{
+    background-color: white;
+    font-size: 18px;
+    font-weight: bold;
+    height: 400px;
+    padding-top: 80px;
+    text-align: center;
 }
 .inicio
 {
@@ -1040,6 +1051,10 @@ max-width:20%;*/
 {
 	padding-right: 30px;
 }
+.facturavir .vrdirc ul
+{
+	padding-left:40px;
+}
 .facturavir .vrdirc label.checkbox
 {
 	font-size: 16px;
@@ -1074,21 +1089,21 @@ max-width:20%;*/
 .facturavir .vrdirc .rechazado
 {
 	background:red;
-	width: 30%;
+	width: 140px;
 	float: left;
 	margin: 4px;
 }
 .facturavir .vrdirc .notificar
 {
 	background:#7F7F7F;
-	width: 30%;
+	width: 140px;
 	float: left;	
 	margin: 4px;
 }
 .facturavir .vrdirc .entregado
 {
 	background:green;
-	width: 30%;
+	width: 140px;
 	float: left;	
 	margin: 4px;
 }
@@ -1481,9 +1496,9 @@ max-width:20%;*/
 .felicitation h1{
 	background: #313131;
 	color: #FFF;
-	font-size: 30px;
+	font-size: 20px;
 	margin: 0;
-	padding: 10px 0px;
+	padding: 10px 10px;
 	border-radius: 15px 15px 0 0;
 }
 .felicitation .feli_re{
