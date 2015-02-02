@@ -82,7 +82,8 @@ function hiddeMenu(){
 }
 function show(div){
     $(".panels").hide();
-    $("."+div).fadeIn();    
+    $("."+div).show();
+    alert(div);  
     new Maplace().ResizeMap();
     getSummary();
 }
