@@ -80,10 +80,10 @@ if (window.jQuery) {
 function hiddeMenu(){
     $(".latermenu").animate({"left":-412},200);
 }
-function show(div){
+function showDiv(div){
     $(".panels").hide();
     $("."+div).show();
-    alert(div);  
+     
     new Maplace().ResizeMap();
     getSummary();
 }

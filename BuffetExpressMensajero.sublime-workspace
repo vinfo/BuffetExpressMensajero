@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"ba",
+				"background-color"
+			],
+			[
+				"pa",
+				"padding-bottom"
+			],
+			[
+				"max",
+				"max-height"
+			],
+			[
 				"di",
 				"display"
 			],
@@ -24,20 +36,12 @@
 				"LocsD"
 			],
 			[
-				"ba",
-				"backgroundColor"
-			],
-			[
 				"n",
 				"transparent"
 			],
 			[
 				"ma",
 				"margin-bottom"
-			],
-			[
-				"pa",
-				"paddingRight"
 			],
 			[
 				"co",
@@ -102,10 +106,6 @@
 			[
 				"pos",
 				"position"
-			],
-			[
-				"max",
-				"max-width"
 			],
 			[
 				"nam",
@@ -346,21 +346,22 @@
 	"expanded_folders":
 	[
 		"/D/Movilidad/BuffetExpressMensajero",
-		"/D/Movilidad/BuffetExpressMensajero/www"
+		"/D/Movilidad/BuffetExpressMensajero/www",
+		"/D/Movilidad/BuffetExpressMensajero/www/templates"
 	],
 	"file_history":
 	[
-		"/D/Movilidad/BuffetExpressMensajero/www/js/internal.js",
-		"/D/Movilidad/BuffetExpressMensajero/www/js/maplace-0.1.3.js",
-		"/D/Movilidad/BuffetExpressMensajero/www/js/index.js",
-		"/D/Movilidad/BuffetExpressPhoneGap/www/js/main.js",
-		"/D/Movilidad/BuffetExpressMensajero/www/js/main.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/templates/ordenes.html",
 		"/D/Movilidad/BuffetExpressMensajero/www/css/style.css",
+		"/D/Movilidad/BuffetExpressMensajero/www/js/main.js",
+		"/D/Movilidad/BuffetExpressMensajero/www/js/maplace-0.1.3.js",
+		"/D/Movilidad/BuffetExpressMensajero/www/js/internal.js",
+		"/D/Movilidad/BuffetExpressMensajero/www/internal.html",
+		"/D/Movilidad/BuffetExpressMensajero/www/js/index.js",
+		"/D/Movilidad/BuffetExpressPhoneGap/www/js/main.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/js/angular.min.js",
 		"/C/Users/odc/Desktop/test/Rutas.html",
 		"/D/Movilidad/BuffetExpressMensajero/www/templates/notificaciones.html",
-		"/D/Movilidad/BuffetExpressMensajero/www/internal.html",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/internal.html",
 		"/C/Users/odc/Desktop/test/Worker.html",
 		"/C/Users/odc/Desktop/test/HelloWebWorkers_EN.js",
@@ -498,6 +499,23 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"Rechazado",
+			"class=\"btns\"",
+			"class=\"btns\">",
+			"getOrdens()",
+			"new Maplace()",
+			"directions",
+			"createMarker",
+			"GoogleMap",
+			"ResizeMap",
+			"GoogleMap",
+			"ResizeMap",
+			"Rechazado_",
+			"showDiv",
+			".menupie",
+			".menupie ul li a img",
+			"show('",
+			"show(\"",
 			"CenterMap",
 			"MyPosition",
 			"getSummary(",
@@ -608,24 +626,7 @@
 			"createMarker",
 			"createKML",
 			"add_markers_to_objMap",
-			"marker",
-			"create_objMap",
-			"activateCurrent",
-			"new google.maps.Map",
-			"initialize",
-			"logo_pno",
-			"pagoController",
-			"coordinates",
-			"pagoController",
-			"position",
-			"pagoController",
-			"SendPay",
-			"alert",
-			"fcode",
-			"setDish",
-			"getItemsxDish(",
-			"SendPay",
-			"71"
+			"marker"
 		],
 		"highlight": true,
 		"in_selection": false,

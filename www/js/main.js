@@ -38,7 +38,16 @@
 	angularRoutingApp.controller('ordenesController', function($scope,$location){		
 		$(".links").attr("href","");
 		getOrdens();
-		setInterval(function(){ getOrdens(); }, 30000);
+		setInterval(function(){
+			getOrdens();
+		}, 30000);
+		setInterval(function(){
+			getPosition();
+			if(localStorage.position!=localStorage.position2){
+				ajaxrest.setTracking();
+				localStorage.setItem("position",localStorage.position2);
+			}
+		}, 60000);
 		$(".pedidotar").css({"bottom":$(".menupie").height()+"px"});										
 	});	
 
