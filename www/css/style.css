@@ -1039,8 +1039,8 @@ max-width:20%;*/
 }
 .facturavir .vrdirc .btns
 {
-	width: 50%;
-    margin: 0 auto;
+	width: 100%;
+    text-align: center;
 }
 .facturavir .vrdirc .general
 {
@@ -1099,21 +1099,21 @@ max-width:20%;*/
 .facturavir .vrdirc .rechazado
 {
 	background:red;
-	width: 140px;
+	width: auto;
 	float: left;
 	margin: 4px;
 }
 .facturavir .vrdirc .notificar
 {
 	background:#7F7F7F;
-	width: 140px;
+	width:auto;
 	float: left;	
 	margin: 4px;
 }
 .facturavir .vrdirc .entregado
 {
 	background:green;
-	width: 140px;
+	width:auto;
 	float: left;	
 	margin: 4px;
 }
@@ -1437,7 +1437,7 @@ max-width:20%;*/
 .datos_perfil{
 	position: relative;
 	width: 90%;
-	margin: 0 auto;
+	margin: 10px auto 80px;
 	margin-bottom:60px;
 	padding-bottom: 20px;
 }
@@ -1467,8 +1467,7 @@ max-width:20%;*/
 .datos_perfil .detallesitos{
 	background: #FFF;
 	text-align: left;
-	padding: 10px;
-	padding-left:20px;
+	padding: 10px 10px 40px 20px;
 	border-radius: 0 0 15px 15px;
 }
 .datos_perfil h1{

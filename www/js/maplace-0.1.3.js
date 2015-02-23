@@ -290,7 +290,7 @@
                         height: '100%'
                     }).appendTo(this.map_div);
 
-                    this.oMap = new google.maps.Map(this.canvas_map.get(0), this.o.map_options);                    
+                    this.oMap = new google.maps.Map(this.canvas_map.get(0), this.o.map_options);                                      
 
                     this.createMarker(MyPosition,title);
                     this.createKML(localStorage.getItem("domain")+'resources/kmls/zona_total.kml');
@@ -1102,13 +1102,17 @@
         Maplace.prototype.ResizeMap = function () {
             var height= $(".container").height() - ($(".menupie").height() + $(".menusup").height()) ; 
             var position= JSON.parse(localStorage.position);                
-            var MyPosition = new google.maps.LatLng(position.lat, position.lng);          
-            google.maps.event.trigger(GoogleMap, 'resize', function () {   
-              $("#gmap-route").css("height", height+"px");                                          
-            });
-            $("#gmap-route").css("height", height+"px");
-            GoogleMap.setCenter(MyPosition); 
-            GoogleMap.setZoom(13);
+            var MyPosition = new google.maps.LatLng(position.lat, position.lng); 
+            if(GoogleMap!=false){
+                google.maps.event.trigger(GoogleMap, 'resize', function () {   
+                  $("#gmap-route").css("height", height+"px");                                          
+                });
+                $("#gmap-route").css("height", height+"px");
+
+                GoogleMap.setCenter(MyPosition); 
+                GoogleMap.setZoom(13);
+            }  
+
             $(".wrap_controls").css({"background":"none","max-height":"30px"});
             $(".pedidotar").css({"bottom":$(".menupie").height()+"px"});
         };               

@@ -36,8 +36,9 @@
 	});		
 
 	angularRoutingApp.controller('ordenesController', function($scope,$location){		
-		$(".links").attr("href","");
-		getOrdens();
+		$(".links").attr("href","");		
+		setTimeout(function(){ getOrdens(); }, 1000);
+		setTimeout(function(){ getOrdens(); }, 5000);		
 		setInterval(function(){
 			getOrdens();
 		}, 30000);
@@ -48,11 +49,13 @@
 				localStorage.setItem("position",localStorage.position2);
 			}
 		}, 60000);
-		$(".pedidotar").css({"bottom":$(".menupie").height()+"px"});										
+		$(".pedidotar").css({"bottom":$(".menupie").height()+"px"});
+		new Maplace().ResizeMap();
 	});	
 
 	angularRoutingApp.controller('mi_cuentaController', function($scope) {
 		$(".links").attr("href","internal.html");
+		$(".latermenu").animate({"left":-412},200);
 		$scope.changeRoute = function(url, forceReload) {
 			$scope = $scope || angular.element(document).scope();
 			if(forceReload || $scope.$$phase) {

@@ -46,7 +46,11 @@ angularRoutingApp.controller('loginController', function($scope, $location,$rout
 	},
 	$scope.hiddeMenu = function () {
 		hiddeMenu();
-	}	
+	}
+	var cuenta= localStorage.cuenta;
+	if(cuenta){
+		window.location = "internal.html";
+	}
 });
 
 angularRoutingApp.controller('cuentaController', function($scope) {
