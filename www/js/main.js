@@ -36,12 +36,11 @@
 	});		
 
 	angularRoutingApp.controller('ordenesController', function($scope,$location){		
-		$(".links").attr("href","");		
-		setTimeout(function(){ getOrdens(); }, 1000);
+		$(".links").attr("href","");			
 		setTimeout(function(){ getOrdens(); }, 5000);		
 		setInterval(function(){
 			getOrdens();
-		}, 30000);
+		}, 15000);
 		setInterval(function(){
 			getPosition();
 			if(localStorage.position!=localStorage.position2){
@@ -49,8 +48,9 @@
 				localStorage.setItem("position",localStorage.position2);
 			}
 		}, 60000);
-		$(".pedidotar").css({"bottom":$(".menupie").height()+"px"});
-		new Maplace().ResizeMap();
+		$(".pedidotar").css({"bottom":$(".menupie").height()+"px"});	
+		localStorage.setItem("request","true");		
+		getSummary();
 	});	
 
 	angularRoutingApp.controller('mi_cuentaController', function($scope) {

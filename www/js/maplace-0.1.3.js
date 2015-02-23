@@ -1100,19 +1100,19 @@
 
         //Reload map
         Maplace.prototype.ResizeMap = function () {
-            var height= $(".container").height() - ($(".menupie").height() + $(".menusup").height()) ; 
-            var position= JSON.parse(localStorage.position);                
-            var MyPosition = new google.maps.LatLng(position.lat, position.lng); 
-            if(GoogleMap!=false){
-                google.maps.event.trigger(GoogleMap, 'resize', function () {   
-                  $("#gmap-route").css("height", height+"px");                                          
-                });
-                $("#gmap-route").css("height", height+"px");
-
-                GoogleMap.setCenter(MyPosition); 
-                GoogleMap.setZoom(13);
-            }  
-
+            var height= $(".container").height() - ($(".menupie").height() + $(".menusup").height());
+            if(localStorage.position){
+                 var position= JSON.parse(localStorage.position);                
+                 var MyPosition = new google.maps.LatLng(position.lat, position.lng); 
+                 if(GoogleMap!=false){                
+                    $("#gmap-route").css("height", height+"px");
+                    GoogleMap.setCenter(MyPosition); 
+                    GoogleMap.setZoom(13);                
+                    google.maps.event.trigger(GoogleMap, 'resize', function () {
+                      $("#gmap-route").css("height", height+"px");                                          
+                  });
+                }
+            } 
             $(".wrap_controls").css({"background":"none","max-height":"30px"});
             $(".pedidotar").css({"bottom":$(".menupie").height()+"px"});
         };               
