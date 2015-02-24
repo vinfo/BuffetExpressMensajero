@@ -37,10 +37,10 @@
 
 	angularRoutingApp.controller('ordenesController', function($scope,$location){		
 		$(".links").attr("href","");			
-		setTimeout(function(){ getOrdens(); }, 5000);		
+		setTimeout(function(){ getOrdens(); }, 2000);		
 		setInterval(function(){
 			getOrdens();
-		}, 15000);
+		}, 30000);
 		setInterval(function(){
 			getPosition();
 			if(localStorage.position!=localStorage.position2){

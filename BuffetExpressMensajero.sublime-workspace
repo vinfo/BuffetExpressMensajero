@@ -346,11 +346,11 @@
 	"expanded_folders":
 	[
 		"/D/Movilidad/BuffetExpressMensajero",
-		"/D/Movilidad/BuffetExpressMensajero/www",
-		"/D/Movilidad/BuffetExpressMensajero/www/js"
+		"/D/Movilidad/BuffetExpressMensajero/www"
 	],
 	"file_history":
 	[
+		"/D/Movilidad/BuffetExpressPhoneGap/www/internal.html",
 		"/D/Movilidad/BuffetExpressMensajero/www/js/main.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/css/style.css",
 		"/D/Movilidad/BuffetExpressMensajero/www/js/maplace-0.1.3.js",
@@ -370,7 +370,6 @@
 		"/D/Movilidad/BuffetExpressPhoneGap/www/js/main.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/js/angular.min.js",
 		"/C/Users/odc/Desktop/test/Rutas.html",
-		"/D/Movilidad/BuffetExpressPhoneGap/www/internal.html",
 		"/C/Users/odc/Desktop/test/Worker.html",
 		"/C/Users/odc/Desktop/test/HelloWebWorkers_EN.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/js/worker_orders.js",

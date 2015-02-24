@@ -1244,8 +1244,8 @@ max-width:20%;*/
 {
 	background: url(../images/bg_menu_lateral.png);
 	position: absolute;
-	left: -120px;	
-	max-width: 120px;
+	left: -412px;	
+	max-width: 412px;
 	width: 50%;
 	z-index: 500;
 }
@@ -1262,7 +1262,7 @@ max-width:20%;*/
 .latermenu .tr .td
 {
 	float: left;
-	width: 100%;
+	width: 50%;
 	text-align: center;
 	padding-top: 1%;
 	padding-bottom: 1%;
@@ -2105,3 +2105,4 @@ img.btn:hover{
 				width: 100%;
 			}
 		}
+
