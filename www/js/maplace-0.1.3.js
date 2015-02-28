@@ -18,10 +18,10 @@
         html_ullist,
         Maplace;
 
-        var cuenta= JSON.parse(localStorage.cuenta);
-        var title= cuenta.names;
-        var position= JSON.parse(localStorage.position);               
-        var MyPosition = new google.maps.LatLng(position.lat, position.lng);        
+    var cuenta= JSON.parse(localStorage.cuenta);
+    var title= cuenta.names;
+    var position= JSON.parse(localStorage.position);               
+    var MyPosition = new google.maps.LatLng(position.lat, position.lng);        
 
 
     //dropdown menu type
@@ -300,7 +300,7 @@
                     var homeControl = new this.HomeControl(homeControlDiv, this.oMap);
                     homeControlDiv.index = 9999999;
                     this.oMap.controls[google.maps.ControlPosition.TOP_RIGHT].push(homeControlDiv);
-                    GoogleMap= this.oMap;                          
+                    GoogleMap= this.oMap;                    
 
                 } catch (err) {
                     this.debug('create_objMap::' + this.map_div.selector, err.toString());
@@ -387,7 +387,7 @@
             controlUI.appendChild(controlText);
 
             google.maps.event.addDomListener(controlUI, 'click', function() {
-                map.setCenter(MyPosition)
+                map.setCenter(MyPosition);
             });   
         };                         
 
@@ -445,7 +445,7 @@
             google.maps.event.addListener(marker, 'click', function (ev) {
                 self.o.beforeShow(index, point, marker);
 
-                //show infowindow?							
+                //show infowindow?                          
                 //if (self.o.show_infowindows && (point.show_infowindow === false ? false : true)) {
                     self.open_infowindow(index, marker, ev);
                 //}
@@ -601,7 +601,7 @@
 
                 //create the marker and add click event
                 marker = new google.maps.Marker(point);
-				this.add_markerEv(index, point, marker);
+                this.add_markerEv(index, point, marker);
                 
                 //extends bounds with this location
                 this.oBounds.extend(point.position);
@@ -751,7 +751,7 @@
                             location: point.position,
                             stopover: stopover
                         });
-                    }					
+                    }                   
                     this.create.marker.call(this, a, point);
                     cont++;
                 }
@@ -784,8 +784,9 @@
                     //directions found
                     if (status === google.maps.DirectionsStatus.OK) {
                         dist_time = self.calc_dist_time(result);                               
-						localStorage.setItem("routes",JSON.stringify(result));
+                        localStorage.setItem("routes",JSON.stringify(result));
                         self.directionsDisplay.setDirections(result);
+                        getOrdens();
                     }
                     self.o.afterRoute(dist_time, status, result);
                 });
@@ -809,8 +810,8 @@
 
         //wrapper for the infowindow types
         Maplace.prototype.type_to_open = {
-            //google default infowindow			
-            bubble: function (location) {				
+            //google default infowindow         
+            bubble: function (location) {               
                 this.infowindow = new google.maps.InfoWindow({
                     content: location.html || ''
                 });
@@ -824,7 +825,7 @@
             var point = this.o.locations[index],
                 type = this.o.infowindow_type;
 
-            //show if content and valid infowindow type provided			
+            //show if content and valid infowindow type provided            
             if (point.html && this.type_to_open[type]) {
                 this.o.beforeOpenInfowindow(index, point, marker);
                 this.type_to_open[type].call(this, point);
@@ -1100,19 +1101,19 @@
 
         //Reload map
         Maplace.prototype.ResizeMap = function () {
-            var height= $(".container").height() - ($(".menupie").height() + $(".menusup").height());
             if(localStorage.position){
                  var position= JSON.parse(localStorage.position);                
                  var MyPosition = new google.maps.LatLng(position.lat, position.lng); 
-                 if(GoogleMap!=false){                
-                    $("#gmap-route").css("height", height+"px");
-                    GoogleMap.setCenter(MyPosition); 
-                    GoogleMap.setZoom(13);                
+                 if(GoogleMap!=false){   
+                    GoogleMap.setZoom(13);
+                    GoogleMap.setCenter(MyPosition);
                     google.maps.event.trigger(GoogleMap, 'resize', function () {
                       $("#gmap-route").css("height", height+"px");                                          
                   });
                 }
-            } 
+            }
+            var height= $(".container").height() - ($(".menupie").height() + $(".menusup").height());
+            $("#gmap-route").css("height", height+"px"); 
             $(".wrap_controls").css({"background":"none","max-height":"30px"});
             $(".pedidotar").css({"bottom":$(".menupie").height()+"px"});
         };               
@@ -1132,7 +1133,7 @@
                 var common = $.extend({}, this.o.shared);
                 this.o.locations[i] = $.extend(common, this.o.locations[i]);
                 if (this.o.locations[i].html) {
-					//alert(this.o.locations[i].html+" "+ (i+1));
+                    //alert(this.o.locations[i].html+" "+ (i+1));
                     var cont= i;
                     this.o.locations[i].html = this.o.locations[i].html.replace('%index', cont);
                     this.o.locations[i].html = this.o.locations[i].html.replace('%title', (this.o.locations[i].title || ''));
