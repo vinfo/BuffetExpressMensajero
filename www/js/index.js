@@ -22,10 +22,10 @@ function startApp() {
                 redirect();
               },
               function(error) {
-                  alert("Ubicación no disponible.");
-                  redirect();
+                  alert("Problemas procesando datos.");
+                  location.reload();
               },
-              {timeout: 30000, enableHighAccuracy: true, maximumAge: 75000}
+              {timeout: 40000, enableHighAccuracy: true, maximumAge: 75000}
       );
   }else{
     alert("Geolocalización no soportada en dispositivo!");

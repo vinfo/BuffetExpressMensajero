@@ -32,7 +32,13 @@
 			localStorage.removeItem("cuenta");
 			$scope.mi_cuenta="login.html";
 			window.location = "login.html";	
-		}										
+		},
+		$scope.cleanRoutes = function () {
+			$(".latermenu").animate({"left":-412},200);
+			ajaxrest.cleanRoutes();
+			alert("Mensajero liberado de ruta");
+			getRoutes();
+		}												
 	});		
 
 	angularRoutingApp.controller('ordenesController', function($scope,$location){		
@@ -43,8 +49,8 @@
 			if(localStorage.position!=localStorage.position2){
 				ajaxrest.setTracking();
 				localStorage.setItem("position",localStorage.position2);
-			}
-		}, 60000);
+			}			
+		}, 30000);
 		$(".pedidotar").css({"bottom":$(".menupie").height()+"px"});	
 		localStorage.setItem("request","true");
 		//setTimeout(function(){ getOrdens(); }, 5000);	
