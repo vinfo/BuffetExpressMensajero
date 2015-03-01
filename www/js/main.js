@@ -44,12 +44,13 @@
 	angularRoutingApp.controller('ordenesController', function($scope,$location){		
 		$(".links").attr("href","");			
 		getRoutes();
-		setInterval(function(){
+		setInterval(function(){			
 			getPosition();
 			if(localStorage.position!=localStorage.position2){
 				ajaxrest.setTracking();
-				localStorage.setItem("position",localStorage.position2);
-			}			
+				if(localStorage.position2)localStorage.setItem("position",localStorage.position2);
+				new Maplace().ResizeMap();								
+			}						
 		}, 30000);
 		$(".pedidotar").css({"bottom":$(".menupie").height()+"px"});	
 		localStorage.setItem("request","true");

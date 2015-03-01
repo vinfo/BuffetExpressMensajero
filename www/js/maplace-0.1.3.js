@@ -1101,14 +1101,20 @@
 
         //Reload map
         Maplace.prototype.ResizeMap = function () {
-            if(localStorage.position){
+            if(localStorage.position && localStorage.position!=null){
                  var position= JSON.parse(localStorage.position);                
                  var MyPosition = new google.maps.LatLng(position.lat, position.lng); 
-                 if(GoogleMap!=false){   
-                    GoogleMap.setZoom(13);
-                    GoogleMap.setCenter(MyPosition);
+                 if(GoogleMap!=false){  
+				   var marker = new google.maps.Marker({
+						map: GoogleMap,
+						position: MyPosition,
+						title: "Mi Ubicación",
+						icon: 'images/puntero_dom.png'
+					}); 					
+					GoogleMap.setCenter(MyPosition);
+					GoogleMap.setZoom(13);
                     google.maps.event.trigger(GoogleMap, 'resize', function () {
-                      $("#gmap-route").css("height", height+"px");                                          
+                      $("#gmap-route").css("height", height+"px");        
                   });
                 }
             }
