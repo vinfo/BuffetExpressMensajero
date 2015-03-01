@@ -36,7 +36,7 @@
 		$scope.cleanRoutes = function () {
 			$(".latermenu").animate({"left":-412},200);
 			ajaxrest.cleanRoutes();
-			alert("Mensajero liberado de ruta");
+			alert("Domiciliario liberado de ruta");
 			getRoutes();
 		}												
 	});		
