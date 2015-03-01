@@ -4,7 +4,7 @@ if (window.jQuery) {
    $(function(){
     // Tamaño container  
     $(".container").css({"min-height":$(document).height()});   
-/*    if( navigator.geolocation ){
+    if( navigator.geolocation ){
         var optn = {
             enableHighAccuracy: true,
             timeout: Infinity,
@@ -15,14 +15,13 @@ if (window.jQuery) {
                 lat1= position.coords.latitude;
                 lng1= position.coords.longitude;     
                 localStorage.setItem("position",JSON.stringify({lat:lat1,lng:lng1}));
-                alert(2);               
               },
               function(error) {
                   alert("Ubicación no disponible");
               }
       );
      id = navigator.geolocation.watchPosition(success, error, optn);
-    }*/
+    }
 
     $(window).load(function(){
         $(".menupie ul li").css({"height":$("li.carrito a img").height()});
