@@ -21,8 +21,8 @@
     var cuenta= JSON.parse(localStorage.cuenta);
     var title= cuenta.names;
     var position= JSON.parse(localStorage.position);               
-    var MyPosition = new google.maps.LatLng(position.lat, position.lng);        
-
+    var MyPosition = new google.maps.LatLng(position.lat, position.lng);
+	var markersArray = [];
 
     //dropdown menu type
     html_dropdown = {
@@ -346,12 +346,12 @@
 
         //Establecer marker domiciliario
         Maplace.prototype.createMarker = function (MyPosition,title) {
-           var marker = new google.maps.Marker({
+/*           var marker = new google.maps.Marker({
                 map: this.oMap,
                 position: MyPosition,
                 title: title,
                 icon: 'images/puntero_dom.png'
-            }); 
+            });*/ 
         };
 
         //Establecer Kmls
@@ -1099,18 +1099,26 @@
             return this;
         };
 
-        //Reload map
+        //Reload map		
         Maplace.prototype.ResizeMap = function () {
             if(localStorage.position && localStorage.position!=null){
                  var position= JSON.parse(localStorage.position);                
                  var MyPosition = new google.maps.LatLng(position.lat, position.lng); 
-                 if(GoogleMap!=false){  
+                 if(GoogleMap!=false){	
+				   if(markersArray.length>0){
+					  for (var i = 0; i < markersArray.length; i++ ) {
+						markersArray[i].setMap(null);
+					  }
+					  markersArray.length = 0;					   
+				   }
 				   var marker = new google.maps.Marker({
 						map: GoogleMap,
 						position: MyPosition,
 						title: "Mi Ubicación",
 						icon: 'images/puntero_dom.png'
-					}); 					
+					});							
+					markersArray.push(marker);
+												
 					GoogleMap.setCenter(MyPosition);
 					GoogleMap.setZoom(13);
                     google.maps.event.trigger(GoogleMap, 'resize', function () {

@@ -45,12 +45,9 @@
 		$(".links").attr("href","");			
 		getRoutes();
 		setInterval(function(){			
-			getPosition();
-			if(localStorage.position!=localStorage.position2){
-				ajaxrest.setTracking();
-				if(localStorage.position2)localStorage.setItem("position",localStorage.position2);
-				new Maplace().ResizeMap();								
-			}						
+			getPosition();			
+			ajaxrest.setTracking();
+			new Maplace().ResizeMap();
 		}, 30000);
 		$(".pedidotar").css({"bottom":$(".menupie").height()+"px"});	
 		localStorage.setItem("request","true");
