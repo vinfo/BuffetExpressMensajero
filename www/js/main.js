@@ -33,21 +33,34 @@
 			$scope.mi_cuenta="login.html";
 			window.location = "login.html";	
 		},
-		$scope.cleanRoutes = function () {
-			$(".latermenu").animate({"left":-412},200);
-			ajaxrest.cleanRoutes();
-			alert("Domiciliario liberado de ruta");
-			getRoutes();
+		$scope.cleanRoutes = function () {			
+			var conf= confirm("Esta seguro que desea liberar la ruta?");
+			if(conf){
+				ajaxrest.cleanRoutes();
+				alert("Domiciliario liberado de ruta");
+				localStorage.setItem("num_ordenes",JSON.stringify({route:0,num:0}));
+				getRoutes();
+			}
+			$(".latermenu").animate({"left":-412},200);			
 		}												
 	});		
 
 	angularRoutingApp.controller('ordenesController', function($scope,$location){		
 		$(".links").attr("href","");			
-		getRoutes();
-		setInterval(function(){			
-			getPosition();			
-			ajaxrest.setTracking();
-			new Maplace().ResizeMap();
+		getRoutes();		
+		setInterval(function(){
+			var num_orders= JSON.parse(localStorage.num_ordenes);
+			var getOrders = ajaxrest.getOrders();
+			if(getOrders.length>0 && getOrders.length!=num_orders.num)getRoutes();			
+			
+			getPosition();
+			var pos1= JSON.parse(localStorage.position);
+			var pos2= JSON.parse(localStorage.position2);
+			if(pos1["lat"].toString().substring(0,6)  != pos2["lat"].toString().substring(0,6)){
+				ajaxrest.setTracking();
+				if(localStorage.position2)localStorage.setItem("position",localStorage.position2);
+				new Maplace().ResizeMap();								
+			}
 		}, 30000);
 		$(".pedidotar").css({"bottom":$(".menupie").height()+"px"});	
 		localStorage.setItem("request","true");

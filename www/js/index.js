@@ -4,6 +4,7 @@ startApp();
 function startApp() {  
   //alert("startApp");
   localStorage.removeItem("position");
+  localStorage.removeItem("num_ordenes");
   localStorage.removeItem("routes");
   localStorage.removeItem("ruta");
   localStorage.setItem("domain","http://buffetexpress.co/REST/");  

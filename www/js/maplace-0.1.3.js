@@ -290,7 +290,10 @@
                         height: '100%'
                     }).appendTo(this.map_div);
 
-                    this.oMap = new google.maps.Map(this.canvas_map.get(0), this.o.map_options);                                      
+                    this.oMap = new google.maps.Map(this.canvas_map.get(0), this.o.map_options);   
+					this.oMap.setZoom(13);					
+					this.oMap.setCenter(MyPosition);
+					                                   
 
                     this.createMarker(MyPosition,title);
                     this.createKML(localStorage.getItem("domain")+'resources/kmls/zona_total.kml');
@@ -300,8 +303,9 @@
                     var homeControl = new this.HomeControl(homeControlDiv, this.oMap);
                     homeControlDiv.index = 9999999;
                     this.oMap.controls[google.maps.ControlPosition.TOP_RIGHT].push(homeControlDiv);
-                    GoogleMap= this.oMap;                    
-
+                    GoogleMap= this.oMap;
+					GoogleMap.setZoom(13);					
+					GoogleMap.setCenter(MyPosition);					
                 } catch (err) {
                     this.debug('create_objMap::' + this.map_div.selector, err.toString());
                 }
@@ -838,7 +842,6 @@
         Maplace.prototype.get_html_controls = function () {
             if (this.controls[this.o.controls_type] && this.controls[this.o.controls_type].getHtml) {
                 this.current_control = this.controls[this.o.controls_type];
-
                 return this.current_control.getHtml.apply(this);
             }
             return '';
@@ -1103,8 +1106,11 @@
         Maplace.prototype.ResizeMap = function () {
             if(localStorage.position && localStorage.position!=null){
                  var position= JSON.parse(localStorage.position);                
-                 var MyPosition = new google.maps.LatLng(position.lat, position.lng); 
+                 var MyPosition = new google.maps.LatLng(position.lat, position.lng);
+				 
                  if(GoogleMap!=false){	
+				   GoogleMap.setCenter(MyPosition);
+				   GoogleMap.setZoom(14);
 				   if(markersArray.length>0){
 					  for (var i = 0; i < markersArray.length; i++ ) {
 						markersArray[i].setMap(null);
@@ -1118,12 +1124,12 @@
 						icon: 'images/puntero_dom.png'
 					});							
 					markersArray.push(marker);
-												
-					GoogleMap.setCenter(MyPosition);
-					GoogleMap.setZoom(13);
-                    google.maps.event.trigger(GoogleMap, 'resize', function () {
-                      $("#gmap-route").css("height", height+"px");        
-                  });
+										
+				  google.maps.event.trigger(GoogleMap, 'resize', function () {
+					  $("#gmap-route").css("height", height+"px");
+					  GoogleMap.setZoom(13);					
+					  GoogleMap.setCenter(MyPosition);					          
+				  });
                 }
             }
             var height= $(".container").height() - ($(".menupie").height() + $(".menusup").height());

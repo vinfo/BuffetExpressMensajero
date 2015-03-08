@@ -49,7 +49,7 @@ target = {
 function success(pos) {
   var crd = pos.coords;
   if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
-    new Maplace().ResizeMap();
+	new Maplace().ResizeMap();
     getSummary();
     navigator.geolocation.clearWatch(id);
 }
