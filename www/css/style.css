@@ -1039,9 +1039,8 @@ max-width:20%;*/
 }
 .facturavir .vrdirc .btns
 {
-	width:50%;
-	margin:0 auto;
 	text-align:center;
+	padding-top:10px;
 }
 .facturavir .vrdirc .general
 {
@@ -1100,19 +1099,22 @@ max-width:20%;*/
 {
 	background:red;
 	margin: 0 auto;
-	max-width:33%;
+	max-width:33.3%;
+	float:left;
 }
 .facturavir .vrdirc .notificar
 {
 	background:#7F7F7F;
 	margin: 0 auto;
-	max-width:33%;
+	max-width:33.3%;
+	float:left;
 }
 .facturavir .vrdirc .entregado
 {
 	background:green;
 	margin: 0 auto;
-	max-width:33%;
+	max-width:33.3%;
+	float:left;
 }
 .facturavir .vrdirc .listdirecc
 {
