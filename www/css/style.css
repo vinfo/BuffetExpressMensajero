@@ -183,7 +183,7 @@ a.btn-reset{
 }
 .menusup
 {
-	background: #057797;
+	background: #474747;
 	/*min-width: 532px;*/
 	width: 100%;
 	position: fixed;
@@ -204,11 +204,11 @@ a.btn-reset{
 }
 .menusup button:hover
 {
-	background: #01425f;
+	background: #333333;
 }
 .menusup button.active
 {
-	background: #01425f;
+	background: #333333;
 }
 .menusup button.ico-menu
 {
@@ -336,7 +336,7 @@ a.btn-reset{
 }
 .menupie
 {
-	background: #057797;
+	background: #474747;
 	position: fixed;
 	bottom: 0px;
 	left: 0px;
@@ -364,13 +364,14 @@ a.btn-reset{
 }
 .menupie ul li:hover
 {
-	background: #01425f;
+	background: #333333;
 }
 .menupie ul li a img
 {
 	width: 100%;
 	max-width: 77px;
-	padding-bottom: 2px;
+	padding-bottom: 3px;
+	padding-bottom: 3px;
 }
 .menupie ul li.carrito a img
 {
@@ -390,7 +391,7 @@ a.btn-reset{
 }
 .menupie ul li.active
 {
-	background: #01425f;
+	background: #333333;
 }
 .menuplato
 {

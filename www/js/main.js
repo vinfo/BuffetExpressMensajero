@@ -73,7 +73,7 @@
 				new Maplace().ResizeMap();
 				getRoutes();							
 			}
-		},30000);
+		},15000);
 		$(".pedidotar").css({"bottom":$(".menupie").height()+"px"});	
 		localStorage.setItem("request","true");
 		//setTimeout(function(){ getOrdens(); }, 5000);	
