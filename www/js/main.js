@@ -42,26 +42,38 @@
 				getRoutes();
 			}
 			$(".latermenu").animate({"left":-412},200);			
-		}												
+		},
+		$scope.refreshOrders = function () {			
+			ajaxrest.getOrders();
+			getRoutes();
+			$(".latermenu").animate({"left":-412},200);
+		}														
 	});		
 
-	angularRoutingApp.controller('ordenesController', function($scope,$location){		
+	angularRoutingApp.controller('ordenesController', function($scope,$location,$interval){		
 		$(".links").attr("href","");			
 		getRoutes();		
-		setInterval(function(){
-			var num_orders= JSON.parse(localStorage.num_ordenes);
-			var getOrders = ajaxrest.getOrders();
-			if(getOrders.length>0 && getOrders.length!=num_orders.num)getRoutes();			
+		var timer= $interval(function(){
+			if(localStorage.num_ordenes){
+				var num_orders= JSON.parse(localStorage.num_ordenes);
+				var getOrders = ajaxrest.getOrders();
+				if(getOrders.length>0 && (getOrders.length != num_orders.num))getRoutes();	
+			}else{
+				localStorage.setItem("num_ordenes",JSON.stringify({route:0,num:0}));
+			}
 			
 			getPosition();
 			var pos1= JSON.parse(localStorage.position);
 			var pos2= JSON.parse(localStorage.position2);
-			if(pos1["lat"].toString().substring(0,6)  != pos2["lat"].toString().substring(0,6)){
+			var p1= pos1["lat"].toString().substring(0,9);
+			var p2= pos2["lat"].toString().substring(0,9);
+			if(p1 !== p2){
 				ajaxrest.setTracking();
 				if(localStorage.position2)localStorage.setItem("position",localStorage.position2);
-				new Maplace().ResizeMap();								
+				new Maplace().ResizeMap();
+				getRoutes();							
 			}
-		}, 30000);
+		},30000);
 		$(".pedidotar").css({"bottom":$(".menupie").height()+"px"});	
 		localStorage.setItem("request","true");
 		//setTimeout(function(){ getOrdens(); }, 5000);	
