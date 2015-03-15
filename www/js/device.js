@@ -56,11 +56,17 @@ function checkConnection() {
     states[Connection.CELL]     = 'Cell generic connection';
     states[Connection.NONE]     = 'No network connection'; 
     
+    var page=getNameURLWeb();
     if(states[networkState]=='No network connection'){
-        //navigator.notification.beep(1);
-        alert('Internet es requerido!');
-        window.location.href = 'offline.html';
-        //throw new Error('No Internet Connection.');                              
+        //navigator.notification.beep(1);        
+        if(page!="offline.html"){
+            alert('Internet es requerido!');        
+            window.location.href = 'offline.html';
+        }
+        //throw new Error('No Internet Connection.');  
+        state=false;                            
+    }else{
+        if(page=="offline.html")window.location.href = 'index.html';
     }
     return false;
 }
@@ -74,3 +80,8 @@ function getDeviceProperty()
           alert("Device OS Version: " + deviceOSVersion);
           */
  }
+ function getNameURLWeb(){
+   var sPath = window.location.pathname;
+   var sPage = sPath.substring(sPath.lastIndexOf('/') + 1);
+   return sPage;
+}  

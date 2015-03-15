@@ -296,7 +296,7 @@
 					                                   
 
                     this.createMarker(MyPosition,title);
-                    this.createKML(localStorage.getItem("domain")+'resources/kmls/zona_total.kml');
+                    //this.createKML(localStorage.getItem("domain")+'resources/kmls/zona_total.kml');
                     this.createKML(localStorage.getItem("domain")+'resources/kmls/'+localData['code']+'.kml');
 
                     var homeControlDiv = document.createElement('div');
