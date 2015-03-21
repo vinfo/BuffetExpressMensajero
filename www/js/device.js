@@ -40,11 +40,12 @@
         screen.lockOrientation('portrait-primary');
         //navigator.splashscreen.show();
         checkConnection();
-        getDeviceProperty();      
+        //getDeviceProperty();      
     }
 };
 
 function checkConnection() {
+    var state=true;
     var networkState = navigator.connection.type;
     var states = {};
     states[Connection.UNKNOWN]  = 'Unknown connection';
@@ -68,7 +69,7 @@ function checkConnection() {
     }else{
         if(page=="offline.html")window.location.href = 'index.html';
     }
-    return false;
+    return state;
 }
 
 function getDeviceProperty()
@@ -84,4 +85,4 @@ function getDeviceProperty()
    var sPath = window.location.pathname;
    var sPage = sPath.substring(sPath.lastIndexOf('/') + 1);
    return sPage;
-}  
+} 
