@@ -1,7 +1,7 @@
 	// Creación del módulo
 	var angularRoutingApp = angular.module('angularRoutingApp', ["ngRoute","ngSanitize"]);
 	var localData = JSON.parse(localStorage.getItem('cuenta'));
-	var base_url="http://buffetexpress.co/REST/";	
+	var base_url="http://buffetexpress.com.co/REST/";	
 
 	// Configuración de las rutas
 	angularRoutingApp.config(function($routeProvider) {
