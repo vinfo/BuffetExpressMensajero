@@ -21,6 +21,7 @@
 
 	angularRoutingApp.controller('mainController', function($scope,$location){
 		localStorage.coordinates='';
+		localStorage.removeItem("flagScreen");
 		if(localStorage.cuenta){
 			$scope.mi_cuenta="#mi_cuenta";
 		}else{
@@ -63,6 +64,7 @@
 			}
 			
 			getPosition();
+			
 			var pos1= JSON.parse(localStorage.position);
 			var pos2= JSON.parse(localStorage.position2);
 			var p1= pos1["lat"].toString().substring(0,9);
