@@ -19,6 +19,7 @@ function startApp() {
                 lat1= position.coords.latitude;
                 lng1= position.coords.longitude;     
                 localStorage.setItem("position",JSON.stringify({lat:lat1,lng:lng1}));
+				localStorage.setItem("coordinates",lat1+","+lng1);
                 redirect();
               },
               function(error) {

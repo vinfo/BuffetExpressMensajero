@@ -346,11 +346,14 @@
 	"expanded_folders":
 	[
 		"/D/Movilidad/BuffetExpressMensajero",
-		"/D/Movilidad/BuffetExpressMensajero/www",
-		"/D/Movilidad/BuffetExpressMensajero/www/js"
+		"/D/Movilidad/BuffetExpressMensajero/www"
 	],
 	"file_history":
 	[
+		"/D/Movilidad/BuffetExpressMensajero/www/config.xml",
+		"/D/Movilidad/BuffetExpressPhoneGap/www/config.xml",
+		"/D/wamp/www/realriskPhonegap/config.xml",
+		"/D/Movilidad/BuffetExpressPhoneGap/www/js/main.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/js/main.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/offline.html",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/index.html",
@@ -364,11 +367,8 @@
 		"/D/Movilidad/BuffetExpressMensajero/www/login.html",
 		"/D/Movilidad/BuffetExpressMensajero/www/js/index.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/templates/ordenes.html",
-		"/D/Movilidad/BuffetExpressPhoneGap/www/js/main.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/js/maplace-0.1.3.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/js/angular.min.js",
-		"/D/Movilidad/BuffetExpressPhoneGap/www/config.xml",
-		"/D/Movilidad/BuffetExpressMensajero/www/config.xml",
 		"/D/Movilidad/BuffetExpressMensajero/www/js/login.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/css/style.css",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/internal.html",
@@ -477,8 +477,7 @@
 		"/C/Users/odc/Downloads/angular-google-maps-master/angular-google-maps-master/example/mapa/dragzoom.html",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/js/dragzoom.js",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/templates/login.html",
-		"/D/Movilidad/BuffetExpressPhoneGap/www/example.css",
-		"/C/Users/odc/AppData/Local/Temp/Rar$EXa0.752/www/templates/mapa.html"
+		"/D/Movilidad/BuffetExpressPhoneGap/www/example.css"
 	],
 	"find":
 	{

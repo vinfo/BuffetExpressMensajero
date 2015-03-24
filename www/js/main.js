@@ -38,13 +38,18 @@
 			var conf= confirm("Esta seguro que desea liberar la ruta?");
 			if(conf){
 				ajaxrest.cleanRoutes();
+				localStorage.removeItem("ordenes");
+				localStorage.removeItem("routes");
+				$("#route").html('');
 				alert("Domiciliario liberado de ruta");
-				localStorage.setItem("num_ordenes",JSON.stringify({route:0,num:0}));
+				localStorage.setItem("num_ordenes",JSON.stringify({route:0,num:0}));				
 				getRoutes();
 			}
+			localStorage.removeItem("flagScreen");
 			$(".latermenu").animate({"left":-412},200);			
 		},
 		$scope.refreshOrders = function () {			
+			localStorage.removeItem("flagScreen");
 			ajaxrest.getOrders();
 			getRoutes();
 			$(".latermenu").animate({"left":-412},200);
@@ -55,7 +60,7 @@
 		$(".links").attr("href","");			
 		getRoutes();		
 		var timer= $interval(function(){
-			if(localStorage.num_ordenes){
+			if(localStorage.num_ordenes && !localStorage.flagScreen){
 				var num_orders= JSON.parse(localStorage.num_ordenes);
 				var getOrders = ajaxrest.getOrders();
 				if(getOrders.length>0 && (getOrders.length != num_orders.num))getRoutes();	
@@ -72,7 +77,7 @@
 			if(p1 !== p2){
 				ajaxrest.setTracking();
 				if(localStorage.position2)localStorage.setItem("position",localStorage.position2);
-				new Maplace().ResizeMap();
+				new Maplace().CenterMap();
 				getRoutes();							
 			}
 		},15000);

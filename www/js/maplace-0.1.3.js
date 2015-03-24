@@ -291,7 +291,7 @@
                     }).appendTo(this.map_div);
 
                     this.oMap = new google.maps.Map(this.canvas_map.get(0), this.o.map_options);   
-					this.oMap.setZoom(13);					
+					this.oMap.setZoom(14);					
 					this.oMap.setCenter(MyPosition);
 					                                   
 
@@ -304,7 +304,7 @@
                     homeControlDiv.index = 9999999;
                     this.oMap.controls[google.maps.ControlPosition.TOP_RIGHT].push(homeControlDiv);
                     GoogleMap= this.oMap;
-					GoogleMap.setZoom(13);					
+					GoogleMap.setZoom(14);					
 					GoogleMap.setCenter(MyPosition);					
                 } catch (err) {
                     this.debug('create_objMap::' + this.map_div.selector, err.toString());
@@ -787,10 +787,15 @@
                 this.directionsService.route(this.o.directions_options, function (result, status) {
                     //directions found
                     if (status === google.maps.DirectionsStatus.OK) {
-                        dist_time = self.calc_dist_time(result);                               
-                        localStorage.setItem("routes",JSON.stringify(result));
-                        self.directionsDisplay.setDirections(result);
-                        getOrdens();
+						if(localStorage.ordenes){
+							dist_time = self.calc_dist_time(result);                               
+							localStorage.setItem("routes",JSON.stringify(result));
+							self.directionsDisplay.setDirections(result);
+							getOrdens();
+						}else{
+							$("#route").html('');
+							localStorage.removeItem("routes");
+						}
                     }
                     self.o.afterRoute(dist_time, status, result);
                 });
@@ -1101,6 +1106,40 @@
             reload && this.Load();
             return this;
         };
+		
+		//Center map		
+        Maplace.prototype.CenterMap = function () {
+            if(localStorage.position && localStorage.position!=null){
+                 var position= JSON.parse(localStorage.position);                
+                 var MyPosition = new google.maps.LatLng(position.lat, position.lng);
+				 
+                 if(GoogleMap!=false){	
+				   GoogleMap.setCenter(MyPosition);
+				   if(markersArray.length>0){
+					  for (var i = 0; i < markersArray.length; i++ ) {
+						markersArray[i].setMap(null);
+					  }
+					  markersArray.length = 0;					   
+				   }
+				   var marker = new google.maps.Marker({
+						map: GoogleMap,
+						position: MyPosition,
+						title: "Mi Ubicación",
+						icon: 'images/puntero_dom.png'
+					});							
+					markersArray.push(marker);
+										
+				  google.maps.event.trigger(GoogleMap, 'resize', function () {
+					  $("#gmap-route").css("height", height+"px");
+					  GoogleMap.setCenter(MyPosition);					          
+				  });
+                }
+            }
+            var height= $(".container").height() - ($(".menupie").height() + $(".menusup").height());
+            $("#gmap-route").css("height", height+"px"); 
+            $(".wrap_controls").css({"background":"none","max-height":"30px"});
+            $(".pedidotar").css({"bottom":$(".menupie").height()+"px"});
+        }; 		
 
         //Reload map		
         Maplace.prototype.ResizeMap = function () {
@@ -1127,7 +1166,7 @@
 										
 				  google.maps.event.trigger(GoogleMap, 'resize', function () {
 					  $("#gmap-route").css("height", height+"px");
-					  GoogleMap.setZoom(13);					
+					  GoogleMap.setZoom(14);					
 					  GoogleMap.setCenter(MyPosition);					          
 				  });
                 }
@@ -1145,6 +1184,7 @@
 
         //loads the options
         Maplace.prototype._init = function () {
+			$("#route").html('');
             //store the locations length
             this.ln = this.o.locations.length;
             var ordenes=[],ids=[];
