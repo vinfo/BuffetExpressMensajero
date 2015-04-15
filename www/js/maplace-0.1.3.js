@@ -198,7 +198,7 @@
                     travelMode: google.maps.TravelMode.DRIVING,
                     unitSystem: google.maps.UnitSystem.METRIC,
                     region: 'CO',
-                    optimizeWaypoints: false,
+                    optimizeWaypoints: true,
                     provideRouteAlternatives: false,
                     avoidHighways: false,
                     avoidTolls: false
