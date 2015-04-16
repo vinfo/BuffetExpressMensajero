@@ -14,6 +14,7 @@ function startApp() {
   var lng1="";  
   localStorage.setItem("zona",JSON.stringify({id:2,code:'cam002',show:0}));
   if (navigator.geolocation) {
+    //alert("geolocation");
       navigator.geolocation.getCurrentPosition(
               function(position) {
                 lat1= position.coords.latitude;
@@ -23,7 +24,7 @@ function startApp() {
                 redirect();
               },
               function(error) {
-                  alert("Problemas procesando datos."+error);
+                  alert("Problemas procesando datos.\n"+JSON.stringify(error));
                   location.reload();
               },
               {timeout: 30000, enableHighAccuracy: true, maximumAge: 75000}
