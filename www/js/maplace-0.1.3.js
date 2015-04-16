@@ -357,6 +357,21 @@
                 icon: 'images/puntero_dom.png'
             });*/ 
         };
+	
+        Maplace.prototype.createMarkerOrders = function (pos,title,idO,idP,names,dir) {				
+		  var marker = new google.maps.Marker({
+			  map: this.oMap,
+			  position: pos,
+			  title: "Orden #"+idO,
+			  icon: 'images/rastreo_'+idP+'.png'
+		  });
+		  var infowindow = new google.maps.InfoWindow({
+			content: '<h3>Orden # '+idO+' - ID Ped.# ('+idP+') </h3>'+names+'<br/>'+dir
+		  });		  
+		  google.maps.event.addListener(marker, 'click', function () {		  		  
+			  infowindow.open(this.oMapsssssssss,marker);
+		  });
+        };		
 
         //Establecer Kmls
         Maplace.prototype.createKML = function (src) {
@@ -783,15 +798,37 @@
                         self.o.afterRoute(dist_time);
                     });
                 }
-
+								
                 this.directionsService.route(this.o.directions_options, function (result, status) {
                     //directions found
                     if (status === google.maps.DirectionsStatus.OK) {
 						if(localStorage.ordenes){
-							dist_time = self.calc_dist_time(result);                               
-							localStorage.setItem("routes",JSON.stringify(result));
-							self.directionsDisplay.setDirections(result);
-							getOrdens();
+						  dist_time = self.calc_dist_time(result);                               
+						  localStorage.setItem("routes",JSON.stringify(result));
+						  self.directionsDisplay.setDirections(result);
+						  self.directionsDisplay.setOptions({ suppressMarkers: true });							
+						  var route = result.routes[0];
+						  var data= JSON.parse(localStorage.ordenes);
+						  for (var i = 0; i < route.waypoint_order.length; i++) {
+								var j= route.waypoint_order[i];						  
+								var idO= data[j].id;
+								var idP= i+1;
+								var coordinates= data[j].coordinates.split(',');
+								var dir = data[j].address;
+								var name=data[j].name;
+								var names= name.split(' ');
+								if(names[0]!="")name=names[0];
+								var last= data[j].lastname;
+								var lastname= last.split(' ');
+								if(lastname[0]!="")last=lastname[0];
+								var names= name+" "+last;
+								var pos= new google.maps.LatLng(coordinates[0],coordinates[1]);
+								self.createMarkerOrders(pos,"Orden#",idO,idP,names,dir);
+																									
+						  }
+						  
+						  
+						  getOrdens();
 						}else{
 							$("#route").html('');
 							localStorage.removeItem("routes");
@@ -1196,6 +1233,7 @@
                     //alert(this.o.locations[i].html+" "+ (i+1));
                     var cont= i;
                     this.o.locations[i].html = this.o.locations[i].html.replace('%index', cont);
+					this.o.locations[i].html = this.o.locations[i].html.replace('%orden', i);
                     this.o.locations[i].html = this.o.locations[i].html.replace('%title', (this.o.locations[i].title || ''));
                     var orden= this.o.locations[i].html.match(/\((.*?)\)/);
                     if (orden){
