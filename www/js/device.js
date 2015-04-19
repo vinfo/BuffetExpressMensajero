@@ -40,7 +40,8 @@
         screen.lockOrientation('portrait-primary');
         //navigator.splashscreen.show();
         checkConnection();
-        getDeviceProperty();      
+        getDeviceProperty();
+        navigator.splashscreen.hide();    
     }
 };
 

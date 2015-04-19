@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"z",
+				"zIndex"
+			],
+			[
+				"lat",
+				"lat1"
+			],
+			[
 				"pa",
 				"padding-top"
 			],
@@ -267,11 +275,40 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "www/js/maplace-0.1.3.js",
+			"settings":
+			{
+				"buffer_size": 48613,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/odc/Downloads/jquery-ui-1.11.4.custom/index.html",
+			"settings":
+			{
+				"buffer_size": 689,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/Movilidad/Node/animate-server/server.js",
+			"settings":
+			{
+				"buffer_size": 373,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
 	"command_palette":
 	{
 		"height": 392.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -346,34 +383,39 @@
 	"expanded_folders":
 	[
 		"/D/Movilidad/BuffetExpressMensajero",
-		"/D/Movilidad/BuffetExpressMensajero/www"
+		"/D/Movilidad/BuffetExpressMensajero/www",
+		"/D/Movilidad/BuffetExpressMensajero/www/js"
 	],
 	"file_history":
 	[
+		"/D/Movilidad/Node/animate-server/node_modules/requirejs/package.json",
+		"/D/Movilidad/BuffetExpressMensajero/www/templates/ordenes.html",
+		"/D/Movilidad/BuffetExpressMensajero/www/internal.html",
+		"/D/Movilidad/BuffetExpressMensajero/www/js/main.js",
+		"/D/Movilidad/BuffetExpressMensajero/www/js/maplace-0.1.3.js",
+		"/D/Movilidad/BuffetExpressMensajero/www/js/mapa.js",
+		"/D/Movilidad/BuffetExpressMensajero/www/js/maplace-0.1.3____________.js",
+		"/D/Movilidad/BuffetExpressMensajero/www/js/index.js",
+		"/D/Movilidad/BuffetExpressMensajero/www/js/internal.js",
+		"/D/Movilidad/BuffetExpressMensajero/www/js/offline.js",
+		"/D/Movilidad/BuffetExpressMensajero/www/index.html",
+		"/D/wamp/www/buffet/REST/domi/js/index.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/config.xml",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/config.xml",
 		"/D/wamp/www/realriskPhonegap/config.xml",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/js/main.js",
-		"/D/Movilidad/BuffetExpressMensajero/www/js/main.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/offline.html",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/index.html",
-		"/D/Movilidad/BuffetExpressMensajero/www/index.html",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/offline.html",
-		"/D/Movilidad/BuffetExpressMensajero/www/js/offline.js",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/js/device.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/js/device.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/templates/terminos.html",
-		"/D/Movilidad/BuffetExpressMensajero/www/internal.html",
 		"/D/Movilidad/BuffetExpressMensajero/www/login.html",
-		"/D/Movilidad/BuffetExpressMensajero/www/js/index.js",
-		"/D/Movilidad/BuffetExpressMensajero/www/templates/ordenes.html",
-		"/D/Movilidad/BuffetExpressMensajero/www/js/maplace-0.1.3.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/js/angular.min.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/js/login.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/css/style.css",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/internal.html",
 		"/D/Movilidad/BuffetExpressMensajero/www/spec.html",
-		"/D/Movilidad/BuffetExpressMensajero/www/js/internal.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/templates/login.html",
 		"/D/Movilidad/BuffetExpressMensajero/www/templates/cuenta.html",
 		"/D/Movilidad/BuffetExpressMensajero/www/templates/notificaciones.html",
@@ -473,11 +515,7 @@
 		"/C/Mi Informacion/Programacion/Angular/angular-google-maps-master/example/assets/scripts/controllers/geojson.js",
 		"/C/Mi Informacion/Programacion/Angular/angular-google-maps-master/example/geojson.html",
 		"/C/Users/odc/Downloads/angular-google-maps-master/angular-google-maps-master/example/dragzoom.html",
-		"/C/Users/odc/Downloads/angular-google-maps-master/angular-google-maps-master/example/issue-482-markers-animation.html",
-		"/C/Users/odc/Downloads/angular-google-maps-master/angular-google-maps-master/example/mapa/dragzoom.html",
-		"/D/Movilidad/BuffetExpressPhoneGap/www/js/dragzoom.js",
-		"/D/Movilidad/BuffetExpressPhoneGap/www/templates/login.html",
-		"/D/Movilidad/BuffetExpressPhoneGap/www/example.css"
+		"/C/Users/odc/Downloads/angular-google-maps-master/angular-google-maps-master/example/issue-482-markers-animation.html"
 	],
 	"find":
 	{
@@ -498,6 +536,29 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"clean",
+			"clear",
+			"createMarkerOrders",
+			"open_infowindow",
+			"infowindow",
+			"alert(",
+			"\"ordenes\"",
+			"createMarkerOrders",
+			"mapa",
+			"mapla",
+			"locations",
+			"InfoWindow",
+			"locations",
+			"mapla",
+			"Cocin",
+			"new google.maps.Marker",
+			"rastreo",
+			"getPosition",
+			"no disponible",
+			"rastreo",
+			"createMarkerOrders",
+			"Problemas procesando",
+			"Problema procesando",
 			"token u",
 			"token",
 			"buffetexpress.co",
@@ -602,30 +663,7 @@
 			"final_orders",
 			"canvas_map",
 			"alert(\"show\"",
-			"\"show\"",
-			"show",
-			"ResizeMap",
-			"setZoom",
-			"setCenter",
-			"create",
-			"directions",
-			"ResizeMap",
-			"setCenter",
-			"Orden #",
-			"Orden",
-			"Orden #",
-			"Orden # ",
-			"notificaciones",
-			"travelMode",
-			"directions_options",
-			"getDeviceProperty",
-			"routes",
-			"'resize'",
-			"routes",
-			"224",
-			"'resize'",
-			"zoom",
-			"localData"
+			"\"show\""
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -679,8 +717,100 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "www/js/maplace-0.1.3.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 48613,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								16101,
+								16101
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 6333.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/Users/odc/Downloads/jquery-ui-1.11.4.custom/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 689,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/D/Movilidad/Node/animate-server/server.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 373,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -727,6 +857,7 @@
 	{
 		"height": 100.0
 	},
+	"pinned_build_system": "",
 	"project": "BuffetExpressMensajero.sublime-project",
 	"replace":
 	{
@@ -736,6 +867,7 @@
 	"select_file":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],
@@ -744,6 +876,7 @@
 	"select_project":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],
@@ -752,6 +885,7 @@
 	"select_symbol":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],

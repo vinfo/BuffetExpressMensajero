@@ -67,8 +67,7 @@
 			}else{
 				localStorage.setItem("num_ordenes",JSON.stringify({route:0,num:0}));
 			}
-			
-			getPosition();
+	        getPosition();			
 			
 			var pos1= JSON.parse(localStorage.position);
 			var pos2= JSON.parse(localStorage.position2);
