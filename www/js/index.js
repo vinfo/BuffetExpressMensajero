@@ -24,10 +24,11 @@ function startApp() {
                 redirect();
               },
               function(error) {
-                  alert("Problemas procesando datos.\n");
-                  location.reload();
+                  alert("Problemas procesando datos...\n");
+                  //location.reload();
+                  redirect();
               },
-              {timeout: 30000, enableHighAccuracy: true, maximumAge: 75000}
+              {timeout:20000, enableHighAccuracy: true, maximumAge: 75000}
       );
   }else{
     alert("Geolocalización no soportada en dispositivo!");
