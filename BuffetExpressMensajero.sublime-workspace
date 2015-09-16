@@ -359,20 +359,22 @@
 	"expanded_folders":
 	[
 		"/D/Movilidad/BuffetExpressMensajero",
-		"/D/Movilidad/BuffetExpressMensajero/www"
+		"/D/Movilidad/BuffetExpressMensajero/www",
+		"/D/Movilidad/BuffetExpressMensajero/www/js",
+		"/D/Movilidad/BuffetExpressMensajero/www/templates"
 	],
 	"file_history":
 	[
+		"/D/Movilidad/BuffetExpressMensajero/www/internal.html",
+		"/D/Movilidad/BuffetExpressMensajero/www/templates/ordenes.html",
+		"/D/Movilidad/BuffetExpressMensajero/www/js/internal.js",
+		"/D/Movilidad/BuffetExpressMensajero/www/js/main.js",
 		"/C/wamp/www/corporacionconstruyendofamilia/plugins/ckeditor/config.js",
 		"/C/wamp/www/corporacionconstruyendofamilia/plugins/ckfinder/config.js",
 		"/C/wamp/www/corporacionconstruyendofamilia/plugins/ckeditor/styles.js",
 		"/C/wamp/www/corporacionconstruyendofamilia/plugins/ckeditor/build-config.js",
 		"/C/Mi Informacion/Programacion/PHP/Plantillas WEB/Administrativas/aries-metro-style-admin-template/HTML/index.html",
 		"/C/wamp/www/realrisk_argos/css/estilos.css",
-		"/D/Movilidad/BuffetExpressMensajero/www/internal.html",
-		"/D/Movilidad/BuffetExpressMensajero/www/templates/ordenes.html",
-		"/D/Movilidad/BuffetExpressMensajero/www/js/main.js",
-		"/D/Movilidad/BuffetExpressMensajero/www/js/internal.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/js/index.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/templates/cuenta.html",
 		"/D/Movilidad/BuffetExpressMensajero/www/templates/mi_cuenta.html",
@@ -511,6 +513,8 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"links",
+			"liquidardiv",
 			"rel'",
 			"rel\"",
 			"Notificaciones",
@@ -636,9 +640,7 @@
 			"final_orders",
 			"adp-summary",
 			"angular.min.js.map",
-			"Orden #",
-			"final_orders",
-			"ID#"
+			"Orden #"
 		],
 		"highlight": true,
 		"in_selection": false,
