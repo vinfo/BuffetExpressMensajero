@@ -165,6 +165,10 @@
             this.directionsService = null;
             this.directionsDisplay = null;
 
+            var google_travel= JSON.parse(localStorage.google_travel);
+            var tipo_travel= google.maps.TravelMode.DRIVING;
+            if(google_travel[0].valor_tipo==2)tipo_travel= google.maps.TravelMode.WALKING;
+
             //default options
             this.o = {
                 debug: false,
@@ -195,7 +199,7 @@
                     fillOpacity: 0.4
                 },
                 directions_options: {
-                    travelMode: google.maps.TravelMode.DRIVING,
+                    travelMode: tipo_travel,
                     unitSystem: google.maps.UnitSystem.METRIC,
                     region: 'CO',
                     optimizeWaypoints: true,
