@@ -360,13 +360,12 @@
 	[
 		"/D/Movilidad/BuffetExpressMensajero",
 		"/D/Movilidad/BuffetExpressMensajero/www",
-		"/D/Movilidad/BuffetExpressMensajero/www/js",
 		"/D/Movilidad/BuffetExpressMensajero/www/templates"
 	],
 	"file_history":
 	[
-		"/D/Movilidad/BuffetExpressMensajero/www/templates/ordenes.html",
 		"/D/Movilidad/BuffetExpressMensajero/www/js/main.js",
+		"/D/Movilidad/BuffetExpressMensajero/www/templates/ordenes.html",
 		"/D/Movilidad/BuffetExpressMensajero/www/internal.html",
 		"/D/Movilidad/BuffetExpressMensajero/www/js/internal.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/js/index.js",
@@ -513,6 +512,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"position2",
 			"\".links\"",
 			"links",
 			"notificaciones",
@@ -639,8 +639,7 @@
 			"show(\"",
 			"CenterMap",
 			"MyPosition",
-			"getSummary(",
-			"valor_buffet"
+			"getSummary("
 		],
 		"highlight": true,
 		"in_selection": false,
