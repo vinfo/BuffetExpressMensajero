@@ -275,6 +275,16 @@
 	},
 	"buffers":
 	[
+		{
+			"contents": "Package Control Messages\n========================\n\nPackage Control:\n---------------\n\n  Version 3.1 Release Notes\n  \n  Package Control continues its focus on polish and fixing edge-case bugs. Some\n  of the changes in this version include:\n  \n   - quick panel for Install Package now stays open on Windows with recent\n     versions of ST3, even when focus is lost\n   - new \"downloader_precedence\" setting to allow users to use specific HTTP\n     backend due to network proxy or SSL issues\n   - added Install Local Dependency command for package developers to more\n     easily deal with dependencies during development\n   - improved handling of git/hg package upgrade errors\n   - better handling of locked .sublime-package files on Windows\n   - performance improvements for users with a large number of open windows\n  \n  For package developers, the list of available dependencies has been growing:\n  https://github.com/wbond/package_control_channel/blob/master/repository/dependencies.json\n  \n  Enjoy!\n  \n\n  Version 3.0 Release Notes\n  \n  \n  **** Windows Sublime Text 3 Users ****\n  \n  Due to a bug in Package Control 2.0, Windows ST3 users will need to open the\n  Sublime Text console (ctrl+`) and execute the following Python to properly\n  upgrade. All other users may ignore this part of the message.\n  \n  Make sure NOT to copy the leading two spaces, or an \"unexpected indent\" error\n  will occur.\n  \n  import urllib.request,os,sys; exec(\"if sys.version_info < (3,) or os.name != 'nt': raise OSError('This code is for Windows ST3 only!')\"); pr='Preferences.sublime-settings'; ip='ignored_packages'; n='Package Control'; s=sublime.load_settings(pr); ig=s.get(ip); ig.append(n); s.set(ip,ig); sublime.save_settings('Preferences.sublime-settings'); pf=n+'.sublime-package'; urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler())); by=urllib.request.urlopen('https://packagecontrol.io/'+pf.replace(' ','%20')).read(); open(os.path.join(sublime.installed_packages_path(),pf),'wb').write(by); ig.remove(n); s.set(ip,ig); sublime.save_settings(pr); print('Package Control: 3.0.0 upgrade successful!')\n  \n  ********\n  \n  \n  Package Control 3.0 adds a bunch of polish, improving the Sublime Text\n  experience for users and package developers:\n  \n   - improved upgrades of themes, color schemes and syntaxes\n   - dependency support\n   - SSL for Linux\n   - new secondary Windows HTTP backend\n   - patches for Python in Sublime Text 2 on Windows\n   - commands to easily remove channels and repositories\n   - an events API for packages\n   - improved documentation\n  \n  \n  As of July 2014, I now work for myself. This has allowed me to spend more time\n  working on open source software, including Package Control. If you appreciate\n  the work I've done, please consider a small donation. If even 5% of regular\n  users donated the price of a coffee or beer, that would cover quite a bit of\n  my development time! See https://packagecontrol.io/about for options.\n  \n  \n  Some recent Package Control stats:\n  \n   - every weekday over 1M JSON requests hit the channel server\n   - in December, the channel server will transmit 4TB+ of compressed JSON\n   - users have installed, upgraded or removed 85M+ packages since late 2011\n  \n  \n  Read more about the release at:\n  \n  https://packagecontrol.io/news#2014-12-23-Package_Control_30_Released\n  \n",
+			"settings":
+			{
+				"buffer_size": 3361,
+				"line_ending": "Windows",
+				"name": "Package Control Messages",
+				"scratch": true
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -359,19 +369,20 @@
 	"expanded_folders":
 	[
 		"/D/Movilidad/BuffetExpressMensajero",
-		"/D/Movilidad/BuffetExpressMensajero/www",
-		"/D/Movilidad/BuffetExpressMensajero/www/js",
-		"/D/Movilidad/BuffetExpressMensajero/www/templates"
+		"/D/Movilidad/BuffetExpressMensajero/www"
 	],
 	"file_history":
 	[
+		"/D/Movilidad/PushMessages/www/js/index.js",
+		"/D/Movilidad/PushMessages/www/js/PushwooshAndroid.js",
+		"/D/Movilidad/BuffetExpressMensajero/www/js/maplace-0.1.3.js",
+		"/D/Movilidad/BuffetExpressMensajero/www/js/main.js",
+		"/D/Movilidad/BuffetExpressMensajero/www/js/login.js",
 		"/C/wamp/www/angelaboteropoeta/application/js/clientes.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/js/index.js",
-		"/D/Movilidad/BuffetExpressMensajero/www/js/login.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/internal.html",
 		"/D/Movilidad/BuffetExpressMensajero/www/templates/ordenes.html",
 		"/D/Movilidad/BuffetExpressMensajero/www/js/internal.js",
-		"/D/Movilidad/BuffetExpressMensajero/www/js/main.js",
 		"/C/wamp/www/corporacionconstruyendofamilia/plugins/ckeditor/config.js",
 		"/C/wamp/www/corporacionconstruyendofamilia/plugins/ckfinder/config.js",
 		"/C/wamp/www/corporacionconstruyendofamilia/plugins/ckeditor/styles.js",
@@ -382,7 +393,6 @@
 		"/D/Movilidad/BuffetExpressMensajero/www/templates/mi_cuenta.html",
 		"/D/Movilidad/BuffetExpressMensajero/www/templates/login.html",
 		"/D/Movilidad/BuffetExpressMensajero/www/config.xml",
-		"/D/Movilidad/BuffetExpressMensajero/www/js/maplace-0.1.3.js",
 		"/C/Users/odc/Downloads/jquery-ui-1.11.4.custom/index.html",
 		"/D/Movilidad/Node/animate-server/server.js",
 		"/D/Movilidad/Node/animate-server/node_modules/requirejs/package.json",
@@ -490,9 +500,7 @@
 		"/C/Mi Informacion/Programacion/Angular/angular-google-maps-master/example/example.html",
 		"/C/Mi Informacion/Programacion/Angular/angular-google-maps-master/example/issue-432-markers-fit-clustering.html",
 		"/C/Mi Informacion/Programacion/Angular/angular-google-maps-master/example/assets/templates/info.html",
-		"/C/Mi Informacion/Programacion/Angular/angular-google-maps-master/example/assets/scripts/controllers/issue-432-markers-fit-clustering.js",
-		"/C/Mi Informacion/Programacion/Angular/angular-google-maps-master/example/assets/templates/issue-755-ng-router.html",
-		"/D/Movilidad/BackupsBuffet/directives.js"
+		"/C/Mi Informacion/Programacion/Angular/angular-google-maps-master/example/assets/scripts/controllers/issue-432-markers-fit-clustering.js"
 	],
 	"find":
 	{
@@ -513,6 +521,9 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"d3apfvOzOPQmkDDmLoLOh6ZFHRrLGL642dStWZpQAq47NVZHrAGRDhjlqGkOTW2BMDaofF7IMz3VLEZddy0L",
+			"getVariables",
+			"DRIVING",
 			"final_orders",
 			"links",
 			"liquidardiv",
@@ -637,10 +648,7 @@
 			"afterRoute",
 			"setPanel",
 			"directions_panel",
-			"summary",
-			"final_orders",
-			"adp-summary",
-			"angular.min.js.map"
+			"summary"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -694,8 +702,38 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3361,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3361,
+								3361
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
