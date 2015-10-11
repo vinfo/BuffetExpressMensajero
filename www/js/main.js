@@ -57,7 +57,8 @@
 	});		
 
 	angularRoutingApp.controller('ordenesController', function($scope,$location,$interval){		
-		$(".links").attr("href","");			
+		$(".links").attr("href","");
+		$(".btn-info").hide();			
 		getRoutes();						
 		var timer= $interval(function(){
 			if(localStorage.num_ordenes && !localStorage.flagScreen){
