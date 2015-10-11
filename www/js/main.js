@@ -71,7 +71,7 @@
 			getPosition();
 			
 			var pos1= JSON.parse(localStorage.position);
-			var pos2= JSON.parse(localStorage.position2);
+			var pos2= localStorage.position2;
 			var p1= pos1["lat"].toString().substring(0,9);
 			var p2= pos2["lat"].toString().substring(0,9);
 			if(p1 !== p2){
