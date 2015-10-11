@@ -359,11 +359,11 @@
 	"expanded_folders":
 	[
 		"/D/Movilidad/BuffetExpressMensajero",
-		"/D/Movilidad/BuffetExpressMensajero/www",
-		"/D/Movilidad/BuffetExpressMensajero/www/templates"
+		"/D/Movilidad/BuffetExpressMensajero/www"
 	],
 	"file_history":
 	[
+		"/D/Movilidad/BuffetExpressMensajero/www/config.xml",
 		"/D/Movilidad/BuffetExpressMensajero/www/templates/ordenes.html",
 		"/D/Movilidad/PushMessages/www/js/index.js",
 		"/D/Movilidad/PushMessages/www/js/PushwooshAndroid.js",
@@ -383,7 +383,6 @@
 		"/D/Movilidad/BuffetExpressMensajero/www/templates/cuenta.html",
 		"/D/Movilidad/BuffetExpressMensajero/www/templates/mi_cuenta.html",
 		"/D/Movilidad/BuffetExpressMensajero/www/templates/login.html",
-		"/D/Movilidad/BuffetExpressMensajero/www/config.xml",
 		"/C/Users/odc/Downloads/jquery-ui-1.11.4.custom/index.html",
 		"/D/Movilidad/Node/animate-server/server.js",
 		"/D/Movilidad/Node/animate-server/node_modules/requirejs/package.json",
