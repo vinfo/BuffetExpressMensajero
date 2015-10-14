@@ -359,14 +359,13 @@
 	"expanded_folders":
 	[
 		"/D/Movilidad/BuffetExpressMensajero",
-		"/D/Movilidad/BuffetExpressMensajero/www",
-		"/D/Movilidad/BuffetExpressMensajero/www/templates"
+		"/D/Movilidad/BuffetExpressMensajero/www"
 	],
 	"file_history":
 	[
+		"/D/Movilidad/BuffetExpressMensajero/www/config.xml",
 		"/D/Movilidad/BuffetExpressMensajero/www/templates/ordenes.html",
 		"/C/Users/odc/Desktop/www/config.xml",
-		"/D/Movilidad/BuffetExpressMensajero/www/config.xml",
 		"/C/Users/odc/Desktop/www/templates/ordenes.html",
 		"/C/Users/odc/Desktop/wwwLAST/config.xml",
 		"/D/Movilidad/BuffetExpressMensajero/www/js/device.js",
