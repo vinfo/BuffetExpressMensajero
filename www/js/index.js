@@ -18,17 +18,16 @@ function startApp() {
       navigator.geolocation.getCurrentPosition(
               function(position) {
                 lat1= position.coords.latitude;
-                lng1= position.coords.longitude; 
+                lng1= position.coords.longitude;     
                 localStorage.setItem("position",JSON.stringify({lat:lat1,lng:lng1}));
 				        localStorage.setItem("coordinates",lat1+","+lng1);
                 redirect();
               },
               function(error) {
-                  alert("Problemas procesando datos...\n");
-                  //location.reload();
-                  redirect();
+                  alert("Problemas procesando datos.\n"+JSON.stringify(error));
+                  location.reload();
               },
-              {timeout:20000, enableHighAccuracy: true, maximumAge: 75000}
+              {timeout: 30000, enableHighAccuracy: true, maximumAge: 75000}
       );
   }else{
     alert("Geolocalización no soportada en dispositivo!");

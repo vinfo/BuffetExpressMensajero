@@ -58,7 +58,7 @@
 
 	angularRoutingApp.controller('ordenesController', function($scope,$location,$interval){		
 		$(".links").attr("href","");			
-		getRoutes();						
+		getRoutes();		
 		var timer= $interval(function(){
 			if(localStorage.num_ordenes && !localStorage.flagScreen){
 				var num_orders= JSON.parse(localStorage.num_ordenes);
