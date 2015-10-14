@@ -275,14 +275,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "www/js/device.js",
-			"settings":
-			{
-				"buffer_size": 3351,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -368,13 +360,17 @@
 	[
 		"/D/Movilidad/BuffetExpressMensajero",
 		"/D/Movilidad/BuffetExpressMensajero/www",
-		"/D/Movilidad/BuffetExpressMensajero/www/js"
+		"/D/Movilidad/BuffetExpressMensajero/www/templates"
 	],
 	"file_history":
 	[
-		"/D/Movilidad/BuffetExpressMensajero/www/js/index.js",
-		"/D/Movilidad/BuffetExpressMensajero/www/config.xml",
 		"/D/Movilidad/BuffetExpressMensajero/www/templates/ordenes.html",
+		"/C/Users/odc/Desktop/www/config.xml",
+		"/D/Movilidad/BuffetExpressMensajero/www/config.xml",
+		"/C/Users/odc/Desktop/www/templates/ordenes.html",
+		"/C/Users/odc/Desktop/wwwLAST/config.xml",
+		"/D/Movilidad/BuffetExpressMensajero/www/js/device.js",
+		"/D/Movilidad/BuffetExpressMensajero/www/js/index.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/js/main.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/internal.html",
 		"/D/Movilidad/BuffetExpressMensajero/www/js/internal.js",
@@ -407,7 +403,6 @@
 		"/D/Movilidad/BuffetExpressPhoneGap/www/index.html",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/offline.html",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/js/device.js",
-		"/D/Movilidad/BuffetExpressMensajero/www/js/device.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/templates/terminos.html",
 		"/D/Movilidad/BuffetExpressMensajero/www/login.html",
 		"/D/Movilidad/BuffetExpressMensajero/www/js/angular.min.js",
@@ -496,10 +491,7 @@
 		"/C/Mi Informacion/Programacion/Angular/angular-google-maps-master/example/assets/scripts/controllers/issue-1027-markers-clustering-ngif.js",
 		"/C/Mi Informacion/Programacion/Angular/angular-google-maps-master/example/issue-484-markers-self.html",
 		"/C/Mi Informacion/Programacion/Angular/angular-google-maps-master/example/assets/scripts/controllers/issue-484-markers-self.js",
-		"/C/Mi Informacion/Programacion/Angular/angular-google-maps-master/example/example.html",
-		"/C/Mi Informacion/Programacion/Angular/angular-google-maps-master/example/issue-432-markers-fit-clustering.html",
-		"/C/Mi Informacion/Programacion/Angular/angular-google-maps-master/example/assets/templates/info.html",
-		"/C/Mi Informacion/Programacion/Angular/angular-google-maps-master/example/assets/scripts/controllers/issue-432-markers-fit-clustering.js"
+		"/C/Mi Informacion/Programacion/Angular/angular-google-maps-master/example/example.html"
 	],
 	"find":
 	{
@@ -701,42 +693,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "www/js/device.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3351,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3351,
-								3351
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": -0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
