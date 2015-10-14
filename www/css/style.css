@@ -1998,7 +1998,25 @@ width: 108%;
 .yellow{
 	background-color: #FC0;
 }
-
+.green{
+	color:#47A447;
+	display:none;
+}
+#contenedor_pays .valor{
+	color:#000;
+}
+#contenedor_pays .cancel{
+	color: #060;
+}
+#contenedor_pays .pend{
+	color: #F60;
+}
+#contenedor_pays .red{
+	color: #F00;
+}
+#contenedor_pays .total{
+	color:#900;
+}
 
 input[type="radio"], input[type="checkbox"] {
   /* All browsers except webkit*/
