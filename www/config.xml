@@ -36,13 +36,12 @@
 <preference name="auto-hide-splash-screen" value="false" />
 <preference name="StatusBarOverlaysWebView" value="false" />
 
+
 <feature name="http://api.phonegap.com/1.0/device" />
 <feature name="Geolocation">
     <param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
-</feature>  
-<feature name="Toast">
-  <param name="android-package" value="nl.xservices.plugins.Toast" />
-</feature>   
+</feature>
+
 
     <access origin="*"/>
 
@@ -51,7 +50,7 @@
         android:xlargeScreens="true"
         android:largeScreens="true"
         android:smallScreens="true" />        
-        <application android:debuggable="true" android:hardwareAccelerated="true" android:theme="@android:style/Theme.NoTitleBar" >
+        <application android:debuggable="false" android:hardwareAccelerated="true" android:theme="@android:style/Theme.NoTitleBar" >
           <activity android:theme="@android:style/Theme.NoTitleBar" >
           </activity>
         </application>
@@ -106,6 +105,6 @@
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    
+
  
 </widget>
