@@ -4,7 +4,7 @@ if (window.jQuery) {
    $(function(){
     // Tamaño container  
     $(".container").css({"min-height":$(document).height()});   
-    if( navigator.geolocation ){
+/*    if( navigator.geolocation ){
         var optn = {
             enableHighAccuracy: true,
             timeout: Infinity,
@@ -21,7 +21,7 @@ if (window.jQuery) {
               }
       );
      id = navigator.geolocation.watchPosition(success, error, optn);
-    }
+    }*/
 
     $(window).load(function(){
         $(".menupie ul li").css({"height":$("li.carrito a img").height()});

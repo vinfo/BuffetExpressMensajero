@@ -1,7 +1,7 @@
 	// Creación del módulo
 	var angularRoutingApp = angular.module('angularRoutingApp', ["ngRoute","ngSanitize"]);
 	var localData = JSON.parse(localStorage.getItem('cuenta'));
-	var base_url="http://buffetexpress.co/REST/";	
+	var base_url="http://buffetexpress.com.co/REST/";	
 
 	// Configuración de las rutas
 	angularRoutingApp.config(function($routeProvider) {
@@ -21,6 +21,7 @@
 
 	angularRoutingApp.controller('mainController', function($scope,$location){
 		localStorage.coordinates='';
+		localStorage.removeItem("flagScreen");
 		if(localStorage.cuenta){
 			$scope.mi_cuenta="#mi_cuenta";
 		}else{
@@ -37,31 +38,54 @@
 			var conf= confirm("Esta seguro que desea liberar la ruta?");
 			if(conf){
 				ajaxrest.cleanRoutes();
+				localStorage.removeItem("ordenes");
+				localStorage.removeItem("routes");
+				$("#route").html('');
 				alert("Domiciliario liberado de ruta");
-				localStorage.setItem("num_ordenes",JSON.stringify({route:0,num:0}));
+				localStorage.setItem("num_ordenes",JSON.stringify({route:0,num:0}));				
 				getRoutes();
 			}
+			localStorage.removeItem("flagScreen");
 			$(".latermenu").animate({"left":-412},200);			
-		}												
+		},
+		$scope.refreshOrders = function () {			
+			localStorage.removeItem("flagScreen");
+			ajaxrest.getOrders();
+			getRoutes();
+			$(".latermenu").animate({"left":-412},200);
+		}														
 	});		
 
-	angularRoutingApp.controller('ordenesController', function($scope,$location){		
-		$(".links").attr("href","");			
-		getRoutes();		
-		setInterval(function(){
-			var num_orders= JSON.parse(localStorage.num_ordenes);
-			var getOrders = ajaxrest.getOrders();
-			if(getOrders.length>0 && getOrders.length!=num_orders.num)getRoutes();			
+	angularRoutingApp.controller('ordenesController', function($scope,$location,$interval){		
+		$(".links").attr("href","");					
+		getRoutes();						
+		var timer= $interval(function(){
+			if(localStorage.num_ordenes && !localStorage.flagScreen){
+				var num_orders= JSON.parse(localStorage.num_ordenes);
+				var getOrders = ajaxrest.getOrders();
+				if(getOrders.length>0 && (getOrders.length != num_orders.num))getRoutes();	
+			}else{
+				localStorage.setItem("num_ordenes",JSON.stringify({route:0,num:0}));
+			}
 			
 			getPosition();
-			var pos1= JSON.parse(localStorage.position);
-			var pos2= JSON.parse(localStorage.position2);
-			if(pos1["lat"].toString().substring(0,6)  != pos2["lat"].toString().substring(0,6)){
-				ajaxrest.setTracking();
-				if(localStorage.position2)localStorage.setItem("position",localStorage.position2);
-				new Maplace().ResizeMap();								
+			
+			try {
+				var pos1= JSON.parse(localStorage.position);
+				var pos2= JSON.parse(localStorage.position2);
+				var p1= pos1["lat"].toString().substring(0,9);
+				var p2= pos2["lat"].toString().substring(0,9);
+				if(p1 !== p2){
+					ajaxrest.setTracking();
+					if(localStorage.position2)localStorage.setItem("position",localStorage.position2);
+					new Maplace().CenterMap();
+					getRoutes();							
+				}
 			}
-		}, 30000);
+			catch(err) {
+			    console.log(err.message);
+			}
+		},15000);
 		$(".pedidotar").css({"bottom":$(".menupie").height()+"px"});	
 		localStorage.setItem("request","true");
 		//setTimeout(function(){ getOrdens(); }, 5000);	

@@ -29,7 +29,25 @@ angularRoutingApp.config(function($routeProvider) {
 	});
 });
 
-angularRoutingApp.controller('loginController', function($scope, $location,$routeParams) {	
+angularRoutingApp.controller('loginController', function($scope, $location,$routeParams) {
+	if (navigator.geolocation){
+	  navigator.geolocation.getCurrentPosition(
+			  function(position) {
+				lat1= position.coords.latitude;
+				lng1= position.coords.longitude;     
+				localStorage.setItem("position",JSON.stringify({lat:lat1,lng:lng1}));
+				localStorage.setItem("coordinates",lat1+","+lng1);
+			  },
+			  function(error) {
+				  alert("Problemas procesando datos.");
+				  location.reload();
+			  },
+			  {timeout: 40000, enableHighAccuracy: true, maximumAge: 75000}
+	  );
+	}else{
+		alert("Geolocalización no soportada en dispositivo!");
+	}	
+	
 	if(localStorage.dimension<380){
 		$scope.logo="images/logo_domiciliarios_pno.png";
 	}else{
