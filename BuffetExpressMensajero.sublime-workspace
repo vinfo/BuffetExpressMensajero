@@ -275,6 +275,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "www/js/device.js",
+			"settings":
+			{
+				"buffer_size": 3351,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -360,16 +368,16 @@
 	[
 		"/D/Movilidad/BuffetExpressMensajero",
 		"/D/Movilidad/BuffetExpressMensajero/www",
-		"/D/Movilidad/BuffetExpressMensajero/www/templates"
+		"/D/Movilidad/BuffetExpressMensajero/www/js"
 	],
 	"file_history":
 	[
-		"/D/Movilidad/BuffetExpressMensajero/www/js/main.js",
-		"/D/Movilidad/BuffetExpressMensajero/www/templates/ordenes.html",
-		"/D/Movilidad/BuffetExpressMensajero/www/internal.html",
-		"/D/Movilidad/BuffetExpressMensajero/www/js/internal.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/js/index.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/config.xml",
+		"/D/Movilidad/BuffetExpressMensajero/www/templates/ordenes.html",
+		"/D/Movilidad/BuffetExpressMensajero/www/js/main.js",
+		"/D/Movilidad/BuffetExpressMensajero/www/internal.html",
+		"/D/Movilidad/BuffetExpressMensajero/www/js/internal.js",
 		"/D/Movilidad/PushMessages/www/js/index.js",
 		"/D/Movilidad/PushMessages/www/js/PushwooshAndroid.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/js/maplace-0.1.3.js",
@@ -693,8 +701,42 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "www/js/device.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3351,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3351,
+								3351
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
