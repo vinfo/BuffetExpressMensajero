@@ -4,9 +4,6 @@ startApp();
 function startApp() {  
   //alert("startApp");
   localStorage.removeItem("position");
-  localStorage.removeItem("position2");
-  localStorage.removeItem("final_orders");
-  localStorage.removeItem("ordenes");
   localStorage.removeItem("num_ordenes");
   localStorage.removeItem("routes");
   localStorage.removeItem("ruta");
