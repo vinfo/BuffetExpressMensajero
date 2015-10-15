@@ -275,6 +275,22 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "www/css/style.css",
+			"settings":
+			{
+				"buffer_size": 33425,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "www/config.xml",
+			"settings":
+			{
+				"buffer_size": 5871,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -363,10 +379,11 @@
 	],
 	"file_history":
 	[
-		"/D/Movilidad/BuffetExpressMensajero/www/config.xml",
 		"/D/Movilidad/BuffetExpressMensajero/www/templates/ordenes.html",
-		"/D/Movilidad/BuffetExpressMensajero/www/index.html",
 		"/D/Movilidad/BuffetExpressMensajero/www/internal.html",
+		"/D/Movilidad/BuffetExpressMensajero/www/css/style.css",
+		"/D/Movilidad/BuffetExpressMensajero/www/config.xml",
+		"/D/Movilidad/BuffetExpressMensajero/www/index.html",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/index.html",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/internal.html",
 		"/D/Movilidad/BuffetExpressPhoneGap/www/config.xml",
@@ -406,7 +423,6 @@
 		"/D/Movilidad/BuffetExpressMensajero/www/templates/terminos.html",
 		"/D/Movilidad/BuffetExpressMensajero/www/login.html",
 		"/D/Movilidad/BuffetExpressMensajero/www/js/angular.min.js",
-		"/D/Movilidad/BuffetExpressMensajero/www/css/style.css",
 		"/D/Movilidad/BuffetExpressMensajero/www/spec.html",
 		"/D/Movilidad/BuffetExpressMensajero/www/templates/notificaciones.html",
 		"/D/Movilidad/BuffetExpressMensajero/www/templates/menu.html",
@@ -511,6 +527,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"10px 10px 10px",
 			"position2",
 			"\".links\"",
 			"links",
@@ -637,8 +654,7 @@
 			"show('",
 			"show(\"",
 			"CenterMap",
-			"MyPosition",
-			"getSummary("
+			"MyPosition"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -692,8 +708,74 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "www/css/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 33425,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								23926,
+								23926
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 29953.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "www/config.xml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5871,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2125,
+								2125
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/XML/XML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 780.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
