@@ -27,8 +27,11 @@ function startApp() {
                 redirect();
               },
               function(error) {
-                  alert("Problemas procesando datos...\n");
-                  //location.reload();
+                  alert("Problemas ubicando posición GPS...");
+                  lat1= 6.252592;
+                  lng1= -75.563851;
+                  localStorage.setItem("position",JSON.stringify({lat:lat1,lng:lng1}));
+                  localStorage.setItem("coordinates",lat1+","+lng1);
                   redirect();
               },
               {timeout:20000, enableHighAccuracy: true, maximumAge: 75000}
