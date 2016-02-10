@@ -24,6 +24,7 @@ function startApp() {
                 lng1= position.coords.longitude; 
                 localStorage.setItem("position",JSON.stringify({lat:lat1,lng:lng1}));
 				        localStorage.setItem("coordinates",lat1+","+lng1);
+                ajaxrest.setTracking();
                 redirect();
               },
               function(error) {
