@@ -60,6 +60,7 @@
 		$(".links").attr("href","");					
 		getRoutes();						
 		var timer= $interval(function(){
+			alert("Ordenes");
 			if(localStorage.num_ordenes && !localStorage.flagScreen){
 				var num_orders= JSON.parse(localStorage.num_ordenes);
 				var getOrders = ajaxrest.getOrders();
