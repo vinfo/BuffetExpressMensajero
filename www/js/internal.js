@@ -3,9 +3,8 @@ var id, target, option;
 if (window.jQuery) {  
  $(function(){
     //Establecer tracking
-    if(localStorage.position2){
-      setInterval(function(){ ajaxrest.setTracking(); }, 30000);      
-    }    
+    alert("track");
+    setInterval(function(){ ajaxrest.setTracking(); }, 60000); 
 
     // Tamaño container  
     $(".container").css({"min-height":$(document).height()});   
