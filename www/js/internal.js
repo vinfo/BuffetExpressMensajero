@@ -4,7 +4,7 @@ if (window.jQuery) {
  $(function(){
     //Establecer tracking
     if(localStorage.position2){
-      setInterval(function(){ ajaxrest.setTracking(); }, 60000);      
+      setInterval(function(){ ajaxrest.setTracking(); }, 30000);      
     }    
 
     // Tamaño container  
