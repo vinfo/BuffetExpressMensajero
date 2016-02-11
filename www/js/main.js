@@ -19,8 +19,7 @@
 		});
 	});
 
-	angularRoutingApp.controller('mainController', function($scope,$location){
-		localStorage.coordinates='';
+	angularRoutingApp.controller('mainController', function($scope,$location){		
 		localStorage.removeItem("flagScreen");
 		if(localStorage.cuenta){
 			$scope.mi_cuenta="#mi_cuenta";

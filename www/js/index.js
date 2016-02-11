@@ -10,6 +10,7 @@ function startApp() {
   localStorage.removeItem("num_ordenes");
   localStorage.removeItem("routes");
   localStorage.removeItem("ruta");
+  localStorage.removeItem("coordinates");
   localStorage.setItem("domain","http://buffetexpress.com.co/REST/");  
   localStorage.setItem("dimension",$(window).width());
   
