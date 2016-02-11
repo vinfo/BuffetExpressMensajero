@@ -3,28 +3,10 @@ var id, target, option;
 if (window.jQuery) {  
  $(function(){
     //Establecer tracking
-    setInterval(function(){ ajaxrest.setTracking(); }, 60000); 
-
+    setInterval(function(){ ajaxrest.setTracking(); }, 60000);
+    
     // Tamaño container  
-    $(".container").css({"min-height":$(document).height()});   
-/*    if( navigator.geolocation ){
-        var optn = {
-            enableHighAccuracy: true,
-            timeout: Infinity,
-            maximumAge: 0   
-        };        
-      navigator.geolocation.getCurrentPosition(
-              function(position) {
-                lat1= position.coords.latitude;
-                lng1= position.coords.longitude;     
-                localStorage.setItem("position",JSON.stringify({lat:lat1,lng:lng1}));
-              },
-              function(error) {
-                  alert("Ubicación no disponible");
-              }
-      );
-     id = navigator.geolocation.watchPosition(success, error, optn);
-   }*/
+    $(".container").css({"min-height":$(document).height()});
 
    $(window).load(function(){
     $(".menupie ul li").css({"height":$("li.carrito a img").height()});
