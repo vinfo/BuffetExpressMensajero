@@ -10,6 +10,10 @@
 			templateUrl : 'templates/ordenes.html',
 			controller 	: 'ordenesController'
 		})
+		.when('/programacion', {
+			templateUrl : 'templates/programacion.html',
+			controller 	: 'programacionController'
+		})		
 		.when('/mi_cuenta', {
 			templateUrl : 'templates/mi_cuenta.html',
 			controller 	: 'mi_cuentaController'
@@ -66,10 +70,8 @@
 					if(getOrders.length>0 && (getOrders.length != num_orders.num))getRoutes();	
 				}else{
 					localStorage.setItem("num_ordenes",JSON.stringify({route:0,num:0}));
-				}
-				
-				getPosition();
-				
+				}				
+				getPosition();				
 				try {
 					var pos1= JSON.parse(localStorage.position);
 					var pos2= JSON.parse(localStorage.position2);
@@ -85,11 +87,10 @@
 				    console.log(err.message);
 				}
 			},15000);
-		}else{
-		  if (angular.isDefined(timer)) {
-            $interval.cancel(timer);
-            timer = undefined;
-          }
+			if (angular.isDefined(timer)) {
+				$interval.cancel(timer);
+				timer = undefined;
+			}			
 		}
 		$(".pedidotar").css({"bottom":$(".menupie").height()+"px"});	
 		localStorage.setItem("request","true");
