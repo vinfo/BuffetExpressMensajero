@@ -62,7 +62,8 @@
 	angularRoutingApp.controller('ordenesController', function($scope,$location,$interval){		
 		$(".links").attr("href","");					
 		getRoutes();
-		ajaxrest.getOrders();		
+		ajaxrest.getOrders();
+		ajaxrest.setTracking();		
 		var timer= $interval(function(){
 			if ( $("#lordenes").length > 0 ) {
 				if(localStorage.num_ordenes && !localStorage.flagScreen){

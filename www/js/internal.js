@@ -1,10 +1,7 @@
 app.initialize();
 var id, target, option;
 if (window.jQuery) {  
- $(function(){
-    //Establecer tracking
-    setInterval(function(){ ajaxrest.setTracking(); }, 60000);
-    
+ $(function(){    
     // Tamaño container  
     $(".container").css({"min-height":$(document).height()});
 
