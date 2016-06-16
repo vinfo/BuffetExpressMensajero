@@ -85,6 +85,11 @@
 				    console.log(err.message);
 				}
 			},15000);
+		}else{
+		  if (angular.isDefined(timer)) {
+            $interval.cancel(timer);
+            timer = undefined;
+          }
 		}
 		$(".pedidotar").css({"bottom":$(".menupie").height()+"px"});	
 		localStorage.setItem("request","true");
