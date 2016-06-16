@@ -61,7 +61,8 @@
 
 	angularRoutingApp.controller('ordenesController', function($scope,$location,$interval){		
 		$(".links").attr("href","");					
-		getRoutes();		
+		getRoutes();
+		ajaxrest.getOrders();		
 		var timer= $interval(function(){
 			if ( $("#lordenes").length > 0 ) {
 				if(localStorage.num_ordenes && !localStorage.flagScreen){
@@ -81,12 +82,12 @@
 				if(p1 !== p2){
 					if(localStorage.position2)localStorage.setItem("position",localStorage.position2);
 					new Maplace().CenterMap();
-					getRoutes();							
-				}
-				ajaxrest.setTracking();
+					getRoutes();
+					ajaxrest.setTracking();							
+				}				
 			}
 			catch(err) {
-				console.log(err.message);
+				console.log("Tracking result: "+err.message);
 			}
 		},15000);
 		
