@@ -64,36 +64,35 @@
 		localStorage.setItem("timer",true);
 		$(".links").attr("href","");					
 		getRoutes();
-		if ( $("#lordenes").length > 0 ) {
-			var timer= $interval(function(){
+		
+		var timer= $interval(function(){
+			if ( $("#lordenes").length > 0 ) {
 				if(localStorage.num_ordenes && !localStorage.flagScreen){
 					var num_orders= JSON.parse(localStorage.num_ordenes);
 					var getOrders = ajaxrest.getOrders();
 					if(getOrders.length>0 && (getOrders.length != num_orders.num))getRoutes();	
 				}else{
 					localStorage.setItem("num_ordenes",JSON.stringify({route:0,num:0}));
-				}				
-				getPosition();				
-				try {
-					var pos1= JSON.parse(localStorage.position);
-					var pos2= JSON.parse(localStorage.position2);
-					var p1= pos1["lat"].toString().substring(0,9);
-					var p2= pos2["lat"].toString().substring(0,9);
-					if(p1 !== p2){
-						if(localStorage.position2)localStorage.setItem("position",localStorage.position2);
-						new Maplace().CenterMap();
-						getRoutes();							
-					}
 				}
-				catch(err) {
-				    console.log(err.message);
+			}
+			ajaxrest.setTracking();				
+			getPosition();				
+			try {
+				var pos1= JSON.parse(localStorage.position);
+				var pos2= JSON.parse(localStorage.position2);
+				var p1= pos1["lat"].toString().substring(0,9);
+				var p2= pos2["lat"].toString().substring(0,9);
+				if(p1 !== p2){
+					if(localStorage.position2)localStorage.setItem("position",localStorage.position2);
+					new Maplace().CenterMap();
+					getRoutes();							
 				}
-			},15000);
-			if (angular.isDefined(timer)&&!localStorage.timer) {
-				$interval.cancel(timer);
-				timer = undefined;
-			}			
-		}
+			}
+			catch(err) {
+				console.log(err.message);
+			}
+		},15000);
+		
 		$(".pedidotar").css({"bottom":$(".menupie").height()+"px"});	
 		localStorage.setItem("request","true");
 		//setTimeout(function(){ getOrdens(); }, 5000);	
