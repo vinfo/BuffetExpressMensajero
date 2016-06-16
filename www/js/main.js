@@ -24,6 +24,7 @@
 	});
 
 	angularRoutingApp.controller('mainController', function($scope,$location){		
+		localStorage.setItem("timer",false);
 		localStorage.removeItem("flagScreen");
 		if(localStorage.cuenta){
 			$scope.mi_cuenta="#mi_cuenta";
@@ -60,6 +61,7 @@
 	});		
 
 	angularRoutingApp.controller('ordenesController', function($scope,$location,$interval){		
+		localStorage.setItem("timer",true);
 		$(".links").attr("href","");					
 		getRoutes();
 		if ( $("#lordenes").length > 0 ) {
@@ -87,7 +89,7 @@
 				    console.log(err.message);
 				}
 			},15000);
-			if (angular.isDefined(timer)) {
+			if (angular.isDefined(timer)&&!localStorage.timer) {
 				$interval.cancel(timer);
 				timer = undefined;
 			}			
@@ -98,7 +100,8 @@
 		getSummary();
 	});
 
-	angularRoutingApp.controller('programacionController', function($scope,$location,$interval){		
+	angularRoutingApp.controller('programacionController', function($scope,$location,$interval){
+		localStorage.setItem("timer",false);	
 		$(".links").attr("href","internal.html");
 		$(".latermenu").animate({"left":-412},200);
 		var data= ajaxrest.getAgendaDomiciliario();	
@@ -106,6 +109,7 @@
 	});	
 
 	angularRoutingApp.controller('mi_cuentaController', function($scope) {
+		localStorage.setItem("timer",false);
 		$(".links").attr("href","internal.html");
 		$(".latermenu").animate({"left":-412},200);
 		$scope.changeRoute = function(url, forceReload) {
@@ -116,8 +120,7 @@
 				$location.path(url);
 				$scope.$apply();
 			}
-		};
-		
+		};		
 		if(localData!=null && localData!=""){		
 			var data= ajaxrest.getUser("email="+localData['email']+"&token="+localStorage.token);	
 			var dat = angular.fromJson(data);
