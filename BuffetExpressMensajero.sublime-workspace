@@ -359,16 +359,20 @@
 	"expanded_folders":
 	[
 		"/D/Movilidad/BuffetExpressMensajero",
-		"/D/Movilidad/BuffetExpressMensajero/www"
+		"/D/Movilidad/BuffetExpressMensajero/www",
+		"/D/Movilidad/BuffetExpressMensajero/www/js"
 	],
 	"file_history":
 	[
-		"/D/Movilidad/BuffetExpressMensajero/www/config.xml",
+		"/C/wamp/www/smartcnch/docs/smartcnch/index.xml",
+		"/C/Users/odc/Downloads/vakata-jstree-8ea6ce7/demo/basic/root.json",
 		"/D/Movilidad/BuffetExpressMensajero/www/js/main.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/js/index.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/js/internal.js",
-		"/D/Movilidad/BuffetExpressMensajero/www/js/device.js",
+		"/D/Movilidad/BuffetExpressMensajero/www/js/login.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/internal.html",
+		"/D/Movilidad/BuffetExpressMensajero/www/config.xml",
+		"/D/Movilidad/BuffetExpressMensajero/www/js/device.js",
 		"/D/Movilidad/BuffetExpressMensajero/www/index.html",
 		"/C/wamp/www/Realrisk-Noticias/config.xml",
 		"/D/Movilidad/BuffetExpressMensajero/www/templates/ordenes.html",
@@ -383,7 +387,6 @@
 		"/C/Users/odc/Desktop/wwwLAST/config.xml",
 		"/D/Movilidad/PushMessages/www/js/index.js",
 		"/D/Movilidad/PushMessages/www/js/PushwooshAndroid.js",
-		"/D/Movilidad/BuffetExpressMensajero/www/js/login.js",
 		"/C/wamp/www/angelaboteropoeta/application/js/clientes.js",
 		"/C/wamp/www/corporacionconstruyendofamilia/plugins/ckeditor/config.js",
 		"/C/wamp/www/corporacionconstruyendofamilia/plugins/ckfinder/config.js",
@@ -488,9 +491,7 @@
 		"/C/Mi Informacion/Programacion/Angular/angular-google-maps-master/example/assets/scripts/controllers/search-box.js",
 		"/C/Mi Informacion/Programacion/Angular/angular-google-maps-master/example/js/angular.min.js",
 		"/C/Mi Informacion/Programacion/Angular/angular-google-maps-master/example/assets/scripts/controllers/issue-621-owl.js",
-		"/C/Mi Informacion/Programacion/Angular/angular-google-maps-master/example/issue-621-owl.html",
-		"/C/Mi Informacion/Programacion/Angular/angular-google-maps-master/example/assets/scripts/controllers/issue-1027-markers-clustering-ngif.js",
-		"/C/Mi Informacion/Programacion/Angular/angular-google-maps-master/example/issue-484-markers-self.html"
+		"/C/Mi Informacion/Programacion/Angular/angular-google-maps-master/example/issue-621-owl.html"
 	],
 	"find":
 	{
@@ -511,6 +512,8 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"coordinates",
+			"api/v1/setTracking/",
 			"ajaxrest.setTracking();",
 			"getRoutes",
 			".ruta",
@@ -636,9 +639,7 @@
 			"getVariable",
 			".facturavir .contf .tr.facturavir .contf label.ttfac",
 			"height:100px;",
-			"orden",
-			"Rechazado",
-			"class=\"btns\""
+			"orden"
 		],
 		"highlight": true,
 		"in_selection": false,
