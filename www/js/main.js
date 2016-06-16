@@ -62,8 +62,7 @@
 	angularRoutingApp.controller('ordenesController', function($scope,$location,$interval){		
 		$(".links").attr("href","");					
 		getRoutes();
-		ajaxrest.getOrders();
-		ajaxrest.setTracking();		
+		ajaxrest.getOrders();	
 		var timer= $interval(function(){
 			if ( $("#lordenes").length > 0 ) {
 				if(localStorage.num_ordenes && !localStorage.flagScreen){
@@ -73,24 +72,8 @@
 				}else{
 					localStorage.setItem("num_ordenes",JSON.stringify({route:0,num:0}));
 				}
-			}						
-			getPosition();			
-			try {
-				var pos1= JSON.parse(localStorage.position);
-				var pos2= JSON.parse(localStorage.position2);
-				var p1= pos1["lat"].toString().substring(0,9);
-				var p2= pos2["lat"].toString().substring(0,9);
-				if(p1 !== p2){
-					ajaxrest.setTracking();	
-					if(localStorage.position2)localStorage.setItem("position",localStorage.position2);
-					new Maplace().CenterMap();
-					getRoutes();										
-				}				
 			}
-			catch(err) {
-				console.log("Tracking result: "+err.message);
-			}
-		},15000);
+		},30000);
 		
 		$(".pedidotar").css({"bottom":$(".menupie").height()+"px"});	
 		localStorage.setItem("request","true");

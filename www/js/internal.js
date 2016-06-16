@@ -1,7 +1,28 @@
 app.initialize();
 var id, target, option;
 if (window.jQuery) {  
- $(function(){    
+ $(function(){
+    //Establecer tracking
+    setInterval(function(){
+        getPosition();      
+        try {
+          var pos1= JSON.parse(localStorage.position);
+          var pos2= JSON.parse(localStorage.position2);
+          var p1= pos1["lat"].toString().substring(0,9);
+          var p2= pos2["lat"].toString().substring(0,9);
+          if(p1 !== p2){
+            ajaxrest.setTracking(); 
+            if(localStorage.position2)localStorage.setItem("position",localStorage.position2);
+            new Maplace().CenterMap();
+            getRoutes();                    
+          }       
+        }
+        catch(err) {
+          console.log("Tracking result: "+err.message);
+        }
+       ajaxrest.setTracking();
+      }, 15000);
+    
     // Tamaño container  
     $(".container").css({"min-height":$(document).height()});
 
