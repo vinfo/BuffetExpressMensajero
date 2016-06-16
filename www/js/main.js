@@ -73,17 +73,17 @@
 					localStorage.setItem("num_ordenes",JSON.stringify({route:0,num:0}));
 				}
 			}						
-			getPosition();				
+			getPosition();			
 			try {
 				var pos1= JSON.parse(localStorage.position);
 				var pos2= JSON.parse(localStorage.position2);
 				var p1= pos1["lat"].toString().substring(0,9);
 				var p2= pos2["lat"].toString().substring(0,9);
 				if(p1 !== p2){
+					ajaxrest.setTracking();	
 					if(localStorage.position2)localStorage.setItem("position",localStorage.position2);
 					new Maplace().CenterMap();
-					getRoutes();
-					ajaxrest.setTracking();							
+					getRoutes();										
 				}				
 			}
 			catch(err) {
