@@ -39,8 +39,8 @@ angularRoutingApp.controller('loginController', function($scope, $location,$rout
 				localStorage.setItem("coordinates",lat1+","+lng1);
 			  },
 			  function(error) {
-				  alert("Problemas procesando datos.");
-				  location.reload();
+				  console.log("Problemas Geolocalización.");
+				  //location.reload();
 			  },
 			  {timeout: 40000, enableHighAccuracy: true, maximumAge: 75000}
 	  );
