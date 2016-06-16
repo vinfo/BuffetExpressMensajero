@@ -24,7 +24,6 @@
 	});
 
 	angularRoutingApp.controller('mainController', function($scope,$location){		
-		localStorage.setItem("timer",false);
 		localStorage.removeItem("flagScreen");
 		if(localStorage.cuenta){
 			$scope.mi_cuenta="#mi_cuenta";
@@ -61,10 +60,8 @@
 	});		
 
 	angularRoutingApp.controller('ordenesController', function($scope,$location,$interval){		
-		localStorage.setItem("timer",true);
 		$(".links").attr("href","");					
-		getRoutes();
-		
+		getRoutes();		
 		var timer= $interval(function(){
 			if ( $("#lordenes").length > 0 ) {
 				if(localStorage.num_ordenes && !localStorage.flagScreen){
@@ -74,8 +71,7 @@
 				}else{
 					localStorage.setItem("num_ordenes",JSON.stringify({route:0,num:0}));
 				}
-			}
-			ajaxrest.setTracking();				
+			}						
 			getPosition();				
 			try {
 				var pos1= JSON.parse(localStorage.position);
@@ -87,6 +83,7 @@
 					new Maplace().CenterMap();
 					getRoutes();							
 				}
+				ajaxrest.setTracking();
 			}
 			catch(err) {
 				console.log(err.message);
@@ -100,7 +97,6 @@
 	});
 
 	angularRoutingApp.controller('programacionController', function($scope,$location,$interval){
-		localStorage.setItem("timer",false);	
 		$(".links").attr("href","internal.html");
 		$(".latermenu").animate({"left":-412},200);
 		var data= ajaxrest.getAgendaDomiciliario();	
@@ -108,7 +104,6 @@
 	});	
 
 	angularRoutingApp.controller('mi_cuentaController', function($scope) {
-		localStorage.setItem("timer",false);
 		$(".links").attr("href","internal.html");
 		$(".latermenu").animate({"left":-412},200);
 		$scope.changeRoute = function(url, forceReload) {

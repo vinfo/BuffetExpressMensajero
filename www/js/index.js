@@ -13,7 +13,6 @@ function startApp() {
   localStorage.removeItem("coordinates");
   localStorage.setItem("domain","http://buffetexpress.com.co/REST/");  
   localStorage.setItem("dimension",$(window).width());
-  localStorage.setItem("timer",true);
   
   var lat1="";
   var lng1="";  
