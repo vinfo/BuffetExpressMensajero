@@ -68,8 +68,7 @@ function getPosition(){
               },
               function(error) {
                   console.log("Ubicación no disponible.");
-          //$(location).attr('href',"index.html");
-          setTimeout(getPosition(),5000);
+                  setTimeout(getPosition(),5000);
               },
               {timeout: 10000, enableHighAccuracy: true, maximumAge:0}
       );
