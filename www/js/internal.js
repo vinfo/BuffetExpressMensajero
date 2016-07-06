@@ -4,7 +4,7 @@ if (window.jQuery) {
  $(function(){
     //Establecer tracking
     setInterval(function(){
-        getPosition();      
+        getPosition();//Valida posición desde phone   
         try {
           var pos1= JSON.parse(localStorage.position);
           var pos2= JSON.parse(localStorage.position2);
@@ -56,3 +56,22 @@ function success(pos) {
    navigator.geolocation.clearWatch(id);
  }
 };
+function getPosition(){  
+  if (navigator.geolocation){
+    console.log("Registrar posición dispositivo");
+     navigator.geolocation.getCurrentPosition(
+              function(position) {
+                lat1= position.coords.latitude;
+                lng1= position.coords.longitude;           
+                localStorage.setItem("position2",JSON.stringify({lat:lat1,lng:lng1}));
+        console.log("OK Posición2: "+lat1+" "+lng1);
+              },
+              function(error) {
+                  console.log("Ubicación no disponible.");
+          //$(location).attr('href',"index.html");
+          setTimeout(getPosition(),5000);
+              },
+              {timeout: 10000, enableHighAccuracy: true, maximumAge:0}
+      );
+  }   
+}
