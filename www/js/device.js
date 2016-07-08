@@ -42,6 +42,14 @@
         checkConnection();
         getDeviceProperty();
         navigator.splashscreen.hide();
+        cordova.plugins.backgroundMode.enable();
+        cordova.plugins.backgroundMode.onactivate = function () {
+            setTimeout(function () {
+                cordova.plugins.backgroundMode.configure({
+                    text:'Running in background for more than 5s now.'
+                });
+            }, 5000);
+        }        
     }
 };
 
