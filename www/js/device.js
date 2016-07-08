@@ -46,9 +46,25 @@
         cordova.plugins.backgroundMode.onactivate = function () {
             setTimeout(function () {
                 cordova.plugins.backgroundMode.configure({
-                    text:'Running in background for more than 5s now.'
+                    text:'Working Express esta activo en background.'
                 });
             }, 5000);
+            if (navigator.geolocation){
+                console.log("Registrar posición dispositivo Background");   
+                navigator.geolocation.getCurrentPosition(
+                  function(position) {
+                    lat1= position.coords.latitude;
+                    lng1= position.coords.longitude;           
+                    localStorage.setItem("position2",JSON.stringify({lat:lat1,lng:lng1}));
+                    console.log("OK Posición2  Background: "+lat1+" "+lng1);
+                },
+                function(error) {
+                  console.log("Ubicación no disponible Background.");
+                  setTimeout(getPosition(),5000);
+              },
+              {timeout: 10000, enableHighAccuracy: true, maximumAge:0}
+              );
+            }            
         }        
     }
 };
@@ -89,9 +105,9 @@ function getDeviceProperty()
          /* alert("Device OS: " + deviceOS); 
           alert("Device OS Version: " + deviceOSVersion);
           */
- }
- function getNameURLWeb(){
-   var sPath = window.location.pathname;
-   var sPage = sPath.substring(sPath.lastIndexOf('/') + 1);
-   return sPage;
-}
+      }
+      function getNameURLWeb(){
+         var sPath = window.location.pathname;
+         var sPage = sPath.substring(sPath.lastIndexOf('/') + 1);
+         return sPage;
+     }
