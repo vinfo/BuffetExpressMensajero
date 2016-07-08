@@ -74,22 +74,4 @@ function getPosition(){
               {timeout: 10000, enableHighAccuracy: true, maximumAge:0}
       );
   }
-
-    var bgGeo = navigator.plugins.backgroundGeoLocation;
-    bgGeo.start(); 
-    var callbackFn = function(location){
-        alert(JSON.stringify(location));
-        runtap.util.gps.onBackgroundSuccess(location);
-    };
-     
-    var failureFn = function(error){
-        alert('Geolocation Error PLUGIN');
-    };
-     
-    bgGeo.configure(callbackFn, failureFn, {
-        desiredAccuracy: 10,
-        stationaryRadius: 10,
-        distanceFilter: 30,
-        debug: true
-    });
 }
