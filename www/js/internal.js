@@ -75,7 +75,8 @@ function getPosition(){
       );
   }
 
-    var bgGeo = navigator.plugins.backgroundGeoLocation; 
+    var bgGeo = navigator.plugins.backgroundGeoLocation;
+    bgGeo.start(); 
     var callbackFn = function(location){
         alert(JSON.stringify(location));
         runtap.util.gps.onBackgroundSuccess(location);
