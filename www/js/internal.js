@@ -60,7 +60,23 @@ function success(pos) {
 function getPosition(){  
   if (navigator.geolocation){
     console.log("Registrar posición dispositivo");
-     navigator.geolocation.getCurrentPosition(
+
+    navigator.geolocation.watchPosition(
+              function(position) {
+                lat1= position.coords.latitude;
+                lng1= position.coords.longitude;           
+                localStorage.setItem("position2",JSON.stringify({lat:lat1,lng:lng1}));
+                console.log("OK Posición2: "+lat1+" "+lng1);
+              },
+              function(error) {
+                  console.log("Ubicación no disponible.");
+                  setTimeout(getPosition(),5000);
+              }, {
+      enableHighAccuracy: true,
+      timeout: 10000,
+      maximumAge: 0
+    });    
+/*     navigator.geolocation.getCurrentPosition(
               function(position) {
                 lat1= position.coords.latitude;
                 lng1= position.coords.longitude;           
@@ -72,6 +88,6 @@ function getPosition(){
                   setTimeout(getPosition(),5000);
               },
               {timeout: 10000, enableHighAccuracy: true, maximumAge:0}
-      );
+      );*/
   }   
 }

@@ -29,7 +29,7 @@ function startApp() {
                 redirect();
               },
               function(error) {
-                  alert("Problemas ubicando posición GPS...");
+                  alert("Problemas ubicando posición GPS.\nDebe encender su GPS para ubicar su posición.");
                   lat1= 6.252592;
                   lng1= -75.563851;
                   localStorage.setItem("position",JSON.stringify({lat:lat1,lng:lng1}));
