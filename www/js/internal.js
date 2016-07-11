@@ -19,7 +19,7 @@ if (window.jQuery) {
         console.log('BackgroundGeoLocation error');
     }
     bgGeo.configure(callbackFn, failureFn, {
-        url: 'http://buffetexpress.com.co/REST/api/v1/getOrders/?token=NzBhOWYxNGNkZjc1NzZhN2I0NDE5NmFj', // <-- Android ONLY:  your server url to send locations to
+        url: 'http://buffetexpress.co/REST/resources/printer/composer.json', // <-- Android ONLY:  your server url to send locations to
         params: {
             auth_token: 'user_secret_auth_token',    //  <-- Android ONLY:  HTTP POST params sent to your server when persisting locations.
             foo: 'bar'                              //  <-- Android ONLY:  HTTP POST params sent to your server when persisting locations.
