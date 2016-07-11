@@ -6,7 +6,7 @@ if (window.jQuery) {
     window.navigator.geolocation.getCurrentPosition(function(location) {
         console.log('Location from Phonegap');
     });
-    var bgGeo = window.plugins.backgroundGeoLocation;
+    var bgGeo = window.backgroundGeoLocation;
     var yourAjaxCallback = function(response) {
         console.log("Finish");
         bgGeo.finish();
