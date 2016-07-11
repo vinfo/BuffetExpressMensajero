@@ -3,7 +3,7 @@ var id, target, option;
 if (window.jQuery) {  
  $(function(){
     //Establecer tracking
-    ajaxrest.getServerPostition();
+    ajaxrest.getServerPosition();
     
     // Tamaño container  
     $(".container").css({"min-height":$(document).height()});
