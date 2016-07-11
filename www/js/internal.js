@@ -1,25 +1,7 @@
 app.initialize();
 var id, target, option;
 if (window.jQuery) {  
- $(function(){
-    //Establecer tracking
-    setInterval(function(){
-      $.ajax({
-         type: 'GET',
-         url: 'http://buffetexpress.co/coordinates.php',
-         crossDomain: true,
-         data: 'coordinates=true',
-         dataType: 'json',
-         async: false, 
-         success: function(msg) {
-           alert(msg);
-         },
-        error: function (request, status, error) {
-          console.log("Error registro coordenadas server: "+ status);
-        }
-       });
-     }, 15000);
-    
+ $(function(){    
     // Tamaño container  
     $(".container").css({"min-height":$(document).height()});
 
