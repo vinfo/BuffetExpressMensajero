@@ -47,12 +47,9 @@
 };
 var id, target, option;
 function success(pos) {
-  var crd = pos.coords;
-
-  if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
-    console.log('Congratulation, you reach the target');
+    var crd = pos.coords;
+    console.log('Congratulation, you reach the target'+crd.latitude+" "+crd.longitude);
     navigator.geolocation.clearWatch(id);
-  }
 };
 
 function error(err) {
