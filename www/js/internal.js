@@ -3,25 +3,41 @@ var id, target, option;
 if (window.jQuery) {  
  $(function(){
     //Establecer tracking
-    setInterval(function(){
-        getPosition();//Valida posición desde phone   
-        try {
-          var pos1= JSON.parse(localStorage.position);
-          var pos2= JSON.parse(localStorage.position2);
-          var p1= pos1["lat"].toString().substring(0,9);
-          var p2= pos2["lat"].toString().substring(0,9);
-          if(p1 !== p2){
-            console.log("IR a Tracking coordenadas diferentes: "+p1+" - "+p2);
-            ajaxrest.setTracking();
-            if(localStorage.position2)localStorage.setItem("position",localStorage.position2);
-            new Maplace().CenterMap();
-            getRoutes();                    
-          }       
-        }
-        catch(err) {
-          console.log("Tracking result: "+err.message);
-        }
-      }, 15000);
+    window.navigator.geolocation.getCurrentPosition(function(location) {
+        console.log('Location from Phonegap');
+    });
+    var bgGeo = window.plugins.backgroundGeoLocation;
+    var yourAjaxCallback = function(response) {
+        console.log("Finish");
+        bgGeo.finish();
+    };    
+    var callbackFn = function(location) {
+        console.log('[js] BackgroundGeoLocation callback:  ' + location.latitude + ',' + location.longitude);
+        yourAjaxCallback.call(this);
+    };
+    var failureFn = function(error) {
+        console.log('BackgroundGeoLocation error');
+    }
+    bgGeo.configure(callbackFn, failureFn, {
+        url: 'http://buffetexpress.com.co/REST/api/v1/getOrders/?token=NzBhOWYxNGNkZjc1NzZhN2I0NDE5NmFj', // <-- Android ONLY:  your server url to send locations to
+        params: {
+            auth_token: 'user_secret_auth_token',    //  <-- Android ONLY:  HTTP POST params sent to your server when persisting locations.
+            foo: 'bar'                              //  <-- Android ONLY:  HTTP POST params sent to your server when persisting locations.
+        },
+        headers: {                                   // <-- Android ONLY:  Optional HTTP headers sent to your configured #url when persisting locations
+            "X-Foo": "BAR"
+        },
+        desiredAccuracy: 10,
+        stationaryRadius: 20,
+        distanceFilter: 30,
+        notificationTitle: 'Background tracking', // <-- android only, customize the title of the notification
+        notificationText: 'ENABLED', // <-- android only, customize the text of the notification
+        activityType: 'AutomotiveNavigation',
+        debug: true, // <-- enable this hear sounds for background-geolocation life-cycle.
+        stopOnTerminate: false // <-- enable this to clear background location settings when the app terminates
+    });
+    bgGeo.start();
+    // bgGeo.stop();
     
     // Tamaño container  
     $(".container").css({"min-height":$(document).height()});
