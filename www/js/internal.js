@@ -1,26 +1,6 @@
 app.initialize();
-var id, target, option;
 if (window.jQuery) {  
  $(function(){
-    window.plugins.backgroundgps.start({}, function(success) {
-        $("#log").append("<div>Start callback : "+JSON.stringify(success)+"</div>");
-    }, function(error){
-        $("#log").append("<div>Start error : "+error+"</div>");
-    });
-
-    window.plugins.backgroundgps.stop({}, function(success) {
-        $("#log").append("<div>Stop callback : "+JSON.stringify(success)+"</div>");
-    }, function(error){
-        $("#log").append("<div>Stop error : "+error+"</div>");
-    });
-
-    window.plugins.backgroundgps.status({}, function(success) {
-        $("#log").prepend("<div>Status callback : "+JSON.stringify(success)+"</div>");
-    }, function(error){
-        $("#log").prepend("<div>Status error : "+error+"</div>");
-    });
-
-  
     setInterval(function(){
       getPosition();
     }, 15000);

@@ -45,6 +45,25 @@
         navigator.splashscreen.hide();
         cordova.plugins.backgroundMode.setDefaults({ text:'WorkingExpress activo en background.'});
         cordova.plugins.backgroundMode.enable();
+
+
+        window.plugins.backgroundgps.start({}, function(success) {
+            $("#log").append("<div>Start callback : "+JSON.stringify(success)+"</div>");
+        }, function(error){
+            $("#log").append("<div>Start error : "+error+"</div>");
+        });
+
+        window.plugins.backgroundgps.stop({}, function(success) {
+            $("#log").append("<div>Stop callback : "+JSON.stringify(success)+"</div>");
+        }, function(error){
+            $("#log").append("<div>Stop error : "+error+"</div>");
+        });
+
+        window.plugins.backgroundgps.status({}, function(success) {
+            $("#log").prepend("<div>Status callback : "+JSON.stringify(success)+"</div>");
+        }, function(error){
+            $("#log").prepend("<div>Status error : "+error+"</div>");
+        });        
     }
 };
 
