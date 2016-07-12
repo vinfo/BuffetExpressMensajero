@@ -1,7 +1,11 @@
 app.initialize();
 var id, target, option;
 if (window.jQuery) {  
- $(function(){ 
+ $(function(){
+    setInterval(function(){
+      getPosition();
+    }, 15000);
+
     // Tamaño container  
     $(".container").css({"min-height":$(document).height()});
 
