@@ -1,7 +1,19 @@
 app.initialize();
 var id, target, option;
 if (window.jQuery) {  
- $(function(){    
+ $(function(){ 
+    //Verificar Posición
+    setInterval(function(){
+      console.log("Registrar coordenadas");
+
+      options = {
+        enableHighAccuracy: true,
+          timeout: 5000,
+          maximumAge: 0
+      };      
+      id = navigator.geolocation.watchPosition(success, error, options);
+     }, 10000);
+
     // Tamaño container  
     $(".container").css({"min-height":$(document).height()});
 

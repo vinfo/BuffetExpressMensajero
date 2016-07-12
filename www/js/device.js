@@ -29,7 +29,7 @@
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
         document.addEventListener("offline", checkConnection, false);
-        document.addEventListener("pause", onPause, false);      
+        //document.addEventListener("pause", onPause, false);      
     },
     // deviceready Event Handler
     //
@@ -45,29 +45,7 @@
         navigator.splashscreen.hide();
     }
 };
-var id, target, option;
-function success(pos) {
-    var crd = pos.coords;
-    console.log('Congratulation, you reach the target'+crd.latitude+" "+crd.longitude);
-    navigator.geolocation.clearWatch(id);
-};
 
-function error(err) {
-  console.warn('ERROR(' + err.code + '): ' + err.message);
-};
-function onPause() {
-    //Establecer tracking
-    setInterval(function(){
-      console.log("Background coordinates register");
-
-      options = {
-        enableHighAccuracy: true,
-          timeout: 5000,
-          maximumAge: 0
-      };      
-      id = navigator.geolocation.watchPosition(success, error, options);
-     }, 5000);
-}
 
 function checkConnection() {
     var state=true;
