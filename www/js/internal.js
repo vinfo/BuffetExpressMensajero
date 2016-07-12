@@ -5,14 +5,9 @@ if (window.jQuery) {
     //Verificar Posición
     setInterval(function(){
       console.log("Registrar coordenadas");
-
-      options = {
-        enableHighAccuracy: true,
-          timeout: 5000,
-          maximumAge: 0
-      };      
-      id = navigator.geolocation.watchPosition(success, error, options);
+      getPosition();
      }, 10000);
+
 
     // Tamaño container  
     $(".container").css({"min-height":$(document).height()});
@@ -51,15 +46,15 @@ function success(pos) {
 function getPosition(){  
   if (navigator.geolocation){
     console.log("Registrar posición dispositivo");   
-     navigator.geolocation.getCurrentPosition(
+     navigator.geolocation.watchPosition(
               function(position) {
                 lat1= position.coords.latitude;
                 lng1= position.coords.longitude;           
                 localStorage.setItem("position2",JSON.stringify({lat:lat1,lng:lng1}));
-        console.log("OK Posición2: "+lat1+" "+lng1);
+                console.log("OK Posición2: "+lat1+" "+lng1);
               },
               function(error) {
-                  console.log("Ubicación no disponible.");
+                  console.log("Ubicación no disponible."+error);
                   setTimeout(getPosition(),5000);
               },
               {timeout: 10000, enableHighAccuracy: true, maximumAge:0}
