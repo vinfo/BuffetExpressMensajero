@@ -47,21 +47,8 @@
         cordova.plugins.backgroundMode.enable();
         cordova.plugins.backgroundMode.onactivate = function () {
             setInterval(function(){
-              console.log("Registrar coordenadas background");
-             navigator.geolocation.watchPosition(
-                      function(position) {
-                        lat1= position.coords.latitude;
-                        lng1= position.coords.longitude;           
-                        localStorage.setItem("position2",JSON.stringify({lat:lat1,lng:lng1}));
-                        console.log("OK Posición2: "+lat1+" "+lng1);
-                      },
-                      function(error) {
-                          console.log("Ubicación no disponible."+error);
-                          setTimeout(getPosition(),5000);
-                      },
-                      {timeout: 10000, enableHighAccuracy: true, maximumAge:0}
-              );
-             }, 10000);
+                console.log("Entro en modo inactivo");
+            }, 5000);
         }
         }, false);        
     }
