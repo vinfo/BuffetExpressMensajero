@@ -2,13 +2,6 @@ app.initialize();
 var id, target, option;
 if (window.jQuery) {  
  $(function(){ 
-    //Verificar Posición
-    setInterval(function(){
-      console.log("Registrar coordenadas");
-      getPosition();
-     }, 10000);
-
-
     // Tamaño container  
     $(".container").css({"min-height":$(document).height()});
 

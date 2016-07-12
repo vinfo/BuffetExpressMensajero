@@ -43,6 +43,15 @@
         checkConnection();
         getDeviceProperty();
         navigator.splashscreen.hide();
+        cordova.plugins.backgroundMode.setDefaults({ text:'WorkingExpress activo en background.'});
+        cordova.plugins.backgroundMode.enable();
+        cordova.plugins.backgroundMode.onactivate = function () {
+            setInterval(function(){
+              console.log("Registrar coordenadas background");
+              getPosition();
+             }, 10000);
+        }
+        }, false);        
     }
 };
 
