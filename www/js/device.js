@@ -48,6 +48,8 @@
 };
 function onPause() {
     cordova.plugins.backgroundMode.enable();
+    var bgGeo = window.plugins.backgroundGeoLocation;
+    
 }
 function onResume() {
     cordova.plugins.backgroundMode.disable();
