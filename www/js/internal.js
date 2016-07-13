@@ -2,7 +2,8 @@ app.initialize();
 if (window.jQuery) {  
  $(function(){
     setInterval(function(){
-      getPosition();
+      //getPosition();
+      cordova.plugins.LocationProvider.getAndClearHistory(successCallback);
     }, 15000);
 
     // Tamaño container  
@@ -19,7 +20,13 @@ if (window.jQuery) {
   })
 } else {
   alert("Internet es requerido!");
-}      
+} 
+
+
+function successCallback(history){
+   alert(JSON.stringify(history));
+}
+
 /* Funciones */    
 function hiddeMenu(){
   $(".latermenu").animate({"left":-412},200);
