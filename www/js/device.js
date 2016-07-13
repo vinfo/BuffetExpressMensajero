@@ -44,6 +44,7 @@
         navigator.splashscreen.hide();
         cordova.plugins.backgroundMode.setDefaults({ text:'WorkingExpress activo en background.'});  
         cordova.plugins.backgroundMode.enable();
+        cordova.plugins.LocationProvider.setConfiguration({timeout:10000, enableHighAccuracy: true, maximumAge:0});
     }
 };
 function onPause() {
