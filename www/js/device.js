@@ -29,7 +29,8 @@
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
         document.addEventListener("offline", checkConnection, false);
-        //document.addEventListener("pause", onPause, false);      
+        document.addEventListener("pause", onPause, false);      
+        document.addEventListener("pause", onResume, false);  
     },
     // deviceready Event Handler
     //
@@ -43,29 +44,16 @@
         checkConnection();
         getDeviceProperty();
         navigator.splashscreen.hide();
-        cordova.plugins.backgroundMode.setDefaults({ text:'WorkingExpress activo en background.'});
-        cordova.plugins.backgroundMode.enable();
-
-
-        window.plugins.backgroundgps.start({}, function(success) {
-            $("#log").append("<div>Start callback : "+JSON.stringify(success)+"</div>");
-        }, function(error){
-            $("#log").append("<div>Start error : "+error+"</div>");
-        });
-
-        window.plugins.backgroundgps.stop({}, function(success) {
-            $("#log").append("<div>Stop callback : "+JSON.stringify(success)+"</div>");
-        }, function(error){
-            $("#log").append("<div>Stop error : "+error+"</div>");
-        });
-
-        window.plugins.backgroundgps.status({}, function(success) {
-            $("#log").prepend("<div>Status callback : "+JSON.stringify(success)+"</div>");
-        }, function(error){
-            $("#log").prepend("<div>Status error : "+error+"</div>");
-        });        
+        cordova.plugins.backgroundMode.setDefaults({ text:'WorkingExpress activo en background.'});       
     }
 };
+function onPause() {
+    cordova.plugins.backgroundMode.enable();
+}
+
+function onResume() {
+    cordova.plugins.backgroundMode.disable();
+}
 
 
 function checkConnection() {
