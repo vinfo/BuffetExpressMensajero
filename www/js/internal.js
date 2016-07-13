@@ -50,7 +50,7 @@ function getPosition(){
                 console.log("OK Posición2: "+lat1+" "+lng1);
               },
               function(error) {
-                  console.log("Ubicación no disponible."+error);
+                  console.log("Ubicación no disponible. Code:"+error.code+" Msg:"+error.message);
                   setTimeout(getPosition(),5000);
               },
               {timeout: 10000, enableHighAccuracy: true, maximumAge:0}
