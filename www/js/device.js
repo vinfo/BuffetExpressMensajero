@@ -42,20 +42,16 @@
         checkConnection();
         getDeviceProperty();
         navigator.splashscreen.hide();
-             
+        cordova.plugins.backgroundMode.setDefaults({ text:'WorkingExpress activo en background.'});  
+        cordova.plugins.backgroundMode.enable();
     }
 };
 function onPause() {
-    alert("pause");
-    cordova.plugins.backgroundMode.setDefaults({ text:'WorkingExpress activo en background.'});  
     cordova.plugins.backgroundMode.enable();
 }
-
 function onResume() {
-    alert("resume");
     cordova.plugins.backgroundMode.disable();
 }
-
 
 function checkConnection() {
     var state=true;
