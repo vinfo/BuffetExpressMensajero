@@ -47,9 +47,7 @@
     }
 };
 function onPause() {
-    cordova.plugins.backgroundMode.enable();
-    var bgGeo = window.plugins.backgroundGeoLocation;
-    
+    cordova.plugins.backgroundMode.enable();   
 }
 function onResume() {
     cordova.plugins.backgroundMode.disable();
