@@ -75,6 +75,8 @@
   <gap:plugin name="de.appplant.cordova.plugin.background-mode" />
   <gap:plugin name="cordova-plugin-navis-background-geolocation" source="npm"/>
 
+  
+
 
   <gap:config-file platform="ios" parent="UIStatusBarHidden">
     <false/>
