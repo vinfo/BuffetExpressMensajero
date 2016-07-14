@@ -53,7 +53,7 @@ function getPosition(){
               function(error) {
                   console.log("Ubicación no disponible. Code:"+error.code+" Msg:"+error.message);
               },
-              {timeout:15000, enableHighAccuracy: true, maximumAge:0}
+              {timeout:15000, enableHighAccuracy:false, maximumAge:0}
       );
   }else{
     alert("Problemas detectando ubicación");
