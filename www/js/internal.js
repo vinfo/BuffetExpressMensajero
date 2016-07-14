@@ -3,7 +3,7 @@ if (window.jQuery) {
  $(function(){
     setInterval(function(){
       getPosition();
-    }, 15000);
+    }, 30000);
 
     // Tamaño container  
     $(".container").css({"min-height":$(document).height()});
@@ -55,7 +55,7 @@ function getPosition(){
               function(error) {
                   console.log("Ubicación no disponible. Code:"+error.code+" Msg:"+error.message);
               },
-              {timeout:10000, enableHighAccuracy: true, maximumAge:0}
+              {timeout:15000, enableHighAccuracy: true, maximumAge:0}
       );
   }
 }
