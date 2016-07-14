@@ -49,8 +49,8 @@ function getPosition(){
                 lat1= position.coords.latitude;
                 lng1= position.coords.longitude;           
                 localStorage.setItem("position2",JSON.stringify({lat:lat1,lng:lng1}));
-                console.log("OK Posición2: "+lat1+" "+lng1);
                 ajaxrest.setTracking();
+                console.log("OK Posición2: "+lat1+" "+lng1);                
               },
               function(error) {
                   console.log("Ubicación no disponible. Code:"+error.code+" Msg:"+error.message);
