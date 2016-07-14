@@ -63,7 +63,7 @@
 		$(".links").attr("href","");					
 		getRoutes();
 		ajaxrest.getOrders();	
-		var timer= $interval(function(){
+		//var timer= $interval(function(){
 			if ( $("#lordenes").length > 0 ) {
 				if(localStorage.num_ordenes && !localStorage.flagScreen){
 					var num_orders= JSON.parse(localStorage.num_ordenes);
@@ -73,7 +73,7 @@
 					localStorage.setItem("num_ordenes",JSON.stringify({route:0,num:0}));
 				}
 			}
-		},30000);
+		//},30000);
 		
 		$(".pedidotar").css({"bottom":$(".menupie").height()+"px"});	
 		localStorage.setItem("request","true");

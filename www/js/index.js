@@ -36,7 +36,7 @@ function startApp() {
                   localStorage.setItem("coordinates",lat1+","+lng1);
                   redirect();
               },
-              {timeout:10000, enableHighAccuracy: true, maximumAge:0}
+              {timeout:15000, enableHighAccuracy: true, maximumAge:0}
       );
   }else{
     alert("Geolocalización no soportada en dispositivo!\nPor favor encender el GPS de su dispositivo.");
