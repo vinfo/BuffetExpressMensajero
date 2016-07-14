@@ -2,8 +2,7 @@ app.initialize();
 if (window.jQuery) {  
  $(function(){
     setInterval(function(){
-      //getPosition();
-      cordova.plugins.LocationProvider.getAndClearHistory(successCallback);
+      getPosition();
     }, 15000);
 
     // Tamaño container  
@@ -22,10 +21,6 @@ if (window.jQuery) {
   alert("Internet es requerido!");
 } 
 
-
-function successCallback(history){
-   alert(JSON.stringify(history));
-}
 
 /* Funciones */    
 function hiddeMenu(){
@@ -58,7 +53,6 @@ function getPosition(){
               },
               function(error) {
                   console.log("Ubicación no disponible. Code:"+error.code+" Msg:"+error.message);
-                  setTimeout(getPosition(),5000);
               },
               {timeout:10000, enableHighAccuracy: true, maximumAge:0}
       );
