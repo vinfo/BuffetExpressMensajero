@@ -73,7 +73,7 @@
   <gap:plugin name="com.phonegap.plugin.statusbar" />
   <plugin name="com.indigoway.cordova.whitelist.whitelistplugin" spec="1.1.1" source="pgb" />
   <plugin name="de.appplant.cordova.plugin.background-mode" spec="0.6.4" source="pgb" />
-  <gap:plugin platform="android" name="cordova-plugin-location-provider" version="1.4.0" source="npm"/>
+  <plugin name="cordova-background-geolocation-lt" source="npm" />
 
   <gap:config-file platform="ios" parent="UIStatusBarHidden">
     <false/>
