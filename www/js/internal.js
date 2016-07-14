@@ -1,9 +1,7 @@
 app.initialize();
 if (window.jQuery) {  
  $(function(){
-    setInterval(function(){
-      getPosition();
-    }, 30000);
+    setInterval(function(){ getPosition(); }, 30000);
 
     // Tamaño container  
     $(".container").css({"min-height":$(document).height()});
@@ -42,7 +40,7 @@ function success(pos) {
  }
 };
 function getPosition(){  
-  if (navigator.geolocation){
+  if ("geolocation" in navigator) {
     console.log("Registrar posición dispositivo");   
      navigator.geolocation.getCurrentPosition(
               function(position) {
@@ -57,5 +55,7 @@ function getPosition(){
               },
               {timeout:15000, enableHighAccuracy: true, maximumAge:0}
       );
+  }else{
+    alert("Problemas detectando ubicación");
   }
 }
