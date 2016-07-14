@@ -73,7 +73,7 @@
   <gap:plugin name="com.phonegap.plugin.statusbar" />
   <gap:plugin name="com.indigoway.cordova.whitelist.whitelistplugin" />
   <gap:plugin name="de.appplant.cordova.plugin.background-mode" />
-  <gap:plugin name="cordova-plugin-navis-background-geolocation" source="npm"/>
+  <gap:plugin name="cordova-background-geolocation-lt" source="npm" />
 
   
 
