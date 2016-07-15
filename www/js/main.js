@@ -52,10 +52,7 @@
 			$(".latermenu").animate({"left":-412},200);			
 		},
 		$scope.refreshOrders = function () {			
-			localStorage.removeItem("flagScreen");
-			ajaxrest.getOrders();
-			getRoutes();
-			$(".latermenu").animate({"left":-412},200);
+			RefreshDiv();
 		}														
 	});		
 
