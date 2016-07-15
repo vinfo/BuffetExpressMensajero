@@ -56,6 +56,7 @@
     </application>
   </gap:config-file>
 
+
   <gap:plugin name="nl.x-services.plugins.toast" version="2.0" />
   <gap:plugin name="net.yoik.cordova.plugins.screenorientation" version="1.3.1" />
   <gap:plugin name="org.apache.cordova.media" version="0.2.8" />
@@ -70,8 +71,6 @@
   <gap:plugin name="org.apache.cordova.vibration" version="0.3.11" />
   <gap:plugin name="org.apache.cordova.network-information" version="0.2.12" />
   <gap:plugin name="com.phonegap.plugin.statusbar" />
-  <gap:plugin name="com.indigoway.cordova.whitelist.whitelistplugin" />
-  <plugin name="it.witek.cordova.plugin.background-mode" spec="0.6.3" source="pgb" />
 
   <gap:config-file platform="ios" parent="UIStatusBarHidden">
     <false/>

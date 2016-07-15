@@ -73,7 +73,8 @@
 					localStorage.setItem("num_ordenes",JSON.stringify({route:0,num:0}));
 				}
 			}
-		},30000);		
+		},30000);
+		
 		$(".pedidotar").css({"bottom":$(".menupie").height()+"px"});	
 		localStorage.setItem("request","true");
 		//setTimeout(function(){ getOrdens(); }, 5000);	

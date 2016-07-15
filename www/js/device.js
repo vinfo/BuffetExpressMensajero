@@ -28,7 +28,7 @@
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
-        document.addEventListener("offline", checkConnection, false);
+        document.addEventListener("offline", checkConnection, false);        
     },
     // deviceready Event Handler
     //
@@ -36,15 +36,14 @@
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         //alert("Iniciando app..");
+        //app.receivedEvent('deviceready');
         screen.lockOrientation('portrait-primary');
+        //navigator.splashscreen.show();
         checkConnection();
         getDeviceProperty();
         navigator.splashscreen.hide();
-        cordova.plugins.backgroundMode.setDefaults({text:'WorkingExpress activo en background.'});  
-        cordova.plugins.backgroundMode.enable();
     }
 };
-
 
 function checkConnection() {
     var state=true;
