@@ -40,7 +40,7 @@
         checkConnection();
         getDeviceProperty();
         navigator.splashscreen.hide();
-        cordova.plugins.backgroundMode.setDefaults({text:'WorkingExpress activo en background.'});  
+        cordova.plugins.backgroundMode.setDefaults({silent: true,text:'WorkingExpress activo en background.'});  
         cordova.plugins.backgroundMode.enable();
     }
 };
