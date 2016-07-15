@@ -76,15 +76,14 @@
 		},30000);		
 		$(".pedidotar").css({"bottom":$(".menupie").height()+"px"});	
 		localStorage.setItem("request","true");
-		//setTimeout(function(){ getOrdens(); }, 5000);	
+		setTimeout(function(){ getOrdens(); }, 5000);	
 		getSummary();
 	});
 
 	angularRoutingApp.controller('programacionController', function($scope,$location,$interval){
 		$(".links").attr("href","internal.html");
 		$(".latermenu").animate({"left":-412},200);
-		var data= ajaxrest.getAgendaDomiciliario();	
-		//var dat = angular.fromJson(data);
+		var data= ajaxrest.getAgendaDomiciliario();
 	});	
 
 	angularRoutingApp.controller('mi_cuentaController', function($scope) {
