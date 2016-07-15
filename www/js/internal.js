@@ -47,7 +47,7 @@ function success(pos) {
 function getPosition(){  
   if ("geolocation" in navigator) {
     console.log("Registrar posición real dispositivo via GPS");   
-/*     navigator.geolocation.getCurrentPosition(
+     navigator.geolocation.getCurrentPosition(
               function(position) {
                 lat1= position.coords.latitude;
                 lng1= position.coords.longitude;           
@@ -58,8 +58,8 @@ function getPosition(){
               function(error) {
                   console.log("Ubicación no disponible. Code:"+error.code+" Msg:"+error.message);
               },
-              {timeout:15000, enableHighAccuracy:false, maximumAge:0}
-      );*/
+              {timeout:30000, enableHighAccuracy:true, maximumAge:0}
+      );
   }else{
     alert("Problemas detectando ubicación");
   }
