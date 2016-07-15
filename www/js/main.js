@@ -10,6 +10,10 @@
 			templateUrl : 'templates/ordenes.html',
 			controller 	: 'ordenesController'
 		})
+		.when('/programacion', {
+			templateUrl : 'templates/programacion.html',
+			controller 	: 'programacionController'
+		})		
 		.when('/mi_cuenta', {
 			templateUrl : 'templates/mi_cuenta.html',
 			controller 	: 'mi_cuentaController'
@@ -19,8 +23,7 @@
 		});
 	});
 
-	angularRoutingApp.controller('mainController', function($scope,$location){
-		localStorage.coordinates='';
+	angularRoutingApp.controller('mainController', function($scope,$location){		
 		localStorage.removeItem("flagScreen");
 		if(localStorage.cuenta){
 			$scope.mi_cuenta="#mi_cuenta";
@@ -58,38 +61,30 @@
 
 	angularRoutingApp.controller('ordenesController', function($scope,$location,$interval){		
 		$(".links").attr("href","");					
-		getRoutes();						
+		getRoutes();
+		ajaxrest.getOrders();	
 		var timer= $interval(function(){
-			if(localStorage.num_ordenes && !localStorage.flagScreen){
-				var num_orders= JSON.parse(localStorage.num_ordenes);
-				var getOrders = ajaxrest.getOrders();
-				if(getOrders.length>0 && (getOrders.length != num_orders.num))getRoutes();	
-			}else{
-				localStorage.setItem("num_ordenes",JSON.stringify({route:0,num:0}));
-			}
-			
-			getPosition();
-			
-			try {
-				var pos1= JSON.parse(localStorage.position);
-				var pos2= JSON.parse(localStorage.position2);
-				var p1= pos1["lat"].toString().substring(0,9);
-				var p2= pos2["lat"].toString().substring(0,9);
-				if(p1 !== p2){
-					ajaxrest.setTracking();
-					if(localStorage.position2)localStorage.setItem("position",localStorage.position2);
-					new Maplace().CenterMap();
-					getRoutes();							
+			if ( $("#lordenes").length > 0 ) {
+				if(localStorage.num_ordenes && !localStorage.flagScreen){
+					var num_orders= JSON.parse(localStorage.num_ordenes);
+					var getOrders = ajaxrest.getOrders();
+					if(getOrders.length>0 && (getOrders.length != num_orders.num))getRoutes();	
+				}else{
+					localStorage.setItem("num_ordenes",JSON.stringify({route:0,num:0}));
 				}
 			}
-			catch(err) {
-			    console.log(err.message);
-			}
-		},15000);
+		},30000);		
 		$(".pedidotar").css({"bottom":$(".menupie").height()+"px"});	
 		localStorage.setItem("request","true");
 		//setTimeout(function(){ getOrdens(); }, 5000);	
 		getSummary();
+	});
+
+	angularRoutingApp.controller('programacionController', function($scope,$location,$interval){
+		$(".links").attr("href","internal.html");
+		$(".latermenu").animate({"left":-412},200);
+		var data= ajaxrest.getAgendaDomiciliario();	
+		//var dat = angular.fromJson(data);
 	});	
 
 	angularRoutingApp.controller('mi_cuentaController', function($scope) {
@@ -103,8 +98,7 @@
 				$location.path(url);
 				$scope.$apply();
 			}
-		};
-		
+		};		
 		if(localData!=null && localData!=""){		
 			var data= ajaxrest.getUser("email="+localData['email']+"&token="+localStorage.token);	
 			var dat = angular.fromJson(data);

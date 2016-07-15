@@ -10,6 +10,7 @@ function startApp() {
   localStorage.removeItem("num_ordenes");
   localStorage.removeItem("routes");
   localStorage.removeItem("ruta");
+  localStorage.removeItem("coordinates");
   localStorage.setItem("domain","http://buffetexpress.com.co/REST/");  
   localStorage.setItem("dimension",$(window).width());
   
@@ -24,21 +25,21 @@ function startApp() {
                 lng1= position.coords.longitude; 
                 localStorage.setItem("position",JSON.stringify({lat:lat1,lng:lng1}));
 				        localStorage.setItem("coordinates",lat1+","+lng1);
-                ajaxrest.setTracking();
+                console.log("Registro de posición exitosa: "+lat1+" - "+lng1);                
                 redirect();
               },
               function(error) {
-                  alert("Problemas ubicando posición GPS...");
+                  alert("Problemas ubicando posición GPS.\nDebe encender su GPS para ubicar su posición.");
                   lat1= 6.252592;
                   lng1= -75.563851;
                   localStorage.setItem("position",JSON.stringify({lat:lat1,lng:lng1}));
                   localStorage.setItem("coordinates",lat1+","+lng1);
                   redirect();
               },
-              {timeout:20000, enableHighAccuracy: true, maximumAge: 75000}
+              {timeout:15000, enableHighAccuracy: true, maximumAge:0}
       );
   }else{
-    alert("Geolocalización no soportada en dispositivo!");
+    alert("Geolocalización no soportada en dispositivo!\nPor favor encender el GPS de su dispositivo.");
     redirect();
   }  
 }

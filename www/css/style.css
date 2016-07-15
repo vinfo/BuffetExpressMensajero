@@ -2004,21 +2004,28 @@ width: 108%;
 	color:#47A447;
 	display:none;
 }
-#contenedor_pays .valor{
+#contenedor_pays,#contenedor_scheduled .valor{
 	color:#000;
 }
-#contenedor_pays .cancel{
+#contenedor_pays,#contenedor_scheduled .cancel{
 	color: #060;
 }
-#contenedor_pays .pend{
+#contenedor_pays,#contenedor_scheduled .pend{
 	color: #F60;
 }
-#contenedor_pays .red{
+#contenedor_pays,#contenedor_scheduled .red{
 	color: #F00;
 }
-#contenedor_pays .total{
+#contenedor_pays,#contenedor_scheduled .total{
 	color:#900;
 }
+#contenedor_pays,#contenedor_scheduled .green{
+	color: #066;
+}
+#contenedor_pays,#contenedor_scheduled .disp{
+	color: #066;
+}
+
 
 input[type="radio"], input[type="checkbox"] {
   /* All browsers except webkit*/
