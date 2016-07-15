@@ -42,14 +42,6 @@
         navigator.splashscreen.hide();
         cordova.plugins.backgroundMode.setDefaults({resume: false,text:'WorkingExpress activo en background.'});  
         cordova.plugins.backgroundMode.enable();
-
-        cordova.plugins.backgroundMode.onactivate = function () {
-            setTimeout(function () {
-                // Modify the currently displayed notification
-                cordova.plugins.backgroundMode.configure({
-                    text:'Running in background for more than 5s now.'
-                });
-            }, 5000);        
     }
 };
 
