@@ -41,7 +41,7 @@
         getDeviceProperty();
         navigator.splashscreen.hide();
         cordova.plugins.backgroundMode.setDefaults({ resume: true,text:'WorkingExpress activo en background.'});  
-        //cordova.plugins.backgroundMode.enable();
+        cordova.plugins.backgroundMode.enable();
     }
 };
 
