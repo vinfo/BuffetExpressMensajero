@@ -1,9 +1,11 @@
 app.initialize();
 if (window.jQuery) {  
  $(function(){
+    var cont=1;
     setInterval(function(){ 
       //getPosition();
-      console.log("Registrar posición solo declaración");
+      console.log("Registrar posición solo declaración 30 seg "+cont);
+      cont++;
     }, 30000);
 
     // Tamaño container  
