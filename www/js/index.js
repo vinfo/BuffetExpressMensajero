@@ -10,7 +10,6 @@ function startApp() {
   localStorage.removeItem("num_ordenes");
   localStorage.removeItem("routes");
   localStorage.removeItem("ruta");
-  localStorage.removeItem("coordinates");
   localStorage.setItem("domain","http://buffetexpress.com.co/REST/");  
   localStorage.setItem("dimension",$(window).width());
   
@@ -24,7 +23,8 @@ function startApp() {
                 lat1= position.coords.latitude;
                 lng1= position.coords.longitude; 
                 localStorage.setItem("position",JSON.stringify({lat:lat1,lng:lng1}));
-				        localStorage.setItem("coordinates",lat1+","+lng1);                
+				        localStorage.setItem("coordinates",lat1+","+lng1);
+                ajaxrest.setTracking();
                 redirect();
               },
               function(error) {
