@@ -29,6 +29,8 @@
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
         document.addEventListener("offline", checkConnection, false);
+        document.addEventListener("pause", onPause, false);
+        document.addEventListener("resume", onResume, false);
     },
     // deviceready Event Handler
     //
@@ -41,10 +43,15 @@
         getDeviceProperty();
         navigator.splashscreen.hide();
         cordova.plugins.backgroundMode.setDefaults({text:'WorkingExpress activo en background.'});  
-        cordova.plugins.backgroundMode.enable();
+        
     }
 };
-
+function onPause() {
+    cordova.plugins.backgroundMode.enable();
+}
+function onResume() {
+    cordova.plugins.backgroundMode.disable();
+}
 
 function checkConnection() {
     var state=true;
