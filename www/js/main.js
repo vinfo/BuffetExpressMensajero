@@ -6,9 +6,9 @@
 	// Configuración de las rutas
 	angularRoutingApp.config(function($routeProvider) {
 		$routeProvider
-		.when('/', {
+		.when('/index', {
 			templateUrl : 'templates/index.html',
-			controller 	: 'mainController'
+			controller 	: 'indexController'
 		})		
 		.when('/ordenes', {
 			templateUrl : 'templates/ordenes.html',
@@ -21,13 +21,20 @@
 		.when('/mi_cuenta', {
 			templateUrl : 'templates/mi_cuenta.html',
 			controller 	: 'mi_cuentaController'
-		})
-		.otherwise({
-			redirectTo: '/'
 		});
 	});
+	
+	angularRoutingApp.controller('indexController', function($scope,$location){
+		$scope.page="index";
+		$("li").removeClass("active");
+		$(".index").css("background","#333333");
+		localStorage.coordinates='';
+		localStorage.removeItem("flagScreen");
+		ajaxrest.getServices();														
+	});		
 
 	angularRoutingApp.controller('mainController', function($scope,$location){
+		$scope.page="main";
 		localStorage.coordinates='';
 		localStorage.removeItem("flagScreen");
 		if(localStorage.cuenta){
@@ -54,15 +61,14 @@
 			}
 			localStorage.removeItem("flagScreen");
 			$(".latermenu").animate({"left":-412},200);			
-		},
-		$scope.refreshOrders = function (){
-			window.location = "internal.html#/ordenes";	
 		}														
 	});		
 
 	angularRoutingApp.controller('ordenesController', function($scope,$location,$interval){
-		$(".links").attr("href","");			
-		getRoutes();
+		$scope.page="ordenes";
+		$(".panels").hide();
+		$(".index").css("background","none");
+		$(".links").attr("href","");
 		ajaxrest.getOrders();			
 		var timer= $interval(function(){
 			if ( $("#lordenes").length > 0 ) {				
@@ -90,16 +96,18 @@
 		localStorage.setItem("request","true");
 		//setTimeout(function(){ getOrdens(); }, 5000);	
 		getSummary();
+		showDiv("pagosdiv");
 	});
 	
 	angularRoutingApp.controller('programacionController', function($scope,$location,$interval){		
+		$scope.page="programacion";
 		$(".links").attr("href","internal.html");
 		$(".latermenu").animate({"left":-412},200);
-		var data= ajaxrest.getAgendaDomiciliario();	
-		//var dat = angular.fromJson(data);
+		var data= ajaxrest.getAgendaDomiciliario();
 	});	
 
 	angularRoutingApp.controller('mi_cuentaController', function($scope) {
+		$scope.page="mi_cuenta";
 		$(".links").attr("href","internal.html");
 		$(".latermenu").animate({"left":-412},200);	
 		if(localData!=null && localData!=""){		

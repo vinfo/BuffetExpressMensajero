@@ -8,7 +8,7 @@ a img
 	border:0px;
 }
 .panels{
-	display: none;
+	display:none;
 }
 .notificaciones{
 	margin-top: 45px;
@@ -234,7 +234,6 @@ a.btn-reset{
 	height: 29px;
 	display: inline-block;
 }
-
 .title
 {
 	width: 100%;
@@ -1034,7 +1033,7 @@ max-width:20%;*/
 	display: inline-block;
 	background:#f0f0f0;
 	position: relative;
-	padding: 5px 20px;
+	padding: 5px 15px;
 	text-align: left;
 	display: none;
 }
@@ -1476,6 +1475,7 @@ max-width:20%;*/
 	margin: 0;
 	padding: 10px 0px;
 	border-radius: 15px 15px 0 0;
+	font-size:22px;
 }
 .datos_perfil .detallesitos .gro{
 	width: 100%;
@@ -1512,9 +1512,7 @@ max-width:20%;*/
 }
 .felicitation .feli_re{
 	background: #FFF;
-	padding: 10px 10px 40px 10px;
-	margin-bottom:120px;
-	min-height:380px;
+	padding: 10px;
 	border-radius: 0 0 15px 15px;
 }
 .felicitation .feli_re h3{
@@ -2026,7 +2024,6 @@ width: 108%;
 	color: #066;
 }
 
-
 input[type="radio"], input[type="checkbox"] {
   /* All browsers except webkit*/
   transform: scale("1.7");
@@ -2037,10 +2034,12 @@ input[type="radio"], input[type="checkbox"] {
 img.btn:hover{
     opacity: 0.7;
 }
+
 .index{
 	float:right;
 	padding:2px 10px;
 	min-height:38px;
+	background:#333333 none repeat scroll 0 0;
 }
 .acept,.aceptS{
 	width:120px;
