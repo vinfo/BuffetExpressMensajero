@@ -21,6 +21,9 @@
 		.when('/mi_cuenta', {
 			templateUrl : 'templates/mi_cuenta.html',
 			controller 	: 'mi_cuentaController'
+		})
+		.otherwise({
+			redirectTo: '/index'
 		});
 	});
 	
