@@ -164,10 +164,10 @@
             this.Fusion = null;
             this.directionsService = null;
             this.directionsDisplay = null;
-
+			
             var google_travel= JSON.parse(localStorage.google_travel);
             var tipo_travel= google.maps.TravelMode.DRIVING;
-            if(google_travel[0].valor_tipo==2)tipo_travel= google.maps.TravelMode.WALKING;
+            if(google_travel[0].valor_tipo==2)tipo_travel= google.maps.TravelMode.WALKING;			
 
             //default options
             this.o = {
@@ -363,22 +363,18 @@
         };
 	
         Maplace.prototype.createMarkerOrders = function (pos,title,idO,idP,names,dir) {				
-		  var infowindow = new google.maps.InfoWindow();
-          var marker = new google.maps.Marker({
+		  var marker = new google.maps.Marker({
 			  map: this.oMap,
 			  position: pos,
 			  title: "Orden #"+idO,
-			  icon: 'images/rastreo_'+idP+'.png',
-              id: 'marker'
+			  icon: 'images/rastreo_'+idP+'.png'
 		  });
-
-          var infowindow = new google.maps.InfoWindow();
-          google.maps.event.addListener(marker,'click', (function(marker,infowindow){ 
-                return function() {
-                   infowindow.setContent('<div id="info_'+idO+'"><h3>Orden # '+idO+' - ID Ped.# ('+idP+') </h3>'+names+'<br/>'+dir+'</div>');
-                   infowindow.open(this.oMap,marker);
-                };
-            })(marker,infowindow)); 
+		  var infowindow = new google.maps.InfoWindow({
+			content: '<h3>Orden # '+idO+' - ID Ped.# ('+idP+') </h3>'+names+'<br/>'+dir
+		  });		  
+		  google.maps.event.addListener(marker, 'click', function () {		  		  
+			  infowindow.open(this.oMapsssssssss,marker);
+		  });
         };		
 
         //Establecer Kmls
@@ -818,7 +814,7 @@
 						  var route = result.routes[0];
 						  var data= JSON.parse(localStorage.ordenes);
 						  for (var i = 0; i < route.waypoint_order.length; i++) {
-								var j= route.waypoint_order[i];				  
+								var j= route.waypoint_order[i];						  
 								var idO= data[j].id;
 								var idP= i+1;
 								var coordinates= data[j].coordinates.split(',');
@@ -831,8 +827,10 @@
 								if(lastname[0]!="")last=lastname[0];
 								var names= name+" "+last;
 								var pos= new google.maps.LatLng(coordinates[0],coordinates[1]);
-								self.createMarkerOrders(pos,"Orden#",idO,idP,names,dir);																									
-						  }						  
+								self.createMarkerOrders(pos,"Orden#",idO,idP,names,dir);
+																									
+						  }
+						  
 						  
 						  getOrdens();
 						}else{

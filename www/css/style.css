@@ -244,7 +244,7 @@ a.btn-reset{
 	color: #FFFFFF;
 	text-align: center;
 	line-height: 68px;
-	z-index: 1;
+	z-index:-999;
 }
 .menusup .title{
 	font-size: 25px;
