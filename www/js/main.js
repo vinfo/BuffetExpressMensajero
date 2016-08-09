@@ -24,7 +24,7 @@
 		})
 		.otherwise({
 			redirectTo: '/index'
-		});
+		});		
 	});
 	
 	angularRoutingApp.controller('indexController', function($scope,$location){
@@ -33,7 +33,11 @@
 		$(".index").css("background","#333333");
 		localStorage.coordinates='';
 		localStorage.removeItem("flagScreen");
-		ajaxrest.getServices();														
+	    ajaxrest.getServices();	
+	    var timer= setInterval(function(){
+		  if($("#contenedor_services").length==0)clearInterval(timer);		
+	      ajaxrest.getServices();
+	    }, 30000);													
 	});		
 
 	angularRoutingApp.controller('mainController', function($scope,$location){
@@ -72,8 +76,8 @@
 		$(".panels").hide();
 		$(".index").css("background","none");
 		$(".links").attr("href","");
-		ajaxrest.getOrders();			
-		var timer= $interval(function(){
+		ajaxrest.getOrders();
+	    var timer= setInterval(function(){			
 			if ( $("#lordenes").length > 0 ) {				
 				if(localStorage.num_ordenes && !localStorage.flagScreen){
 					var num_orders= JSON.parse(localStorage.num_ordenes);
@@ -82,19 +86,20 @@
 				}else{
 					localStorage.setItem("num_ordenes",JSON.stringify({route:0,num:0}));
 				}
-			}			
+			}else{
+				clearInterval(timer);
+			}
 			var pos1= JSON.parse(localStorage.position);
 			var pos2= JSON.parse(localStorage.position2);
 			var p1= pos1["lat"].toString().substring(0,9);
 			var p2= pos2["lat"].toString().substring(0,9);
+			ajaxrest.setTracking();	
 			if(p1 !== p2){
-				ajaxrest.setTracking();
 				if(localStorage.position2)localStorage.setItem("position",localStorage.position2);
 				new Maplace().CenterMap();
 				getRoutes();							
 			}
-			ajaxrest.setTracking();			
-		},15000);
+	    },15000);
 		$(".pedidotar").css({"bottom":$(".menupie").height()+"px"});	
 		localStorage.setItem("request","true");
 		//setTimeout(function(){ getOrdens(); }, 5000);	
