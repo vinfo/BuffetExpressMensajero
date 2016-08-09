@@ -37,12 +37,14 @@ angularRoutingApp.controller('loginController', function($scope, $location,$rout
 				lng1= position.coords.longitude;     
 				localStorage.setItem("position",JSON.stringify({lat:lat1,lng:lng1}));
 				localStorage.setItem("coordinates",lat1+","+lng1);
+				console.log("Registro de posición exitosa: "+lat1+" - "+lng1);
 			  },
 			  function(error) {
-				  alert("Problemas procesando datos.");
-				  location.reload();
+				  console.log("Problemas Geolocalización.");
+				  alert("Por favor encender el GPS de su dispositivo.");
+				  //location.reload();
 			  },
-			  {timeout: 40000, enableHighAccuracy: true, maximumAge: 75000}
+			  {timeout: 30000, enableHighAccuracy: true, maximumAge:0}
 	  );
 	}else{
 		alert("Geolocalización no soportada en dispositivo!");
