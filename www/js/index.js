@@ -32,7 +32,7 @@ function startApp() {
 				          console.warn('ERROR(' + error.code + '): ' + error.message);
                   //location.reload();
               },
-              {timeout:10000, enableHighAccuracy:true, maximumAge:0}
+              {timeout:5000, enableHighAccuracy:true, maximumAge:0}
       );
   }else{
     alert("Geolocalización no soportada en dispositivo!");

@@ -48,7 +48,7 @@ function getPosition(){
   if(localStorage.ordenes){
     if ("geolocation" in navigator) {
       console.log("Registrar posición real dispositivo via GPS - Position2");   
-       navigator.geolocation.watchPosition(
+       navigator.geolocation.getCurrentPosition(
                 function(position) {
                   lat1= position.coords.latitude;
                   lng1= position.coords.longitude;           
