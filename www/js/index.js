@@ -1,6 +1,5 @@
 app.initialize();
 startApp();
-
 function startApp() {  
   //alert("startApp");
   localStorage.removeItem("position");
