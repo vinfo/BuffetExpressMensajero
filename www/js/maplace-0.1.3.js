@@ -1180,6 +1180,7 @@
             $("#gmap-route").css("height", height+"px"); 
             $(".wrap_controls").css({"background":"none","max-height":"30px"});
             $(".pedidotar").css({"bottom":$(".menupie").height()+"px"});
+            console.log("Escribiendo Mapa Centrado");
         }; 		
 
         //Reload map		
@@ -1216,6 +1217,7 @@
             $("#gmap-route").css("height", height+"px"); 
             $(".wrap_controls").css({"background":"none","max-height":"30px"});
             $(".pedidotar").css({"bottom":$(".menupie").height()+"px"});
+            console.log("Escribiendo Mapa Redimensión");
         };               
 
         //check if already initialized with a Load()
