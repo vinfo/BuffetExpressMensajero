@@ -77,6 +77,8 @@
 		$(".index").css("background","none");
 		$(".links").attr("href","");
 		ajaxrest.getOrders();
+		getRoutes();
+		getOrdens();
 	    var timer= setInterval(function(){			
 			if ( $("#lordenes").length > 0 ) {				
 				if(localStorage.num_ordenes && !localStorage.flagScreen){
@@ -99,10 +101,10 @@
 				new Maplace().CenterMap();
 				getRoutes();							
 			}
+			getOrdens();
 	    },15000);
 		$(".pedidotar").css({"bottom":$(".menupie").height()+"px"});	
-		localStorage.setItem("request","true");
-		//setTimeout(function(){ getOrdens(); }, 5000);	
+		localStorage.setItem("request","true");	
 		getSummary();
 		showDiv("pagosdiv");
 	});
