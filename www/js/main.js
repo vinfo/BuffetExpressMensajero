@@ -80,6 +80,7 @@
 		$(".links").attr("href","");
 		$(".latermenu").animate({"left":-412},200);
 		ajaxrest.getOrders();
+		new Maplace().CenterMap();
 		getRoutes();
 		getOrdens();
 	    var timer= setInterval(function(){			
