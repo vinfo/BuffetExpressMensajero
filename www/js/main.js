@@ -31,6 +31,7 @@
 		$scope.page="index";
 		$("li").removeClass("active");
 		$(".index").css("background","#333333");
+		$(".latermenu").animate({"left":-412},200);
 		localStorage.coordinates='';
 		localStorage.removeItem("flagScreen");
 	    ajaxrest.getServices();	
@@ -44,6 +45,7 @@
 		$scope.page="main";
 		localStorage.coordinates='';
 		localStorage.removeItem("flagScreen");
+		$(".latermenu").animate({"left":-412},200);
 		if(localStorage.cuenta){
 			$scope.mi_cuenta="#mi_cuenta";
 		}else{
@@ -76,6 +78,7 @@
 		$(".panels").hide();
 		$(".index").css("background","none");
 		$(".links").attr("href","");
+		$(".latermenu").animate({"left":-412},200);
 		ajaxrest.getOrders();
 		getRoutes();
 		getOrdens();
