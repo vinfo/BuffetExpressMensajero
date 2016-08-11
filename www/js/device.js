@@ -41,6 +41,7 @@
         //navigator.splashscreen.show();
         checkConnection();
         getDeviceProperty();
+        if(!localStorage.pushtoken)alert("Bienvenido a Working Express.\nLa primer cooperativa de domiciliarios en Colombia");
     }
 };
 
