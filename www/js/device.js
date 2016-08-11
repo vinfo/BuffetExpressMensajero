@@ -35,7 +35,7 @@
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        //alert("Iniciando app..");
+        //console.log("Iniciando app..");
         //app.receivedEvent('deviceready');
         screen.lockOrientation('portrait-primary');
         //navigator.splashscreen.show();
@@ -75,13 +75,13 @@ function checkConnection() {
 
 function getDeviceProperty()
 {
-     alert("getDeviceProperty");
+     console.log("getDeviceProperty");
      var deviceOS  = device.platform  ;  //fetch the device operating system
      var deviceOSVersion = device.version ;  //fetch the device OS version
      var uuid=  device.uuid;
      localStorage.setItem("OS",deviceOS);
      localStorage.setItem("UUID",uuid);
-     alert("Plataforma registrada "+device.platform);
+     console.log("Plataforma registrada "+device.platform);
      initPushwoosh();
  }
  function getNameURLWeb(){
@@ -90,12 +90,12 @@ function getDeviceProperty()
    return sPage;
 }
 function initPushwoosh() {    
-    alert("initPushwoosh "+localStorage.OS);    
+    console.log("initPushwoosh "+localStorage.OS);    
     if(localStorage.OS == "Android"){
         registerPushwooshAndroid();
-        alert("Register "+localStorage.OS);
+        console.log("Register "+localStorage.OS);
     }else if(localStorage.OS == "iPhone" || device.platform == "iOS"){
         registerPushwooshIOS();
-        alert("Register "+localStorage.OS);        
+        console.log("Register "+localStorage.OS);        
     }    
 }
