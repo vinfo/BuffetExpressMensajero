@@ -41,7 +41,8 @@
         //navigator.splashscreen.show();
         console.log("Inicializa Dispositivo"); 
         getDeviceProperty();
-        checkConnection();      
+        checkConnection();
+        if(!localStorage.pushtoken)alert("Bienvenido a Working Express.\nLa primer cooperativa de domicialirios en Colombia");    
     }
 };
 
