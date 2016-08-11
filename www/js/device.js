@@ -39,12 +39,10 @@
         //app.receivedEvent('deviceready');
         screen.lockOrientation('portrait-primary');
         //navigator.splashscreen.show();
-        checkConnection();
+        console.log("Inicializa Dispositivo");  
         getDeviceProperty();
-        if(!localStorage.pushtoken){
-            alert("Bienvenido a Working Express.\nLa primer cooperativa de domiciliarios en Colombia");
-            return true;
-        }
+        checkConnection();        
+        if(!localStorage.pushtoken)alert("Bienvenido a Working Express.\nLa primer cooperativa de domiciliarios en Colombia");
     }
 };
 
