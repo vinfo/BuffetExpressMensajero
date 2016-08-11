@@ -42,7 +42,7 @@
         console.log("Inicializa Dispositivo");  
         getDeviceProperty();
         checkConnection();        
-        if(!localStorage.pushtoken)alert("Bienvenido a Working Express.\nLa primer cooperativa de domiciliarios en Colombia");
+        //if(!localStorage.pushtoken)alert("Bienvenido a Working Express.\nLa primer cooperativa de domiciliarios en Colombia");
     }
 };
 
