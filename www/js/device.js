@@ -87,4 +87,14 @@ function getDeviceProperty()
    var sPath = window.location.pathname;
    var sPage = sPath.substring(sPath.lastIndexOf('/') + 1);
    return sPage;
-} 
+}
+function initPushwoosh() {    
+    console.log("initPushwoosh "+localStorage.OS);    
+    if(localStorage.OS == "Android"){
+        registerPushwooshAndroid();
+        console.log("Register "+localStorage.OS);
+    }else if(localStorage.OS == "iPhone" || device.platform == "iOS"){
+        registerPushwooshIOS();
+        console.log("Register "+localStorage.OS);        
+    }    
+}
