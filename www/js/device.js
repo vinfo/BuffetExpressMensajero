@@ -74,12 +74,14 @@ function checkConnection() {
 
 function getDeviceProperty()
 {
+     console.log("getDeviceProperty");
      var deviceOS  = device.platform  ;  //fetch the device operating system
      var deviceOSVersion = device.version ;  //fetch the device OS version
-     localStorage.setItem("OS",deviceOS); 
-         /* alert("Device OS: " + deviceOS); 
-          alert("Device OS Version: " + deviceOSVersion);
-          */
+     var uuid=  device.uuid;
+     localStorage.setItem("OS",deviceOS);
+     localStorage.setItem("UUID",uuid);
+     console.log("Plataforma registrada "+device.platform);
+     initPushwoosh();
  }
  function getNameURLWeb(){
    var sPath = window.location.pathname;
