@@ -74,13 +74,13 @@ function checkConnection() {
 
 function getDeviceProperty()
 {
-     console.log("getDeviceProperty");
+     alert("getDeviceProperty");
      var deviceOS  = device.platform  ;  //fetch the device operating system
      var deviceOSVersion = device.version ;  //fetch the device OS version
      var uuid=  device.uuid;
      localStorage.setItem("OS",deviceOS);
      localStorage.setItem("UUID",uuid);
-     console.log("Plataforma registrada "+device.platform);
+     alert("Plataforma registrada "+device.platform);
      initPushwoosh();
  }
  function getNameURLWeb(){
@@ -89,12 +89,12 @@ function getDeviceProperty()
    return sPage;
 }
 function initPushwoosh() {    
-    console.log("initPushwoosh "+localStorage.OS);    
+    alert("initPushwoosh "+localStorage.OS);    
     if(localStorage.OS == "Android"){
         registerPushwooshAndroid();
-        console.log("Register "+localStorage.OS);
+        alert("Register "+localStorage.OS);
     }else if(localStorage.OS == "iPhone" || device.platform == "iOS"){
         registerPushwooshIOS();
-        console.log("Register "+localStorage.OS);        
+        alert("Register "+localStorage.OS);        
     }    
 }
