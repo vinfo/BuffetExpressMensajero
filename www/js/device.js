@@ -39,8 +39,9 @@
         //app.receivedEvent('deviceready');
         screen.lockOrientation('portrait-primary');
         //navigator.splashscreen.show();
-        checkConnection();
-        //getDeviceProperty();      
+        console.log("Inicializa Dispositivo"); 
+        getDeviceProperty();
+        checkConnection();      
     }
 };
 
