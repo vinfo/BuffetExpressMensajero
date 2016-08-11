@@ -44,7 +44,7 @@ function onPushwooshAndroidInitialized(pushToken)
 		function(token)
 		{
 			console.log('push token: ' + token);
-			//console.log("Inicializando "+ token);
+			//alert("Inicializando "+ token);
 			console.warn('push token device: ' + token);
 			localStorage.setItem("pushtoken",token);
 		}
@@ -53,8 +53,8 @@ function onPushwooshAndroidInitialized(pushToken)
 	//and HWID if you want to communicate with Pushwoosh API
 	pushNotification.getPushwooshHWID(
 		function(token) {
-			//console.log('Pushwoosh HWID: ' + token);
-			//console.log("Obteniendo "+ token);	
+			//alert('Pushwoosh HWID: ' + token);
+			//alert("Obteniendo "+ token);	
 		}
 	);
 }
