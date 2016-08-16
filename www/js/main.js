@@ -102,7 +102,6 @@
 			ajaxrest.setTracking();	
 			if(p1 !== p2){
 				if(localStorage.position2)localStorage.setItem("position",localStorage.position2);
-				new Maplace().CenterMap();
 				getRoutes();							
 			}
 			getOrdens();
