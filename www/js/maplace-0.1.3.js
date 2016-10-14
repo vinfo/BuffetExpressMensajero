@@ -295,7 +295,7 @@
                     }).appendTo(this.map_div);
 
                     this.oMap = new google.maps.Map(this.canvas_map.get(0), this.o.map_options);   
-					this.oMap.setZoom(14);					
+					this.oMap.setZoom(8);					
 					this.oMap.setCenter(MyPosition);
 					                                   
 
@@ -308,7 +308,7 @@
                     homeControlDiv.index = 9999999;
                     this.oMap.controls[google.maps.ControlPosition.TOP_RIGHT].push(homeControlDiv);
                     GoogleMap= this.oMap;
-					GoogleMap.setZoom(14);					
+					GoogleMap.setZoom(8);					
 					GoogleMap.setCenter(MyPosition);					
                 } catch (err) {
                     this.debug('create_objMap::' + this.map_div.selector, err.toString());
@@ -1191,7 +1191,7 @@
 				 
                  if(GoogleMap!=false){	
 				   GoogleMap.setCenter(MyPosition);
-				   GoogleMap.setZoom(14);
+				   GoogleMap.setZoom(8);
 				   if(markersArray.length>0){
 					  for (var i = 0; i < markersArray.length; i++ ) {
 						markersArray[i].setMap(null);
@@ -1208,7 +1208,7 @@
 										
 				  google.maps.event.trigger(GoogleMap, 'resize', function () {
 					  $("#gmap-route").css("height", height+"px");
-					  GoogleMap.setZoom(14);					
+					  GoogleMap.setZoom(8);					
 					  GoogleMap.setCenter(MyPosition);					          
 				  });
                 }
