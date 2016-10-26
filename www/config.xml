@@ -3,9 +3,9 @@
  xmlns:gap= "http://phonegap.com/ns/1.0"
  xmlns:android = "http://schemas.android.com/apk/res/android"
  id          = "com.vinfo.workingexpress"
- versionCode = "8"
- version     = "1.8"
- versionName = "1.8" >
+ versionCode = "9"
+ version     = "1.9"
+ versionName = "1.9" >
 
  <name>Working Express</name>
  <description>
@@ -59,7 +59,7 @@
     android:xlargeScreens="true"
     android:largeScreens="true"
     android:smallScreens="true" />        
-    <application android:debuggable="false" android:hardwareAccelerated="true" android:theme="@android:style/Theme.NoTitleBar" >
+    <application android:debuggable="true" android:hardwareAccelerated="true" android:theme="@android:style/Theme.NoTitleBar" >
       <activity android:theme="@android:style/Theme.NoTitleBar" >
       </activity>
   </application>
@@ -82,7 +82,7 @@
 <plugin name="cordova-plugin-vibration" spec="2.1.0" />
 <plugin name="cordova-plugin-whitelist" spec="1.3.0" />
 <plugin name="cordova-plugin-x-socialsharing" spec="5.0.11" />
-<plugin name="pushwoosh-pgb-plugin" spec="6.2.1" />
+<gap:plugin name="com.pushwoosh.plugins.pushwoosh" version="3.4.2" />
 
 <gap:config-file parent="UIStatusBarHidden" platform="ios">
     <false />
